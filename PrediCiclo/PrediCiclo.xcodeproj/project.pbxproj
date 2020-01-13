@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3328EC5A093882B30207A00A /* Pods_PrediCicloTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F6732BC9E0F695C002792B0 /* Pods_PrediCicloTests.framework */; };
 		B22CDC9223C78A8B0011ADB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CDC9123C78A8B0011ADB0 /* AppDelegate.swift */; };
 		B22CDC9423C78A8B0011ADB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CDC9323C78A8B0011ADB0 /* SceneDelegate.swift */; };
 		B22CDC9623C78A8B0011ADB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CDC9523C78A8B0011ADB0 /* ViewController.swift */; };
@@ -14,6 +15,7 @@
 		B22CDC9B23C78A8D0011ADB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B22CDC9A23C78A8D0011ADB0 /* Assets.xcassets */; };
 		B22CDC9E23C78A8D0011ADB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B22CDC9C23C78A8D0011ADB0 /* LaunchScreen.storyboard */; };
 		B22CDCA923C78A8D0011ADB0 /* PrediCicloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CDCA823C78A8D0011ADB0 /* PrediCicloTests.swift */; };
+		B52603F751748C8E0872E55E /* Pods_PrediCiclo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4011D2C1197DC787E23E6424 /* Pods_PrediCiclo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		21AB4A2D638D38C1DF873BA5 /* Pods-PrediCicloTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrediCicloTests.debug.xcconfig"; path = "Target Support Files/Pods-PrediCicloTests/Pods-PrediCicloTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4011D2C1197DC787E23E6424 /* Pods_PrediCiclo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrediCiclo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D1FB47C80EE96FFDA8E3BA7 /* Pods-PrediCicloTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrediCicloTests.release.xcconfig"; path = "Target Support Files/Pods-PrediCicloTests/Pods-PrediCicloTests.release.xcconfig"; sourceTree = "<group>"; };
+		4F6732BC9E0F695C002792B0 /* Pods_PrediCicloTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrediCicloTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6692FC233C5B1621EC38C4B /* Pods-PrediCiclo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrediCiclo.debug.xcconfig"; path = "Target Support Files/Pods-PrediCiclo/Pods-PrediCiclo.debug.xcconfig"; sourceTree = "<group>"; };
 		B22CDC8E23C78A8B0011ADB0 /* PrediCiclo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrediCiclo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B22CDC9123C78A8B0011ADB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B22CDC9323C78A8B0011ADB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +45,7 @@
 		B22CDCA423C78A8D0011ADB0 /* PrediCicloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrediCicloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B22CDCA823C78A8D0011ADB0 /* PrediCicloTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrediCicloTests.swift; sourceTree = "<group>"; };
 		B22CDCAA23C78A8D0011ADB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE0171C03B08177E46BAEA10 /* Pods-PrediCiclo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrediCiclo.release.xcconfig"; path = "Target Support Files/Pods-PrediCiclo/Pods-PrediCiclo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B52603F751748C8E0872E55E /* Pods_PrediCiclo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +61,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3328EC5A093882B30207A00A /* Pods_PrediCicloTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D37DF53C03A4C1D9BCB7D66 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A6692FC233C5B1621EC38C4B /* Pods-PrediCiclo.debug.xcconfig */,
+				CE0171C03B08177E46BAEA10 /* Pods-PrediCiclo.release.xcconfig */,
+				21AB4A2D638D38C1DF873BA5 /* Pods-PrediCicloTests.debug.xcconfig */,
+				4D1FB47C80EE96FFDA8E3BA7 /* Pods-PrediCicloTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B22CDC8523C78A8B0011ADB0 = {
 			isa = PBXGroup;
 			children = (
 				B22CDC9023C78A8B0011ADB0 /* PrediCiclo */,
 				B22CDCA723C78A8D0011ADB0 /* PrediCicloTests */,
 				B22CDC8F23C78A8B0011ADB0 /* Products */,
+				7D37DF53C03A4C1D9BCB7D66 /* Pods */,
+				FBD43C17D0E0DB8D6B55BB74 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +123,15 @@
 			path = PrediCicloTests;
 			sourceTree = "<group>";
 		};
+		FBD43C17D0E0DB8D6B55BB74 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4011D2C1197DC787E23E6424 /* Pods_PrediCiclo.framework */,
+				4F6732BC9E0F695C002792B0 /* Pods_PrediCicloTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +139,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B22CDCAD23C78A8D0011ADB0 /* Build configuration list for PBXNativeTarget "PrediCiclo" */;
 			buildPhases = (
+				F099DCFF9C35C59B438B9299 /* [CP] Check Pods Manifest.lock */,
 				B22CDC8A23C78A8B0011ADB0 /* Sources */,
 				B22CDC8B23C78A8B0011ADB0 /* Frameworks */,
 				B22CDC8C23C78A8B0011ADB0 /* Resources */,
+				96EE361C2ACA9AFB6ACC71A2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +158,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B22CDCB023C78A8D0011ADB0 /* Build configuration list for PBXNativeTarget "PrediCicloTests" */;
 			buildPhases = (
+				3E75BB6017C07434DFD36925 /* [CP] Check Pods Manifest.lock */,
 				B22CDCA023C78A8D0011ADB0 /* Sources */,
 				B22CDCA123C78A8D0011ADB0 /* Frameworks */,
 				B22CDCA223C78A8D0011ADB0 /* Resources */,
@@ -194,6 +230,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3E75BB6017C07434DFD36925 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PrediCicloTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96EE361C2ACA9AFB6ACC71A2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrediCiclo/Pods-PrediCiclo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrediCiclo/Pods-PrediCiclo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PrediCiclo/Pods-PrediCiclo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F099DCFF9C35C59B438B9299 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PrediCiclo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B22CDC8A23C78A8B0011ADB0 /* Sources */ = {
@@ -360,6 +460,7 @@
 		};
 		B22CDCAE23C78A8D0011ADB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6692FC233C5B1621EC38C4B /* Pods-PrediCiclo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -378,6 +479,7 @@
 		};
 		B22CDCAF23C78A8D0011ADB0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE0171C03B08177E46BAEA10 /* Pods-PrediCiclo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,6 +498,7 @@
 		};
 		B22CDCB123C78A8D0011ADB0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21AB4A2D638D38C1DF873BA5 /* Pods-PrediCicloTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -418,6 +521,7 @@
 		};
 		B22CDCB223C78A8D0011ADB0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D1FB47C80EE96FFDA8E3BA7 /* Pods-PrediCicloTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
