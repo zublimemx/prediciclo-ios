@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,10 +12,10 @@
 		B22CDC9423C78A8B0011ADB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CDC9323C78A8B0011ADB0 /* SceneDelegate.swift */; };
 		B22CDC9623C78A8B0011ADB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CDC9523C78A8B0011ADB0 /* ViewController.swift */; };
 		B22CDC9923C78A8B0011ADB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B22CDC9723C78A8B0011ADB0 /* Main.storyboard */; };
-		B22CDC9B23C78A8D0011ADB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B22CDC9A23C78A8D0011ADB0 /* Assets.xcassets */; };
 		B22CDC9E23C78A8D0011ADB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B22CDC9C23C78A8D0011ADB0 /* LaunchScreen.storyboard */; };
 		B22CDCA923C78A8D0011ADB0 /* PrediCicloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CDCA823C78A8D0011ADB0 /* PrediCicloTests.swift */; };
 		B52603F751748C8E0872E55E /* Pods_PrediCiclo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4011D2C1197DC787E23E6424 /* Pods_PrediCiclo.framework */; };
+		C6387C0A23D104620090E291 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6387C0923D104620090E291 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,12 +39,12 @@
 		B22CDC9323C78A8B0011ADB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B22CDC9523C78A8B0011ADB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B22CDC9823C78A8B0011ADB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B22CDC9A23C78A8D0011ADB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B22CDC9D23C78A8D0011ADB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B22CDC9F23C78A8D0011ADB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B22CDCA423C78A8D0011ADB0 /* PrediCicloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrediCicloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B22CDCA823C78A8D0011ADB0 /* PrediCicloTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrediCicloTests.swift; sourceTree = "<group>"; };
 		B22CDCAA23C78A8D0011ADB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6387C0923D104620090E291 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../Downloads/Assets.xcassets; sourceTree = "<group>"; };
 		CE0171C03B08177E46BAEA10 /* Pods-PrediCiclo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrediCiclo.release.xcconfig"; path = "Target Support Files/Pods-PrediCiclo/Pods-PrediCiclo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,7 +76,6 @@
 				21AB4A2D638D38C1DF873BA5 /* Pods-PrediCicloTests.debug.xcconfig */,
 				4D1FB47C80EE96FFDA8E3BA7 /* Pods-PrediCicloTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -107,7 +106,7 @@
 				B22CDC9323C78A8B0011ADB0 /* SceneDelegate.swift */,
 				B22CDC9523C78A8B0011ADB0 /* ViewController.swift */,
 				B22CDC9723C78A8B0011ADB0 /* Main.storyboard */,
-				B22CDC9A23C78A8D0011ADB0 /* Assets.xcassets */,
+				C6387C0923D104620090E291 /* Assets.xcassets */,
 				B22CDC9C23C78A8D0011ADB0 /* LaunchScreen.storyboard */,
 				B22CDC9F23C78A8D0011ADB0 /* Info.plist */,
 			);
@@ -217,7 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B22CDC9E23C78A8D0011ADB0 /* LaunchScreen.storyboard in Resources */,
-				B22CDC9B23C78A8D0011ADB0 /* Assets.xcassets in Resources */,
+				C6387C0A23D104620090E291 /* Assets.xcassets in Resources */,
 				B22CDC9923C78A8B0011ADB0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
