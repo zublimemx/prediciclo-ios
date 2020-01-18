@@ -16,6 +16,10 @@
 		B22CDCA923C78A8D0011ADB0 /* PrediCicloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CDCA823C78A8D0011ADB0 /* PrediCicloTests.swift */; };
 		B52603F751748C8E0872E55E /* Pods_PrediCiclo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4011D2C1197DC787E23E6424 /* Pods_PrediCiclo.framework */; };
 		C6387C0A23D104620090E291 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6387C0923D104620090E291 /* Assets.xcassets */; };
+		C6BDD9C523D2F955000BA7F2 /* Registro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6BDD9C423D2F955000BA7F2 /* Registro.storyboard */; };
+		C6BDD9C723D2FF51000BA7F2 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6BDD9C623D2FF51000BA7F2 /* Home.storyboard */; };
+		C6BDD9C923D30611000BA7F2 /* Tienda.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6BDD9C823D30611000BA7F2 /* Tienda.storyboard */; };
+		C6BDD9CC23D30A45000BA7F2 /* Mas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6BDD9CB23D30A45000BA7F2 /* Mas.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 		B22CDCA823C78A8D0011ADB0 /* PrediCicloTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrediCicloTests.swift; sourceTree = "<group>"; };
 		B22CDCAA23C78A8D0011ADB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6387C0923D104620090E291 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../Downloads/Assets.xcassets; sourceTree = "<group>"; };
+		C6BDD9C423D2F955000BA7F2 /* Registro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registro.storyboard; sourceTree = "<group>"; };
+		C6BDD9C623D2FF51000BA7F2 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		C6BDD9C823D30611000BA7F2 /* Tienda.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tienda.storyboard; sourceTree = "<group>"; };
+		C6BDD9CB23D30A45000BA7F2 /* Mas.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mas.storyboard; sourceTree = "<group>"; };
 		CE0171C03B08177E46BAEA10 /* Pods-PrediCiclo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrediCiclo.release.xcconfig"; path = "Target Support Files/Pods-PrediCiclo/Pods-PrediCiclo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,8 +133,12 @@
 		C6BDD9B723D256FA000BA7F2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C6BDD9BE23D25767000BA7F2 /* Home */,
-				C6BDD9BD23D25757000BA7F2 /* Launch */,
+				B22CDC9723C78A8B0011ADB0 /* Main.storyboard */,
+				B22CDC9C23C78A8D0011ADB0 /* LaunchScreen.storyboard */,
+				C6BDD9C423D2F955000BA7F2 /* Registro.storyboard */,
+				C6BDD9C623D2FF51000BA7F2 /* Home.storyboard */,
+				C6BDD9C823D30611000BA7F2 /* Tienda.storyboard */,
+				C6BDD9CB23D30A45000BA7F2 /* Mas.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -152,22 +164,6 @@
 			children = (
 			);
 			path = Util;
-			sourceTree = "<group>";
-		};
-		C6BDD9BD23D25757000BA7F2 /* Launch */ = {
-			isa = PBXGroup;
-			children = (
-				B22CDC9C23C78A8D0011ADB0 /* LaunchScreen.storyboard */,
-			);
-			path = Launch;
-			sourceTree = "<group>";
-		};
-		C6BDD9BE23D25767000BA7F2 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				B22CDC9723C78A8B0011ADB0 /* Main.storyboard */,
-			);
-			path = Home;
 			sourceTree = "<group>";
 		};
 		FBD43C17D0E0DB8D6B55BB74 /* Frameworks */ = {
@@ -264,6 +260,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B22CDC9E23C78A8D0011ADB0 /* LaunchScreen.storyboard in Resources */,
+				C6BDD9C923D30611000BA7F2 /* Tienda.storyboard in Resources */,
+				C6BDD9C723D2FF51000BA7F2 /* Home.storyboard in Resources */,
+				C6BDD9C523D2F955000BA7F2 /* Registro.storyboard in Resources */,
+				C6BDD9CC23D30A45000BA7F2 /* Mas.storyboard in Resources */,
 				C6387C0A23D104620090E291 /* Assets.xcassets in Resources */,
 				B22CDC9923C78A8B0011ADB0 /* Main.storyboard in Resources */,
 			);
