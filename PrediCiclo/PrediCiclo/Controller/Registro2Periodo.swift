@@ -10,10 +10,18 @@ import UIKit
 
 class Registro2Periodo: UIViewController {
 
+    @IBOutlet weak var DiasPeriodoPicker: UIPickerView!
+    
+    private let PeriodoValores = ["1","2","3","4","5","6","7"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
         // Do any additional setup after loading the view.
+        
+        DiasPeriodoPicker.dataSource = self
+        DiasPeriodoPicker.delegate = self
+        
     }
     
 
@@ -27,4 +35,24 @@ class Registro2Periodo: UIViewController {
     }
     */
 
+}
+
+extension Registro2Periodo:UIPickerViewDelegate,UIPickerViewDataSource {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+          return 1
+      }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return PeriodoValores.count
+    }
+    
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return PeriodoValores[row]
+    }
+    
+
+    
+    
 }
