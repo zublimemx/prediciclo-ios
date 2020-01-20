@@ -144,15 +144,15 @@
 			children = (
 				B22CDC9123C78A8B0011ADB0 /* AppDelegate.swift */,
 				B22CDC9323C78A8B0011ADB0 /* SceneDelegate.swift */,
+				C6387C0923D104620090E291 /* Assets.xcassets */,
+				B22CDC9C23C78A8D0011ADB0 /* LaunchScreen.storyboard */,
+				B22CDC9F23C78A8D0011ADB0 /* Info.plist */,
 				C658B71A23D667270009D1C5 /* Login */,
 				C658B71B23D667830009D1C5 /* Registro */,
 				C658B71D23D667A80009D1C5 /* Home */,
 				C658B71C23D667990009D1C5 /* Tienda */,
 				C658B71E23D667B10009D1C5 /* Mas */,
 				C6BDD9BA23D25721000BA7F2 /* Util */,
-				C6387C0923D104620090E291 /* Assets.xcassets */,
-				B22CDC9C23C78A8D0011ADB0 /* LaunchScreen.storyboard */,
-				B22CDC9F23C78A8D0011ADB0 /* Info.plist */,
 			);
 			path = PrediCiclo;
 			sourceTree = "<group>";
