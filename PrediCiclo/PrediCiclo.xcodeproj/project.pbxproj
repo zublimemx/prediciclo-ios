@@ -143,11 +143,15 @@
 			isa = PBXGroup;
 			children = (
 				B22CDC9123C78A8B0011ADB0 /* AppDelegate.swift */,
+				B22CDC9323C78A8B0011ADB0 /* SceneDelegate.swift */,
+				C658B71A23D667270009D1C5 /* Login */,
+				C658B71B23D667830009D1C5 /* Registro */,
+				C658B71D23D667A80009D1C5 /* Home */,
+				C658B71C23D667990009D1C5 /* Tienda */,
+				C658B71E23D667B10009D1C5 /* Mas */,
 				C6BDD9BA23D25721000BA7F2 /* Util */,
-				C6BDD9B923D2571C000BA7F2 /* Model */,
-				C6BDD9B823D2570D000BA7F2 /* Controller */,
-				C6BDD9B723D256FA000BA7F2 /* View */,
 				C6387C0923D104620090E291 /* Assets.xcassets */,
+				B22CDC9C23C78A8D0011ADB0 /* LaunchScreen.storyboard */,
 				B22CDC9F23C78A8D0011ADB0 /* Info.plist */,
 			);
 			path = PrediCiclo;
@@ -162,43 +166,215 @@
 			path = PrediCicloTests;
 			sourceTree = "<group>";
 		};
-		C6BDD9B723D256FA000BA7F2 /* View */ = {
+		C658B71A23D667270009D1C5 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				B22CDC9C23C78A8D0011ADB0 /* LaunchScreen.storyboard */,
+				C658B72023D6688C0009D1C5 /* View */,
+				C658B72123D6689E0009D1C5 /* Controller */,
+				C658B72223D668A80009D1C5 /* Model */,
+				C658B72323D668AE0009D1C5 /* Net */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		C658B71B23D667830009D1C5 /* Registro */ = {
+			isa = PBXGroup;
+			children = (
+				C658B72423D669F10009D1C5 /* View */,
+				C658B72523D669FC0009D1C5 /* Controller */,
+				C658B72623D66A0D0009D1C5 /* Model */,
+				C658B72723D66A130009D1C5 /* Net */,
+			);
+			path = Registro;
+			sourceTree = "<group>";
+		};
+		C658B71C23D667990009D1C5 /* Tienda */ = {
+			isa = PBXGroup;
+			children = (
+				C658B72F23D66AA20009D1C5 /* View */,
+				C658B72E23D66A9B0009D1C5 /* Controller */,
+				C658B72D23D66A960009D1C5 /* Model */,
+				C658B72C23D66A8E0009D1C5 /* Net */,
+			);
+			path = Tienda;
+			sourceTree = "<group>";
+		};
+		C658B71D23D667A80009D1C5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C658B72B23D66A7E0009D1C5 /* View */,
+				C658B72A23D66A760009D1C5 /* Controller */,
+				C658B72923D66A700009D1C5 /* Model */,
+				C658B72823D66A640009D1C5 /* Net */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C658B71E23D667B10009D1C5 /* Mas */ = {
+			isa = PBXGroup;
+			children = (
+				C658B73323D66ABB0009D1C5 /* View */,
+				C658B73223D66AB40009D1C5 /* Controller */,
+				C658B73123D66AAE0009D1C5 /* Model */,
+				C658B73023D66AA90009D1C5 /* Net */,
+			);
+			path = Mas;
+			sourceTree = "<group>";
+		};
+		C658B72023D6688C0009D1C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				B22CDC9723C78A8B0011ADB0 /* Main.storyboard */,
-				C6BDD9C423D2F955000BA7F2 /* Registro.storyboard */,
-				C6BDD9C623D2FF51000BA7F2 /* Home.storyboard */,
-				C6BDD9C823D30611000BA7F2 /* Tienda.storyboard */,
-				C6BDD9CB23D30A45000BA7F2 /* Mas.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		C6BDD9B823D2570D000BA7F2 /* Controller */ = {
+		C658B72123D6689E0009D1C5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B22CDC9323C78A8B0011ADB0 /* SceneDelegate.swift */,
-				C6BDD9CD23D30DC3000BA7F2 /* LoginViewController.swift */,
-				C658B6F823D57BB00009D1C5 /* Registro1Periodo.swift */,
-				C658B6FA23D57BCB0009D1C5 /* Registro2Periodo.swift */,
-				C658B6FC23D57BE50009D1C5 /* Registro3Menstruacion.swift */,
-				C658B6FE23D57C030009D1C5 /* Registro4Fecha.swift */,
-				C658B70023D57ECF0009D1C5 /* Home.swift */,
-				C658B70223D57EE30009D1C5 /* Tienda.swift */,
-				C658B70423D57EF40009D1C5 /* Mas.swift */,
-				C658B70623D599410009D1C5 /* Informacion.swift */,
-				C658B70823D5A10A0009D1C5 /* DatosEnvio.swift */,
 				C658B70B23D64EDD0009D1C5 /* RegistroController.swift */,
+				C6BDD9CD23D30DC3000BA7F2 /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		C6BDD9B923D2571C000BA7F2 /* Model */ = {
+		C658B72223D668A80009D1C5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C658B72323D668AE0009D1C5 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Net;
+			sourceTree = "<group>";
+		};
+		C658B72423D669F10009D1C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C6BDD9C423D2F955000BA7F2 /* Registro.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C658B72523D669FC0009D1C5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C658B6F823D57BB00009D1C5 /* Registro1Periodo.swift */,
+				C658B6FA23D57BCB0009D1C5 /* Registro2Periodo.swift */,
+				C658B6FC23D57BE50009D1C5 /* Registro3Menstruacion.swift */,
+				C658B6FE23D57C030009D1C5 /* Registro4Fecha.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C658B72623D66A0D0009D1C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C658B72723D66A130009D1C5 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Net;
+			sourceTree = "<group>";
+		};
+		C658B72823D66A640009D1C5 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Net;
+			sourceTree = "<group>";
+		};
+		C658B72923D66A700009D1C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C658B72A23D66A760009D1C5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C658B70023D57ECF0009D1C5 /* Home.swift */,
+				C658B70623D599410009D1C5 /* Informacion.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C658B72B23D66A7E0009D1C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C6BDD9C623D2FF51000BA7F2 /* Home.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C658B72C23D66A8E0009D1C5 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Net;
+			sourceTree = "<group>";
+		};
+		C658B72D23D66A960009D1C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C658B72E23D66A9B0009D1C5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C658B70223D57EE30009D1C5 /* Tienda.swift */,
+				C658B70823D5A10A0009D1C5 /* DatosEnvio.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C658B72F23D66AA20009D1C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C6BDD9C823D30611000BA7F2 /* Tienda.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C658B73023D66AA90009D1C5 /* Net */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Net;
+			sourceTree = "<group>";
+		};
+		C658B73123D66AAE0009D1C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C658B73223D66AB40009D1C5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C658B70423D57EF40009D1C5 /* Mas.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C658B73323D66ABB0009D1C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C6BDD9CB23D30A45000BA7F2 /* Mas.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		C6BDD9BA23D25721000BA7F2 /* Util */ = {
