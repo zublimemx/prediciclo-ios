@@ -1,5 +1,5 @@
 //
-//  Home.swift
+//  RegistroController.swift
 //  PrediCiclo
 //
 //  Created by Daniel Barcenas on 1/20/20.
@@ -8,15 +8,22 @@
 
 import UIKit
 
-class Home: UIViewController {
+class RegistroController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.navigationController?.navigationBar.isHidden = true
+        
+        
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func InicioSesion(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+        print("Hola")
+        self.navigationController?.popViewController(animated: true)
+    }
     
+
     /*
     // MARK: - Navigation
 

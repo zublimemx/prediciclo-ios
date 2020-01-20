@@ -12,17 +12,14 @@ class Informacion: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.isHidden = true
-        tabBarController?.tabBar.isHidden = true
+      // self.navigationController?.navigationBar.isHidden = true
+        //tabBarController?.tabBar.isHidden = true
         // Do any additional setup after loading the view.
         
        
     }
     
 
-    @IBAction func Cerrar(_ sender: UIButton) {
-    //self.dismiss(animated: true, completion:nil)
-    }
     
     
 

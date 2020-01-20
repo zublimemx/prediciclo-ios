@@ -47,6 +47,9 @@
                         <viewLayoutGuide key="safeArea" id="gaL-kv-AZc"/>
                     </view>
                     <navigationItem key="navigationItem" id="r1j-IT-off"/>
+                    <connections>
+                        <outlet property="Periodo" destination="MYF-8V-OX0" id="4ye-Ka-Rgt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fRI-Mm-ovj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
