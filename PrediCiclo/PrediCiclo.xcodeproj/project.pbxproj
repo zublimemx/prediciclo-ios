@@ -16,10 +16,18 @@
 		B22CDCA923C78A8D0011ADB0 /* PrediCicloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CDCA823C78A8D0011ADB0 /* PrediCicloTests.swift */; };
 		B52603F751748C8E0872E55E /* Pods_PrediCiclo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4011D2C1197DC787E23E6424 /* Pods_PrediCiclo.framework */; };
 		C6387C0A23D104620090E291 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6387C0923D104620090E291 /* Assets.xcassets */; };
+		C658B6F923D57BB00009D1C5 /* Registro1Periodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B6F823D57BB00009D1C5 /* Registro1Periodo.swift */; };
+		C658B6FB23D57BCB0009D1C5 /* Registro2Periodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B6FA23D57BCB0009D1C5 /* Registro2Periodo.swift */; };
+		C658B6FD23D57BE50009D1C5 /* Registro3Menstruacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B6FC23D57BE50009D1C5 /* Registro3Menstruacion.swift */; };
+		C658B6FF23D57C030009D1C5 /* Registro4Fecha.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B6FE23D57C030009D1C5 /* Registro4Fecha.swift */; };
+		C658B70123D57ECF0009D1C5 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B70023D57ECF0009D1C5 /* Home.swift */; };
+		C658B70323D57EE30009D1C5 /* Tienda.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B70223D57EE30009D1C5 /* Tienda.swift */; };
+		C658B70523D57EF40009D1C5 /* Mas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B70423D57EF40009D1C5 /* Mas.swift */; };
 		C6BDD9C523D2F955000BA7F2 /* Registro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6BDD9C423D2F955000BA7F2 /* Registro.storyboard */; };
 		C6BDD9C723D2FF51000BA7F2 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6BDD9C623D2FF51000BA7F2 /* Home.storyboard */; };
 		C6BDD9C923D30611000BA7F2 /* Tienda.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6BDD9C823D30611000BA7F2 /* Tienda.storyboard */; };
 		C6BDD9CC23D30A45000BA7F2 /* Mas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6BDD9CB23D30A45000BA7F2 /* Mas.storyboard */; };
+		C6BDD9CE23D30DC3000BA7F2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BDD9CD23D30DC3000BA7F2 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,10 +57,18 @@
 		B22CDCA823C78A8D0011ADB0 /* PrediCicloTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrediCicloTests.swift; sourceTree = "<group>"; };
 		B22CDCAA23C78A8D0011ADB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6387C0923D104620090E291 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../Downloads/Assets.xcassets; sourceTree = "<group>"; };
+		C658B6F823D57BB00009D1C5 /* Registro1Periodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registro1Periodo.swift; sourceTree = "<group>"; };
+		C658B6FA23D57BCB0009D1C5 /* Registro2Periodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registro2Periodo.swift; sourceTree = "<group>"; };
+		C658B6FC23D57BE50009D1C5 /* Registro3Menstruacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registro3Menstruacion.swift; sourceTree = "<group>"; };
+		C658B6FE23D57C030009D1C5 /* Registro4Fecha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registro4Fecha.swift; sourceTree = "<group>"; };
+		C658B70023D57ECF0009D1C5 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		C658B70223D57EE30009D1C5 /* Tienda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tienda.swift; sourceTree = "<group>"; };
+		C658B70423D57EF40009D1C5 /* Mas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mas.swift; sourceTree = "<group>"; };
 		C6BDD9C423D2F955000BA7F2 /* Registro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registro.storyboard; sourceTree = "<group>"; };
 		C6BDD9C623D2FF51000BA7F2 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		C6BDD9C823D30611000BA7F2 /* Tienda.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tienda.storyboard; sourceTree = "<group>"; };
 		C6BDD9CB23D30A45000BA7F2 /* Mas.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mas.storyboard; sourceTree = "<group>"; };
+		C6BDD9CD23D30DC3000BA7F2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CE0171C03B08177E46BAEA10 /* Pods-PrediCiclo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrediCiclo.release.xcconfig"; path = "Target Support Files/Pods-PrediCiclo/Pods-PrediCiclo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,8 +149,8 @@
 		C6BDD9B723D256FA000BA7F2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B22CDC9723C78A8B0011ADB0 /* Main.storyboard */,
 				B22CDC9C23C78A8D0011ADB0 /* LaunchScreen.storyboard */,
+				B22CDC9723C78A8B0011ADB0 /* Main.storyboard */,
 				C6BDD9C423D2F955000BA7F2 /* Registro.storyboard */,
 				C6BDD9C623D2FF51000BA7F2 /* Home.storyboard */,
 				C6BDD9C823D30611000BA7F2 /* Tienda.storyboard */,
@@ -148,6 +164,14 @@
 			children = (
 				B22CDC9323C78A8B0011ADB0 /* SceneDelegate.swift */,
 				B22CDC9523C78A8B0011ADB0 /* ViewController.swift */,
+				C6BDD9CD23D30DC3000BA7F2 /* LoginViewController.swift */,
+				C658B6F823D57BB00009D1C5 /* Registro1Periodo.swift */,
+				C658B6FA23D57BCB0009D1C5 /* Registro2Periodo.swift */,
+				C658B6FC23D57BE50009D1C5 /* Registro3Menstruacion.swift */,
+				C658B6FE23D57C030009D1C5 /* Registro4Fecha.swift */,
+				C658B70023D57ECF0009D1C5 /* Home.swift */,
+				C658B70223D57EE30009D1C5 /* Tienda.swift */,
+				C658B70423D57EF40009D1C5 /* Mas.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -347,7 +371,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6BDD9CE23D30DC3000BA7F2 /* LoginViewController.swift in Sources */,
+				C658B70523D57EF40009D1C5 /* Mas.swift in Sources */,
+				C658B6FF23D57C030009D1C5 /* Registro4Fecha.swift in Sources */,
 				B22CDC9623C78A8B0011ADB0 /* ViewController.swift in Sources */,
+				C658B6FD23D57BE50009D1C5 /* Registro3Menstruacion.swift in Sources */,
+				C658B70323D57EE30009D1C5 /* Tienda.swift in Sources */,
+				C658B70123D57ECF0009D1C5 /* Home.swift in Sources */,
+				C658B6FB23D57BCB0009D1C5 /* Registro2Periodo.swift in Sources */,
+				C658B6F923D57BB00009D1C5 /* Registro1Periodo.swift in Sources */,
 				B22CDC9223C78A8B0011ADB0 /* AppDelegate.swift in Sources */,
 				B22CDC9423C78A8B0011ADB0 /* SceneDelegate.swift in Sources */,
 			);
