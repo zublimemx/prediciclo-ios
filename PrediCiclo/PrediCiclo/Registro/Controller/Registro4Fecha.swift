@@ -9,11 +9,18 @@
 import UIKit
 
 class Registro4Fecha: UIViewController {
-
     
     
+    // MARK: Variables
+    
+    // MARK: Controls
     @IBOutlet weak var cumpleView: UIDatePicker!
     
+    // MARK: Functions
+    override func viewDidLoad() {
+        self.navigationController?.navigationBar.isHidden = true
+    }
+   
     @IBAction func datePickerChanged(_ sender: UIDatePicker) {
         let components = Calendar.current.dateComponents([.year, .month, .day], from: sender.date)
         if let day = components.day, let month = components.month, let year = components.year {
@@ -23,14 +30,7 @@ class Registro4Fecha: UIViewController {
             
     }
     }
-    
-    override func viewDidLoad() {
-        self.navigationController?.navigationBar.isHidden = true
-    }
-        
-    
-    
-    
+
     /*
     @objc func siguienteAction(){
         let api = PredicicloApi()
@@ -45,34 +45,17 @@ class Registro4Fecha: UIViewController {
  */
             
     func setDates(){
-        
         let calendar = Calendar(identifier: .gregorian)
-
         let currentDate = Date()
         var components = DateComponents()
         components.calendar = calendar
         let maxDate = calendar.date(byAdding: components, to: currentDate)!
-        
         cumpleView.maximumDate = maxDate
-        
-        
         components.year = -60
         let minDate = calendar.date(byAdding: components, to: currentDate)!
-
-
         cumpleView.minimumDate = minDate
-
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     // MARK: Actions
 
 }

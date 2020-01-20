@@ -9,10 +9,13 @@
 import UIKit
 
 class Registro3Menstruacion: UIViewController {
-
-    @IBOutlet weak var menstruacionPicker: UIPickerView!
-     private let PeriodoValores = ["1","2","3","4","5","6","7","8"]
     
+    
+    // MARK: Variables
+    private let PeriodoValores = ["1","2","3","4","5","6","7","8"]
+    // MARK: Controls
+    @IBOutlet weak var menstruacionPicker: UIPickerView!
+    // MARK: Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
@@ -20,19 +23,9 @@ class Registro3Menstruacion: UIViewController {
         menstruacionPicker.dataSource = self
         menstruacionPicker.delegate = self
     }
-    
-    
-    
+    // MARK: Actions
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }
 

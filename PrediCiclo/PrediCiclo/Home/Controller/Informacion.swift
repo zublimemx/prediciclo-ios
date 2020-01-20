@@ -9,23 +9,24 @@
 import UIKit
 
 class Informacion: UIViewController {
-
+    
+    // MARK: Variables
+    
+    // MARK: Controls
+    
+    // MARK: Functions
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
+        self.tabBarController?.tabBar.isHidden = true
+    }
     
     @IBAction func cerrar(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
         self.navigationController?.popViewController(animated: true)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.navigationController?.navigationBar.isHidden = true
-        self.tabBarController?.tabBar.isHidden = true
-        
-    }
-    /*
-    @IBAction func CerrarButton(_ sender: UIButton) {
-        
-    }
- */
+    // MARK: Actions
+
     
 }
