@@ -10,24 +10,24 @@
         <!--Navigation Controller-->
         <scene sceneID="nZf-Z7-czj">
             <objects>
-                <navigationController id="PJN-Uf-D11" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="fullScreen" id="PJN-Uf-D11" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="p7n-8Q-d8p">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.87792378660000003" green="0.51142561440000001" blue="0.47488272190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="eIK-jZ-KEK" kind="relationship" relationship="rootViewController" id="b6o-XF-i8l"/>
+                        <segue destination="R5i-KF-7cy" kind="relationship" relationship="rootViewController" id="HeR-R7-acT"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g74-NL-3Gl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-532" y="-84"/>
+            <point key="canvasLocation" x="-1483" y="-84"/>
         </scene>
-        <!--Datos de envio-->
+        <!--Datos Envio-->
         <scene sceneID="mMk-Qm-1U8">
             <objects>
-                <viewController id="eIK-jZ-KEK" sceneMemberID="viewController">
+                <viewController id="eIK-jZ-KEK" customClass="DatosEnvio" customModule="PrediCiclo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3wc-fP-JXe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,7 +51,6 @@
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="STV-yP-QWP"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Datos de envio" id="pRR-8h-KV6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4eF-Cl-Zep" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -109,6 +108,9 @@
                                 <rect key="frame" x="171" y="623" width="67" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Continuar"/>
+                                <connections>
+                                    <segue destination="L63-If-kwO" kind="show" id="fB2-Vt-ahN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -143,6 +145,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="34b-mB-Riy"/>
                     </view>
+                    <navigationItem key="navigationItem" id="85C-mn-4iH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N0o-sI-lOk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -172,11 +175,15 @@
                                 <rect key="frame" x="220" y="746" width="125" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Confirmar compra"/>
+                                <connections>
+                                    <segue destination="NeZ-X6-80C" kind="show" id="Au3-Ko-gax"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="gFW-PO-D9a"/>
                     </view>
+                    <navigationItem key="navigationItem" id="cgL-Fu-oxs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vhd-2Z-USJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -215,5 +222,39 @@
             </objects>
             <point key="canvasLocation" x="4057.971014492754" y="-84.375"/>
         </scene>
+        <!--Item 2-->
+        <scene sceneID="Kbm-9e-yCv">
+            <objects>
+                <viewController id="R5i-KF-7cy" customClass="Tienda" customModule="PrediCiclo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Eyg-ch-AK3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gvb-Lt-JdU">
+                                <rect key="frame" x="177" y="433" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Comprar"/>
+                                <connections>
+                                    <segue destination="eIK-jZ-KEK" kind="show" id="keh-Cu-pq8"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="woman" translatesAutoresizingMaskIntoConstraints="NO" id="HLo-ci-s85">
+                                <rect key="frame" x="87" y="180" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="4Lz-fu-xgg"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="zdZ-wG-1gB"/>
+                    <navigationItem key="navigationItem" id="WEQ-oY-gSC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nj0-PR-u1t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-584" y="-84"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="woman" width="2560" height="1706"/>
+    </resources>
 </document>

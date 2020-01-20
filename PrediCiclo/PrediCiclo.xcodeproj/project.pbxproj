@@ -10,7 +10,6 @@
 		3328EC5A093882B30207A00A /* Pods_PrediCicloTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F6732BC9E0F695C002792B0 /* Pods_PrediCicloTests.framework */; };
 		B22CDC9223C78A8B0011ADB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CDC9123C78A8B0011ADB0 /* AppDelegate.swift */; };
 		B22CDC9423C78A8B0011ADB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CDC9323C78A8B0011ADB0 /* SceneDelegate.swift */; };
-		B22CDC9623C78A8B0011ADB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CDC9523C78A8B0011ADB0 /* ViewController.swift */; };
 		B22CDC9923C78A8B0011ADB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B22CDC9723C78A8B0011ADB0 /* Main.storyboard */; };
 		B22CDC9E23C78A8D0011ADB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B22CDC9C23C78A8D0011ADB0 /* LaunchScreen.storyboard */; };
 		B22CDCA923C78A8D0011ADB0 /* PrediCicloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CDCA823C78A8D0011ADB0 /* PrediCicloTests.swift */; };
@@ -23,6 +22,8 @@
 		C658B70123D57ECF0009D1C5 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B70023D57ECF0009D1C5 /* Home.swift */; };
 		C658B70323D57EE30009D1C5 /* Tienda.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B70223D57EE30009D1C5 /* Tienda.swift */; };
 		C658B70523D57EF40009D1C5 /* Mas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B70423D57EF40009D1C5 /* Mas.swift */; };
+		C658B70723D599410009D1C5 /* Informacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B70623D599410009D1C5 /* Informacion.swift */; };
+		C658B70923D5A10A0009D1C5 /* DatosEnvio.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B70823D5A10A0009D1C5 /* DatosEnvio.swift */; };
 		C6BDD9C523D2F955000BA7F2 /* Registro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6BDD9C423D2F955000BA7F2 /* Registro.storyboard */; };
 		C6BDD9C723D2FF51000BA7F2 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6BDD9C623D2FF51000BA7F2 /* Home.storyboard */; };
 		C6BDD9C923D30611000BA7F2 /* Tienda.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6BDD9C823D30611000BA7F2 /* Tienda.storyboard */; };
@@ -49,7 +50,6 @@
 		B22CDC8E23C78A8B0011ADB0 /* PrediCiclo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrediCiclo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B22CDC9123C78A8B0011ADB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B22CDC9323C78A8B0011ADB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B22CDC9523C78A8B0011ADB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B22CDC9823C78A8B0011ADB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B22CDC9D23C78A8D0011ADB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B22CDC9F23C78A8D0011ADB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -64,6 +64,8 @@
 		C658B70023D57ECF0009D1C5 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		C658B70223D57EE30009D1C5 /* Tienda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tienda.swift; sourceTree = "<group>"; };
 		C658B70423D57EF40009D1C5 /* Mas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mas.swift; sourceTree = "<group>"; };
+		C658B70623D599410009D1C5 /* Informacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Informacion.swift; sourceTree = "<group>"; };
+		C658B70823D5A10A0009D1C5 /* DatosEnvio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatosEnvio.swift; sourceTree = "<group>"; };
 		C6BDD9C423D2F955000BA7F2 /* Registro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registro.storyboard; sourceTree = "<group>"; };
 		C6BDD9C623D2FF51000BA7F2 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		C6BDD9C823D30611000BA7F2 /* Tienda.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tienda.storyboard; sourceTree = "<group>"; };
@@ -163,7 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				B22CDC9323C78A8B0011ADB0 /* SceneDelegate.swift */,
-				B22CDC9523C78A8B0011ADB0 /* ViewController.swift */,
 				C6BDD9CD23D30DC3000BA7F2 /* LoginViewController.swift */,
 				C658B6F823D57BB00009D1C5 /* Registro1Periodo.swift */,
 				C658B6FA23D57BCB0009D1C5 /* Registro2Periodo.swift */,
@@ -172,6 +173,8 @@
 				C658B70023D57ECF0009D1C5 /* Home.swift */,
 				C658B70223D57EE30009D1C5 /* Tienda.swift */,
 				C658B70423D57EF40009D1C5 /* Mas.swift */,
+				C658B70623D599410009D1C5 /* Informacion.swift */,
+				C658B70823D5A10A0009D1C5 /* DatosEnvio.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -372,12 +375,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6BDD9CE23D30DC3000BA7F2 /* LoginViewController.swift in Sources */,
+				C658B70723D599410009D1C5 /* Informacion.swift in Sources */,
 				C658B70523D57EF40009D1C5 /* Mas.swift in Sources */,
 				C658B6FF23D57C030009D1C5 /* Registro4Fecha.swift in Sources */,
-				B22CDC9623C78A8B0011ADB0 /* ViewController.swift in Sources */,
 				C658B6FD23D57BE50009D1C5 /* Registro3Menstruacion.swift in Sources */,
 				C658B70323D57EE30009D1C5 /* Tienda.swift in Sources */,
 				C658B70123D57ECF0009D1C5 /* Home.swift in Sources */,
+				C658B70923D5A10A0009D1C5 /* DatosEnvio.swift in Sources */,
 				C658B6FB23D57BCB0009D1C5 /* Registro2Periodo.swift in Sources */,
 				C658B6F923D57BB00009D1C5 /* Registro1Periodo.swift in Sources */,
 				B22CDC9223C78A8B0011ADB0 /* AppDelegate.swift in Sources */,

@@ -8,60 +8,22 @@
     </dependencies>
     <scenes>
         <!--Item-->
-        <scene sceneID="JLW-rh-a4n">
+        <scene sceneID="UOG-Oh-FLo">
             <objects>
-                <viewController id="8Iz-nO-Z5d" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="XJJ-na-6Pv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFQ-RR-csw">
-                                <rect key="frame" x="177" y="496" width="60" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Comprar"/>
-                                <connections>
-                                    <segue destination="WMX-6O-U6n" kind="show" id="ElX-JB-lxg"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="LBX-UH-FZB"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="gOt-Vb-MvY"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NJ7-LT-hjA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="gYJ-7Y-y4i" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Jor-NF-L6v"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rcJ-bX-bcI">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.87792378660000003" green="0.51142561440000001" blue="0.47488272190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Kbi-z6-Ovg" kind="relationship" relationship="rootViewController" id="iC2-Z1-kIX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6bY-DQ-6LT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1523" y="1159"/>
-        </scene>
-        <!--Item 2-->
-        <scene sceneID="9Ts-6S-NSe">
-            <objects>
-                <viewController id="nn8-SI-jGb" customClass="Mas" customModule="PrediCiclo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gj9-mm-jYd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="grE-LN-WMA">
-                                <rect key="frame" x="177" y="433" width="60" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Comprar"/>
-                                <connections>
-                                    <segue destination="52y-cB-dqx" kind="show" id="80e-wA-09p"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="woman" translatesAutoresizingMaskIntoConstraints="NO" id="2cF-35-Nws">
-                                <rect key="frame" x="87" y="180" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="hZZ-fD-uk1"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="GeE-y7-vw9"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="X9Q-42-8f0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-717" y="663"/>
+            <point key="canvasLocation" x="-2645" y="-749"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="j7M-A2-L84">
@@ -74,10 +36,17 @@
                         <viewLayoutGuide key="safeArea" id="gmT-Hh-pGH"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="QGO-gq-Ekg"/>
+                    <navigationItem key="navigationItem" id="EIP-qU-Lcz">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="Kv2-N4-usi">
+                            <connections>
+                                <segue destination="ZDN-El-hN7" kind="show" id="DZQ-XT-G1N"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B8p-fP-JuZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-458" y="-27"/>
+            <point key="canvasLocation" x="-1701" y="-820"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="jJM-rK-Gz7">
@@ -92,19 +61,19 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Kbi-z6-Ovg" kind="relationship" relationship="viewControllers" id="BOR-sp-IGo"/>
-                        <segue destination="nn8-SI-jGb" kind="relationship" relationship="viewControllers" id="jTI-iY-md9"/>
-                        <segue destination="8Iz-nO-Z5d" kind="relationship" relationship="viewControllers" id="tr3-O2-Ayt"/>
+                        <segue destination="gYJ-7Y-y4i" kind="relationship" relationship="viewControllers" id="nlX-rB-o2M"/>
+                        <segue destination="WMX-6O-U6n" kind="relationship" relationship="viewControllers" id="EiG-Al-Qz0"/>
+                        <segue destination="52y-cB-dqx" kind="relationship" relationship="viewControllers" id="VpB-UG-Hdb"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Z1-d6-tKu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2159" y="201"/>
+            <point key="canvasLocation" x="-3510" y="-692"/>
         </scene>
-        <!--View Controller-->
+        <!--Item-->
         <scene sceneID="JBf-2I-dkT">
             <objects>
-                <viewController id="ZDN-El-hN7" sceneMemberID="viewController">
+                <viewController id="ZDN-El-hN7" customClass="Informacion" customModule="PrediCiclo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eT0-aa-SVy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -176,44 +145,42 @@
                                 <state key="normal" title="Cerrar">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="Cerrar:" destination="ZDN-El-hN7" eventType="touchUpInside" id="wYf-th-ln1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="IzC-iU-I9U"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="3FG-5c-L3f"/>
                     <navigationItem key="navigationItem" id="sxy-Pa-W4C"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1vJ-g1-VOJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1262" y="-631"/>
-        </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="w18-9a-kfR">
-            <objects>
-                <viewControllerPlaceholder id="bRC-EY-iQJ" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="F8z-Um-xI4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="118" y="264"/>
+            <point key="canvasLocation" x="-562" y="-820"/>
         </scene>
         <!--Tienda-->
         <scene sceneID="t6a-oe-VSR">
             <objects>
                 <viewControllerPlaceholder storyboardName="Tienda" id="52y-cB-dqx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="YxS-bE-MWo"/>
                     <navigationItem key="navigationItem" id="62S-uK-QdR"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dm1-Uf-JFr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="485" y="739"/>
+            <point key="canvasLocation" x="-2895" y="-223"/>
         </scene>
         <!--Mas-->
         <scene sceneID="oC3-rX-TRx">
             <objects>
                 <viewControllerPlaceholder storyboardName="Mas" id="WMX-6O-U6n" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="KYc-Bd-fJg"/>
                     <navigationItem key="navigationItem" id="XhM-i7-B0M"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mR2-Cu-NqE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1024" y="1562"/>
+            <point key="canvasLocation" x="-3250" y="-195"/>
         </scene>
     </scenes>
     <resources>
@@ -222,6 +189,5 @@
         <image name="caret-arrow-up" width="512" height="512"/>
         <image name="pregnancy-test" width="512" height="512"/>
         <image name="raindrop-close-up" width="512" height="512"/>
-        <image name="woman" width="2560" height="1706"/>
     </resources>
 </document>
