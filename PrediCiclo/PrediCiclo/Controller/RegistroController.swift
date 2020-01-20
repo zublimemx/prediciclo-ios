@@ -19,7 +19,6 @@ class RegistroController: UIViewController {
     
     @IBAction func InicioSesion(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
-        print("Hola")
         self.navigationController?.popViewController(animated: true)
     }
     

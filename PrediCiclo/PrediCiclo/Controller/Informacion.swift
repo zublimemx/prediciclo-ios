@@ -10,17 +10,22 @@ import UIKit
 
 class Informacion: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-      // self.navigationController?.navigationBar.isHidden = true
-        //tabBarController?.tabBar.isHidden = true
-        // Do any additional setup after loading the view.
-        
-       
+    
+    @IBAction func cerrar(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
+        self.tabBarController?.tabBar.isHidden = true
+        
+    }
+    /*
+    @IBAction func CerrarButton(_ sender: UIButton) {
+        
+    }
+ */
     
-    
-
 }
