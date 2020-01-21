@@ -21,20 +21,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYf-L2-5fh">
-                                <rect key="frame" x="224" y="482.5" width="150" height="40"/>
-                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="lA7-bw-vss"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="u5f-BD-ALn"/>
-                                </constraints>
-                                <state key="normal" title="Siguiente">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="E8W-rg-j3I" kind="show" id="wnJ-9m-aps"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RNX-wg-CGE">
                                 <rect key="frame" x="40" y="412.5" width="334" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -91,25 +77,40 @@
                                 <color key="textColor" red="1" green="0.097982175650000003" blue="0.097993679340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bK-VV-Z42">
+                                <rect key="frame" x="224" y="483" width="150" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.35686274509999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                <state key="normal" title="Regístrate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="E8W-rg-j3I" kind="show" id="eEq-Fc-jXn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="Xal-Mn-r9i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="1L7-ZZ-Wlg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xal-Mn-r9i" secondAttribute="trailing" constant="40" id="1mN-er-LPS"/>
-                            <constraint firstItem="PYf-L2-5fh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="224" id="5jN-Rx-fVf"/>
                             <constraint firstItem="Xal-Mn-r9i" firstAttribute="top" secondItem="DOX-IJ-c0Y" secondAttribute="bottom" constant="16" id="D3v-ba-ZD6"/>
                             <constraint firstItem="hw2-U0-lVa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="JAo-9X-L6T"/>
                             <constraint firstItem="mih-fs-ff3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KNc-ml-r0D"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DOX-IJ-c0Y" secondAttribute="trailing" constant="278.5" id="O3g-w0-qKd"/>
                             <constraint firstItem="i3H-4s-lE1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ShB-xa-qWZ"/>
                             <constraint firstItem="i3H-4s-lE1" firstAttribute="top" secondItem="RNX-wg-CGE" secondAttribute="bottom" constant="96.5" id="V5J-8e-74b"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="PYf-L2-5fh" secondAttribute="trailing" id="X6l-3Q-fth"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RNX-wg-CGE" secondAttribute="trailing" constant="40" id="Ycd-XX-TaI"/>
                             <constraint firstItem="DOX-IJ-c0Y" firstAttribute="top" secondItem="hw2-U0-lVa" secondAttribute="bottom" constant="43" id="YeF-fL-2h9"/>
                             <constraint firstItem="mih-fs-ff3" firstAttribute="top" secondItem="i3H-4s-lE1" secondAttribute="bottom" constant="4" id="ZLd-Ms-XPo"/>
                             <constraint firstItem="DOX-IJ-c0Y" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d5P-hs-p78"/>
-                            <constraint firstItem="PYf-L2-5fh" firstAttribute="top" secondItem="RNX-wg-CGE" secondAttribute="bottom" constant="30" id="jgw-5C-Cz7"/>
                             <constraint firstItem="RNX-wg-CGE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="kc1-Ng-nNK"/>
                             <constraint firstItem="RNX-wg-CGE" firstAttribute="top" secondItem="Xal-Mn-r9i" secondAttribute="bottom" constant="15" id="qNA-4D-SNp"/>
                             <constraint firstItem="hw2-U0-lVa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xRW-jb-Fdo"/>
@@ -120,7 +121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="569.56521739130437" y="87.723214285714278"/>
+            <point key="canvasLocation" x="736" y="23"/>
         </scene>
         <!--Registro-->
         <scene sceneID="ZNP-0D-LUF">
@@ -253,7 +254,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kdz-4v-XUx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1210" y="88"/>
+            <point key="canvasLocation" x="1932" y="293"/>
         </scene>
     </scenes>
     <resources>

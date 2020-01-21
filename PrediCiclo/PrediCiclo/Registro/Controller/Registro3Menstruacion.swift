@@ -12,7 +12,7 @@ class Registro3Menstruacion: UIViewController {
     
     
     // MARK: Variables
-    private let PeriodoValores = ["1","2","3","4","5","6","7","8"]
+    private var diasMenstruacion:[String] = []
     // MARK: Controls
     @IBOutlet weak var menstruacionPicker: UIPickerView!
     // MARK: Functions
@@ -22,9 +22,21 @@ class Registro3Menstruacion: UIViewController {
         // Do any additional setup after loading the view.
         menstruacionPicker.dataSource = self
         menstruacionPicker.delegate = self
+        
+        var i = 21;
+        repeat{
+            self.diasMenstruacion.append("\(i)")
+            i += 1;
+        }while(i<42)
+                      
+        menstruacionPicker.reloadAllComponents()
     }
     // MARK: Actions
-
+    @IBAction func btnAtras_click(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     
 
 }
@@ -36,12 +48,12 @@ extension Registro3Menstruacion:UIPickerViewDelegate,UIPickerViewDataSource {
       }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return PeriodoValores.count
+        return diasMenstruacion.count
     }
     
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return PeriodoValores[row]
+        return diasMenstruacion[row]
     }
     
 

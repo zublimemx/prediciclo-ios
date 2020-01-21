@@ -20,7 +20,7 @@ class Registro4Fecha: UIViewController {
     override func viewDidLoad() {
         self.navigationController?.navigationBar.isHidden = true
     }
-   
+   /*
     @IBAction func datePickerChanged(_ sender: UIDatePicker) {
         let components = Calendar.current.dateComponents([.year, .month, .day], from: sender.date)
         if let day = components.day, let month = components.month, let year = components.year {
@@ -30,6 +30,7 @@ class Registro4Fecha: UIViewController {
             
     }
     }
+    */
 
     /*
     @objc func siguienteAction(){
@@ -57,5 +58,11 @@ class Registro4Fecha: UIViewController {
     }
     
      // MARK: Actions
+    
+    @IBAction func btnAtras_click(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 
 }
