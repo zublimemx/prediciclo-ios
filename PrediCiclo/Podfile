@@ -1,6 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
+
 target 'PrediCiclo' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
@@ -15,6 +16,7 @@ target 'PrediCiclo' do
 	pod 'ObjectMapper', '~> 3.4'
 	pod 'SwiftyJSON','4.2.0'
 	pod 'NVActivityIndicatorView','4.4.0'
+  pod 'JTAppleCalendar', :git => 'https://github.com/patchthecode/JTAppleCalendar.git', :branch => 'master'
 	
 
   target 'PrediCicloTests' do
