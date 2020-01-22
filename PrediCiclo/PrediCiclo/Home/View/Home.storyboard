@@ -18,7 +18,7 @@
                         <color key="barTintColor" red="0.87792378660000003" green="0.51142561440000001" blue="0.47488272190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="HPN-a2-Zsi" kind="relationship" relationship="rootViewController" id="2VY-8S-5ZV"/>
+                        <segue destination="frU-V9-h8g" kind="relationship" relationship="rootViewController" id="02P-kw-jIG"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6bY-DQ-6LT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -191,85 +191,114 @@
             <point key="canvasLocation" x="-4491" y="-577"/>
         </scene>
         <!--Ib Calendar Data Source-->
-        <scene sceneID="siq-NO-6dG">
+        <scene sceneID="Yf8-4N-RGt">
             <objects>
-                <viewController id="HPN-a2-Zsi" customClass="Home" customModule="PrediCiclo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="LVU-pg-IQu">
+                <viewController id="frU-V9-h8g" customClass="ViewController" customModule="PrediCiclo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BXD-zt-Ubo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SQm-DS-Jpk" customClass="JTACMonthView" customModule="JTAppleCalendar">
-                                <rect key="frame" x="40" y="142" width="336" height="233"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ybb-s0-OiH" customClass="JTACMonthView" customModule="JTAppleCalendar">
+                                <rect key="frame" x="40" y="142" width="336" height="450"/>
                                 <color key="backgroundColor" red="1" green="0.097982175650000003" blue="0.097993679340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="233" id="CoH-Cq-uCk"/>
+                                    <constraint firstAttribute="height" constant="450" id="1It-p9-47L"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="xj2-Fj-H9l">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="jnx-Ui-h8d">
                                     <size key="itemSize" width="85" height="84"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="50" height="79"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dateCell" id="4Xl-gJ-Rri" customClass="DateCell" customModule="PrediCiclo">
-                                        <rect key="frame" x="0.0" y="0.0" width="85" height="84"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dateCell" id="ZEy-df-2P1" customClass="DateCell" customModule="PrediCiclo">
+                                        <rect key="frame" x="0.0" y="79" width="85" height="84"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="85" height="84"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oUF-rt-m2z">
-                                                    <rect key="frame" x="7" y="10" width="71" height="64"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateHere" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccr-iz-j28">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateHere" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPc-Wl-Mwy">
                                                     <rect key="frame" x="7" y="31.5" width="71" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="1" green="0.097982175650000003" blue="0.097993679340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <color key="highlightedColor" red="1" green="0.097982175650000003" blue="0.097993679340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="textColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S8T-x5-VB0">
+                                                    <rect key="frame" x="37.5" y="57.5" width="10" height="10"/>
+                                                    <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="10" id="EQZ-M1-OY1"/>
+                                                        <constraint firstAttribute="height" constant="10" id="vm8-YM-F6G"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" red="0.93104708189999996" green="0.49832963940000002" blue="0.47010797259999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="ccr-iz-j28" firstAttribute="centerY" secondItem="4Xl-gJ-Rri" secondAttribute="centerY" id="hlw-At-LlL"/>
-                                            <constraint firstItem="ccr-iz-j28" firstAttribute="centerX" secondItem="4Xl-gJ-Rri" secondAttribute="centerX" id="yyr-xA-9je"/>
+                                            <constraint firstItem="IPc-Wl-Mwy" firstAttribute="centerX" secondItem="ZEy-df-2P1" secondAttribute="centerX" id="6en-7D-1DQ"/>
+                                            <constraint firstItem="S8T-x5-VB0" firstAttribute="top" secondItem="IPc-Wl-Mwy" secondAttribute="bottom" constant="5" id="AVX-l9-DIj"/>
+                                            <constraint firstItem="IPc-Wl-Mwy" firstAttribute="centerY" secondItem="ZEy-df-2P1" secondAttribute="centerY" id="JB6-fs-AbY"/>
+                                            <constraint firstItem="S8T-x5-VB0" firstAttribute="centerX" secondItem="ZEy-df-2P1" secondAttribute="centerX" id="rZQ-X4-Sd4"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="dateLabel" destination="ccr-iz-j28" id="Ebp-O5-32S"/>
-                                            <outlet property="selectedView" destination="oUF-rt-m2z" id="7Kf-Gp-Alk"/>
+                                            <outlet property="dateLabel" destination="IPc-Wl-Mwy" id="Ivx-P2-qi9"/>
+                                            <outlet property="dotView" destination="S8T-x5-VB0" id="lh2-FG-Gdi"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="DateHeader" id="uvO-AK-fQo" customClass="DateHeader" customModule="PrediCiclo">
+                                    <rect key="frame" x="0.0" y="0.0" width="336" height="79"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MonthLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yBV-HO-Vdf">
+                                            <rect key="frame" x="122.5" y="29" width="91" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.74509803919999995" green="0.90196078430000004" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="yBV-HO-Vdf" firstAttribute="centerX" secondItem="uvO-AK-fQo" secondAttribute="centerX" id="WCe-dQ-cZ1"/>
+                                        <constraint firstItem="yBV-HO-Vdf" firstAttribute="centerY" secondItem="uvO-AK-fQo" secondAttribute="centerY" id="zPu-f6-ceF"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="monthTitle" destination="yBV-HO-Vdf" id="FZl-AP-amo"/>
+                                    </connections>
+                                </collectionReusableView>
                                 <connections>
-                                    <outlet property="ibCalendarDataSource" destination="HPN-a2-Zsi" id="9lW-b8-pAO"/>
-                                    <outlet property="ibCalendarDelegate" destination="HPN-a2-Zsi" id="2sg-cw-GoT"/>
+                                    <outlet property="ibCalendarDataSource" destination="frU-V9-h8g" id="cDG-LH-fl5"/>
+                                    <outlet property="ibCalendarDelegate" destination="frU-V9-h8g" id="w5d-fI-xjz"/>
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.75674592070000002" blue="0.70603986480000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="SQm-DS-Jpk" firstAttribute="leading" secondItem="nV1-iy-XJv" secondAttribute="leading" constant="40" id="MHb-wx-eE4"/>
-                            <constraint firstItem="SQm-DS-Jpk" firstAttribute="top" secondItem="nV1-iy-XJv" secondAttribute="top" constant="54" id="VzK-6D-M39"/>
-                            <constraint firstItem="nV1-iy-XJv" firstAttribute="trailing" secondItem="SQm-DS-Jpk" secondAttribute="trailing" constant="38" id="fqP-Yt-AXg"/>
+                            <constraint firstItem="Ybb-s0-OiH" firstAttribute="top" secondItem="siP-Jv-Z4H" secondAttribute="top" constant="54" id="2dS-W0-zIO"/>
+                            <constraint firstItem="Ybb-s0-OiH" firstAttribute="leading" secondItem="siP-Jv-Z4H" secondAttribute="leading" constant="40" id="GwL-cr-i3S"/>
+                            <constraint firstItem="siP-Jv-Z4H" firstAttribute="trailing" secondItem="Ybb-s0-OiH" secondAttribute="trailing" constant="38" id="XQD-9d-8Bx"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="nV1-iy-XJv"/>
+                        <viewLayoutGuide key="safeArea" id="siP-Jv-Z4H"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Prediciclo" id="DEq-2Q-oRR">
-                        <barButtonItem key="rightBarButtonItem" title="info" id="U9x-U5-sll">
+                    <navigationItem key="navigationItem" title="Prediciclo" id="0PY-cd-mQh">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="yf2-46-l5F">
                             <connections>
-                                <segue destination="ZDN-El-hN7" kind="show" id="hMf-nA-Hvo"/>
+                                <segue destination="ZDN-El-hN7" kind="show" id="eNS-jz-fco"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="calendarView" destination="SQm-DS-Jpk" id="LFs-2I-mgj"/>
+                        <outlet property="calendarView" destination="Ybb-s0-OiH" id="dLG-LV-vNJ"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NEg-E6-ZFd" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DO7-bN-dVp" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1717.3913043478262" y="-1296.4285714285713"/>
+            <point key="canvasLocation" x="-1671" y="-1296"/>
         </scene>
     </scenes>
     <resources>

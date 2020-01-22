@@ -19,7 +19,6 @@
 		C658B6FB23D57BCB0009D1C5 /* Registro2Periodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B6FA23D57BCB0009D1C5 /* Registro2Periodo.swift */; };
 		C658B6FD23D57BE50009D1C5 /* Registro3Menstruacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B6FC23D57BE50009D1C5 /* Registro3Menstruacion.swift */; };
 		C658B6FF23D57C030009D1C5 /* Registro4Fecha.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B6FE23D57C030009D1C5 /* Registro4Fecha.swift */; };
-		C658B70123D57ECF0009D1C5 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B70023D57ECF0009D1C5 /* Home.swift */; };
 		C658B70323D57EE30009D1C5 /* Tienda.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B70223D57EE30009D1C5 /* Tienda.swift */; };
 		C658B70523D57EF40009D1C5 /* Mas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B70423D57EF40009D1C5 /* Mas.swift */; };
 		C658B70723D599410009D1C5 /* Informacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B70623D599410009D1C5 /* Informacion.swift */; };
@@ -31,7 +30,9 @@
 		C658B71623D664330009D1C5 /* SharedPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B71023D664330009D1C5 /* SharedPreferences.swift */; };
 		C658B71723D664330009D1C5 /* Extensiones.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B71123D664330009D1C5 /* Extensiones.swift */; };
 		C658B71823D664330009D1C5 /* wave.json in Resources */ = {isa = PBXBuildFile; fileRef = C658B71223D664330009D1C5 /* wave.json */; };
-		C6993B2F23D7CDA000C29C9E /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6993B2E23D7CDA000C29C9E /* DateCell.swift */; };
+		C6993B3923D8DD5C00C29C9E /* DateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6993B3823D8DD5C00C29C9E /* DateHeader.swift */; };
+		C6993B3B23D8DD6A00C29C9E /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6993B3A23D8DD6A00C29C9E /* DateCell.swift */; };
+		C6993B3D23D8DE1300C29C9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6993B3C23D8DE1300C29C9E /* ViewController.swift */; };
 		C6BDD9C523D2F955000BA7F2 /* Registro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6BDD9C423D2F955000BA7F2 /* Registro.storyboard */; };
 		C6BDD9C723D2FF51000BA7F2 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6BDD9C623D2FF51000BA7F2 /* Home.storyboard */; };
 		C6BDD9C923D30611000BA7F2 /* Tienda.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6BDD9C823D30611000BA7F2 /* Tienda.storyboard */; };
@@ -69,7 +70,6 @@
 		C658B6FA23D57BCB0009D1C5 /* Registro2Periodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registro2Periodo.swift; sourceTree = "<group>"; };
 		C658B6FC23D57BE50009D1C5 /* Registro3Menstruacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registro3Menstruacion.swift; sourceTree = "<group>"; };
 		C658B6FE23D57C030009D1C5 /* Registro4Fecha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registro4Fecha.swift; sourceTree = "<group>"; };
-		C658B70023D57ECF0009D1C5 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		C658B70223D57EE30009D1C5 /* Tienda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tienda.swift; sourceTree = "<group>"; };
 		C658B70423D57EF40009D1C5 /* Mas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mas.swift; sourceTree = "<group>"; };
 		C658B70623D599410009D1C5 /* Informacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Informacion.swift; sourceTree = "<group>"; };
@@ -81,7 +81,9 @@
 		C658B71023D664330009D1C5 /* SharedPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SharedPreferences.swift; path = "../../../../../prediciclo-ios-swift-master/Prediciclo/extras/SharedPreferences.swift"; sourceTree = "<group>"; };
 		C658B71123D664330009D1C5 /* Extensiones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensiones.swift; path = "../../../../../prediciclo-ios-swift-master/Prediciclo/extras/Extensiones.swift"; sourceTree = "<group>"; };
 		C658B71223D664330009D1C5 /* wave.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = wave.json; path = "../../../../../prediciclo-ios-swift-master/Prediciclo/extras/wave.json"; sourceTree = "<group>"; };
-		C6993B2E23D7CDA000C29C9E /* DateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateCell.swift; path = "../../../../../../CalendarFromScratch 3/test/DateCell.swift"; sourceTree = "<group>"; };
+		C6993B3823D8DD5C00C29C9E /* DateHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateHeader.swift; path = "../../../../../../events 2/test/DateHeader.swift"; sourceTree = "<group>"; };
+		C6993B3A23D8DD6A00C29C9E /* DateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateCell.swift; path = "../../../../../../events 2/test/DateCell.swift"; sourceTree = "<group>"; };
+		C6993B3C23D8DE1300C29C9E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "../../../../../../events 2/test/ViewController.swift"; sourceTree = "<group>"; };
 		C6BDD9C423D2F955000BA7F2 /* Registro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registro.storyboard; sourceTree = "<group>"; };
 		C6BDD9C623D2FF51000BA7F2 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		C6BDD9C823D30611000BA7F2 /* Tienda.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tienda.storyboard; sourceTree = "<group>"; };
@@ -304,9 +306,10 @@
 		C658B72A23D66A760009D1C5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C658B70023D57ECF0009D1C5 /* Home.swift */,
+				C6993B3C23D8DE1300C29C9E /* ViewController.swift */,
 				C658B70623D599410009D1C5 /* Informacion.swift */,
-				C6993B2E23D7CDA000C29C9E /* DateCell.swift */,
+				C6993B3A23D8DD6A00C29C9E /* DateCell.swift */,
+				C6993B3823D8DD5C00C29C9E /* DateHeader.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -576,7 +579,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6BDD9CE23D30DC3000BA7F2 /* LoginViewController.swift in Sources */,
-				C6993B2F23D7CDA000C29C9E /* DateCell.swift in Sources */,
 				C658B71423D664330009D1C5 /* AlamofireStatus.swift in Sources */,
 				C658B70723D599410009D1C5 /* Informacion.swift in Sources */,
 				C658B70523D57EF40009D1C5 /* Mas.swift in Sources */,
@@ -585,13 +587,15 @@
 				C658B6FD23D57BE50009D1C5 /* Registro3Menstruacion.swift in Sources */,
 				C658B71523D664330009D1C5 /* GradientView.swift in Sources */,
 				C658B70323D57EE30009D1C5 /* Tienda.swift in Sources */,
-				C658B70123D57ECF0009D1C5 /* Home.swift in Sources */,
+				C6993B3923D8DD5C00C29C9E /* DateHeader.swift in Sources */,
+				C6993B3B23D8DD6A00C29C9E /* DateCell.swift in Sources */,
 				C658B70923D5A10A0009D1C5 /* DatosEnvio.swift in Sources */,
 				C658B6FB23D57BCB0009D1C5 /* Registro2Periodo.swift in Sources */,
 				C658B70C23D64EDD0009D1C5 /* RegistroController.swift in Sources */,
 				C658B6F923D57BB00009D1C5 /* Registro1Periodo.swift in Sources */,
 				C658B71323D664330009D1C5 /* Constants.swift in Sources */,
 				C658B71723D664330009D1C5 /* Extensiones.swift in Sources */,
+				C6993B3D23D8DE1300C29C9E /* ViewController.swift in Sources */,
 				B22CDC9223C78A8B0011ADB0 /* AppDelegate.swift in Sources */,
 				B22CDC9423C78A8B0011ADB0 /* SceneDelegate.swift in Sources */,
 			);

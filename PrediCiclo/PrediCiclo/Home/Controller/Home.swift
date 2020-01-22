@@ -12,6 +12,7 @@ class Home: UIViewController {
     
     // MARK: Variables
     
+    
     // MARK: Controls
     @IBOutlet weak var calendarView: JTACMonthView!
     
@@ -60,24 +61,38 @@ class Home: UIViewController {
     }
     
     // MARK: Actions
-    
+    let parameters = ConfigurationParameters(startDate: startDate,
+    endDate: endDate,
+    numberOfRows: 1,
+    generateInDates: .forFirstMonthOnly,
+    generateOutDates: .off,
+    hasStrictBoundaries: false)
 
 }
 
 
 extension Home: JTACMonthViewDataSource {
+    
+    
     func configureCalendar(_ calendar: JTACMonthView) -> ConfigurationParameters {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy MM dd"
-
-        let startDate = formatter.date(from: "2020 01 01")!
+        
+        let startDate = formatter.date(from: "2018 01 01")!
         let endDate = Date()
-        //return ConfigurationParameters(startDate: startDate, endDate: endDate)
-        return ConfigurationParameters(startDate: startDate,
-        endDate: endDate,
-        generateInDates: .forAllMonths,
-        generateOutDates: .tillEndOfGrid)
+        
+        if numberOfRows == 6 {
+            return ConfigurationParameters(startDate: startDate, endDate: endDate, numberOfRows: numberOfRows)
+        } else {
+            return ConfigurationParameters(startDate: startDate,
+                                           endDate: endDate,
+                                           numberOfRows: numberOfRows,
+                                           generateInDates: .forFirstMonthOnly,
+                                           generateOutDates: .off,
+                                           hasStrictBoundaries: false)
+        }
     }
+
 }
 
 extension Home: JTACMonthViewDelegate {
