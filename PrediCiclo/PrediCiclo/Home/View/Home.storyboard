@@ -200,7 +200,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SQm-DS-Jpk" customClass="JTACMonthView" customModule="JTAppleCalendar">
                                 <rect key="frame" x="40" y="142" width="336" height="233"/>
-                                <color key="backgroundColor" red="0.41553786396980286" green="0.90867096185684204" blue="0.61829620599746704" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.097982175650000003" blue="0.097993679340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="233" id="CoH-Cq-uCk"/>
                                 </constraints>
@@ -218,12 +218,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="85" height="84"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <view multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oUF-rt-m2z">
+                                                    <rect key="frame" x="7" y="10" width="71" height="64"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateHere" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccr-iz-j28">
                                                     <rect key="frame" x="7" y="31.5" width="71" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="1" green="0.097982175650000003" blue="0.097993679340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="highlightedColor" red="1" green="0.097982175650000003" blue="0.097993679340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <color key="shadowColor" red="0.1338186992" green="0.071839612179999998" blue="0.840398953" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </label>
                                             </subviews>
                                         </view>
@@ -234,6 +238,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="dateLabel" destination="ccr-iz-j28" id="Ebp-O5-32S"/>
+                                            <outlet property="selectedView" destination="oUF-rt-m2z" id="7Kf-Gp-Alk"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -258,10 +263,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="calendarView" destination="SQm-DS-Jpk" id="LFs-2I-mgj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NEg-E6-ZFd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1716" y="-1296"/>
+            <point key="canvasLocation" x="-1717.3913043478262" y="-1296.4285714285713"/>
         </scene>
     </scenes>
     <resources>
