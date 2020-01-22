@@ -10,7 +10,7 @@
         <!--Item-->
         <scene sceneID="UOG-Oh-FLo">
             <objects>
-                <navigationController id="gYJ-7Y-y4i" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="fullScreen" id="gYJ-7Y-y4i" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="Jor-NF-L6v"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rcJ-bX-bcI">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -28,7 +28,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="jJM-rK-Gz7">
             <objects>
-                <tabBarController id="Mne-L4-RqY" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="fullScreen" id="Mne-L4-RqY" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="xPe-VD-ohE">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="Imc-Qk-Fkz"/>
                     </navigationItem>
@@ -50,7 +50,7 @@
         <!--Item-->
         <scene sceneID="JBf-2I-dkT">
             <objects>
-                <viewController id="ZDN-El-hN7" customClass="Informacion" customModule="PrediCiclo" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="ZDN-El-hN7" customClass="Informacion" customModule="PrediCiclo" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eT0-aa-SVy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -193,7 +193,7 @@
         <!--Ib Calendar Data Source-->
         <scene sceneID="Yf8-4N-RGt">
             <objects>
-                <viewController id="frU-V9-h8g" customClass="ViewController" customModule="PrediCiclo" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="frU-V9-h8g" customClass="ViewController" customModule="PrediCiclo" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BXD-zt-Ubo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -288,7 +288,7 @@
                     <navigationItem key="navigationItem" title="Prediciclo" id="0PY-cd-mQh">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="yf2-46-l5F">
                             <connections>
-                                <segue destination="ZDN-El-hN7" kind="show" id="eNS-jz-fco"/>
+                                <segue destination="ZDN-El-hN7" kind="show" id="s2e-ub-7fb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

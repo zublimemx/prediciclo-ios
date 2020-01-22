@@ -10,7 +10,7 @@
         <!--Registro1 Periodo-->
         <scene sceneID="Xma-Uu-YIw">
             <objects>
-                <viewController id="vOE-ED-MnM" customClass="Registro1Periodo" customModule="PrediCiclo" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="vOE-ED-MnM" customClass="Registro1Periodo" customModule="PrediCiclo" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Kr-vO-ctD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,9 +67,9 @@
         <!--Registro2 Periodo-->
         <scene sceneID="BOv-R4-btd">
             <objects>
-                <viewController id="aQF-A1-meo" customClass="Registro2Periodo" customModule="PrediCiclo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="aQF-A1-meo" customClass="Registro2Periodo" customModule="PrediCiclo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hp8-Ac-PqH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="NgM-f4-NSI">
@@ -127,9 +127,9 @@
         <!--Registro3 Menstruacion-->
         <scene sceneID="mJX-gm-sFU">
             <objects>
-                <viewController id="Wpf-oq-bzl" customClass="Registro3Menstruacion" customModule="PrediCiclo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Wpf-oq-bzl" customClass="Registro3Menstruacion" customModule="PrediCiclo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H39-kO-oV4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="¿Cuántos días dura tu menstruación?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9Y-1B-txS">
@@ -186,9 +186,9 @@
         <!--Registro4 Fecha-->
         <scene sceneID="zdK-3l-STe">
             <objects>
-                <viewController id="ImK-LG-dzS" customClass="Registro4Fecha" customModule="PrediCiclo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="ImK-LG-dzS" customClass="Registro4Fecha" customModule="PrediCiclo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Syk-iy-l2n">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="birthday" translatesAutoresizingMaskIntoConstraints="NO" id="Ysg-48-l55">
