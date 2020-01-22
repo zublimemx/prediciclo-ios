@@ -18,35 +18,12 @@
                         <color key="barTintColor" red="0.87792378660000003" green="0.51142561440000001" blue="0.47488272190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Kbi-z6-Ovg" kind="relationship" relationship="rootViewController" id="iC2-Z1-kIX"/>
+                        <segue destination="HPN-a2-Zsi" kind="relationship" relationship="rootViewController" id="2VY-8S-5ZV"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6bY-DQ-6LT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2645" y="-749"/>
-        </scene>
-        <!--Item 1-->
-        <scene sceneID="j7M-A2-L84">
-            <objects>
-                <viewController id="Kbi-z6-Ovg" customClass="Home" customModule="PrediCiclo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="heN-I9-6HG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.87792378660000003" green="0.51142561440000001" blue="0.47488272190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="gmT-Hh-pGH"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="QGO-gq-Ekg"/>
-                    <navigationItem key="navigationItem" id="EIP-qU-Lcz">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="Kv2-N4-usi">
-                            <connections>
-                                <segue destination="ZDN-El-hN7" kind="show" id="DZQ-XT-G1N"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="B8p-fP-JuZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1701" y="-820"/>
+            <point key="canvasLocation" x="-2742" y="-1296"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="jJM-rK-Gz7">
@@ -73,7 +50,7 @@
         <!--Item-->
         <scene sceneID="JBf-2I-dkT">
             <objects>
-                <viewController id="ZDN-El-hN7" customClass="Informacion" customModule="PrediCiclo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZDN-El-hN7" customClass="Informacion" customModule="PrediCiclo" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eT0-aa-SVy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -155,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1vJ-g1-VOJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-562.31884057971024" y="-820.3125"/>
+            <point key="canvasLocation" x="-726" y="-1296"/>
         </scene>
         <!--Tienda-->
         <scene sceneID="t6a-oe-VSR">
@@ -166,7 +143,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dm1-Uf-JFr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2895" y="-223"/>
+            <point key="canvasLocation" x="-2043" y="-577"/>
         </scene>
         <!--Mas-->
         <scene sceneID="oC3-rX-TRx">
@@ -177,7 +154,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mR2-Cu-NqE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3902" y="-234"/>
+            <point key="canvasLocation" x="-3860" y="-577"/>
         </scene>
         <!--Item-->
         <scene sceneID="CpS-lh-wZ6">
@@ -194,7 +171,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dak-8A-fMC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3432" y="203"/>
+            <point key="canvasLocation" x="-2696" y="-577"/>
         </scene>
         <!--Item-->
         <scene sceneID="eYf-M7-iN3">
@@ -211,7 +188,80 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YdA-OI-ZEE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4509" y="-392"/>
+            <point key="canvasLocation" x="-4491" y="-577"/>
+        </scene>
+        <!--Ib Calendar Data Source-->
+        <scene sceneID="siq-NO-6dG">
+            <objects>
+                <viewController id="HPN-a2-Zsi" customClass="Home" customModule="PrediCiclo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LVU-pg-IQu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SQm-DS-Jpk" customClass="JTACMonthView" customModule="JTAppleCalendar">
+                                <rect key="frame" x="40" y="142" width="336" height="233"/>
+                                <color key="backgroundColor" red="0.41553786396980286" green="0.90867096185684204" blue="0.61829620599746704" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="233" id="CoH-Cq-uCk"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="xj2-Fj-H9l">
+                                    <size key="itemSize" width="85" height="84"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dateCell" id="4Xl-gJ-Rri" customClass="DateCell" customModule="PrediCiclo">
+                                        <rect key="frame" x="0.0" y="0.0" width="85" height="84"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="85" height="84"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateHere" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccr-iz-j28">
+                                                    <rect key="frame" x="7" y="31.5" width="71" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="0.097982175650000003" blue="0.097993679340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="highlightedColor" red="1" green="0.097982175650000003" blue="0.097993679340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="shadowColor" red="0.1338186992" green="0.071839612179999998" blue="0.840398953" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.93104708189999996" green="0.49832963940000002" blue="0.47010797259999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="ccr-iz-j28" firstAttribute="centerY" secondItem="4Xl-gJ-Rri" secondAttribute="centerY" id="hlw-At-LlL"/>
+                                            <constraint firstItem="ccr-iz-j28" firstAttribute="centerX" secondItem="4Xl-gJ-Rri" secondAttribute="centerX" id="yyr-xA-9je"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="ccr-iz-j28" id="Ebp-O5-32S"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="ibCalendarDataSource" destination="HPN-a2-Zsi" id="9lW-b8-pAO"/>
+                                    <outlet property="ibCalendarDelegate" destination="HPN-a2-Zsi" id="2sg-cw-GoT"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.75674592070000002" blue="0.70603986480000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SQm-DS-Jpk" firstAttribute="leading" secondItem="nV1-iy-XJv" secondAttribute="leading" constant="40" id="MHb-wx-eE4"/>
+                            <constraint firstItem="SQm-DS-Jpk" firstAttribute="top" secondItem="nV1-iy-XJv" secondAttribute="top" constant="54" id="VzK-6D-M39"/>
+                            <constraint firstItem="nV1-iy-XJv" firstAttribute="trailing" secondItem="SQm-DS-Jpk" secondAttribute="trailing" constant="38" id="fqP-Yt-AXg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nV1-iy-XJv"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Prediciclo" id="DEq-2Q-oRR">
+                        <barButtonItem key="rightBarButtonItem" title="info" id="U9x-U5-sll">
+                            <connections>
+                                <segue destination="ZDN-El-hN7" kind="show" id="hMf-nA-Hvo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NEg-E6-ZFd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1716" y="-1296"/>
         </scene>
     </scenes>
     <resources>

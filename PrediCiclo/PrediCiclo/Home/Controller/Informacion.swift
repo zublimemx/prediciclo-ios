@@ -21,12 +21,10 @@ class Informacion: UIViewController {
         self.tabBarController?.tabBar.isHidden = true
     }
     
+    // MARK: Actions
     @IBAction func cerrar(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
         self.navigationController?.popViewController(animated: true)
     }
-    
-    // MARK: Actions
-
     
 }
