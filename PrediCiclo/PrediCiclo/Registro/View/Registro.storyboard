@@ -51,6 +51,19 @@
                                     <!--2025-12-31 11:00:00 +0000-->
                                 </date>
                             </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Icn-cd-LNS">
+                                <rect key="frame" x="35" y="753" width="82" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Atras">
+                                    <color key="titleColor" red="0.1159587279" green="0.12258534879999999" blue="0.133340925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnAtras_click:" destination="Wpf-oq-bzl" eventType="touchUpInside" id="aVF-a4-1MX"/>
+                                    <action selector="btnAtras_click:" destination="aQF-A1-meo" eventType="touchUpInside" id="ceh-ah-sRw"/>
+                                    <action selector="btnAtras_click:" destination="vOE-ED-MnM" eventType="touchUpInside" id="mln-nc-BSQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.75674592068893609" blue="0.70603986482398351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="gaL-kv-AZc"/>

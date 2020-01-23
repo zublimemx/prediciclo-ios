@@ -41,7 +41,11 @@ class Registro1Periodo: UIViewController {
     
     // MARK: Actions
   
-
+    @IBAction func btnAtras_click(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }
 
 

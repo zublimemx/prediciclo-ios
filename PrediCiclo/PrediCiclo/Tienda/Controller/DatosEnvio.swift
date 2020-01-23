@@ -17,7 +17,7 @@ class DatosEnvio: UIViewController {
     // MARK: Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBarController?.tabBar.isHidden = true
+         self.navigationController?.navigationBar.isHidden = false
         // Do any additional setup after loading the view.
     }
     

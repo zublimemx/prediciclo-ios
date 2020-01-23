@@ -7,11 +7,18 @@
 //
 
 import UIKit
+import PasswordTextField
 
 class LoginViewController: UIViewController {
     
     // MARK: Variables
-    
+    @IBOutlet weak var txtUserName: UITextField!
+    @IBOutlet weak var txtUserPassword: PasswordTextField!
+    @IBOutlet weak var btnNext: UIButton!
+    @IBOutlet weak var btnRegister: UIButton!
+    @IBOutlet weak var btnForgotPassword: UIButton!
+    @IBOutlet weak var viewLottie: UIView!
+    @IBOutlet weak var ctsAltura: NSLayoutConstraint!
     // MARK: Controls
     
     // MARK: Functions
@@ -19,17 +26,21 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    //Agregar el metodo TouchBegan Permite que al tocar se oculte el teclado o aparesca
+    //Permite que al tocar se oculte el teclado o aparesca
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true) //Al recibir un toque se oculta el teclado
     }
     
-    //Nuestro segundo Problema es hacer funcionar el boton de intro del teclado
+    //Boton de intro del teclado
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true

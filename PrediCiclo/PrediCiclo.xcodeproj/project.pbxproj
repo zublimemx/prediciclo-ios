@@ -236,8 +236,8 @@
 		C658B72123D6689E0009D1C5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C658B70B23D64EDD0009D1C5 /* RegistroController.swift */,
 				C6BDD9CD23D30DC3000BA7F2 /* LoginViewController.swift */,
+				C658B70B23D64EDD0009D1C5 /* RegistroController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

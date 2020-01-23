@@ -36,13 +36,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XpF-Sp-x9l">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XpF-Sp-x9l" customClass="PasswordTextField" customModule="PasswordTextField">
                                 <rect key="frame" x="37" y="421" width="340" height="34"/>
                                 <color key="backgroundColor" red="0.9999235272" green="1" blue="0.99988299609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="imageTintColor">
+                                        <color key="value" red="1" green="0.097982175650000003" blue="0.097993679340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJD-zm-92A">
                                 <rect key="frame" x="227" y="485" width="150" height="38"/>
@@ -138,11 +143,21 @@
                             <constraint firstItem="i5A-nE-Lcc" firstAttribute="top" secondItem="GM2-5X-1ic" secondAttribute="bottom" constant="40" id="vIp-sf-J84"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XpF-Sp-x9l" secondAttribute="trailing" constant="37" id="vaM-io-dcf"/>
                             <constraint firstItem="jJD-zm-92A" firstAttribute="top" secondItem="XpF-Sp-x9l" secondAttribute="bottom" constant="30" id="vmp-pV-3Rj"/>
+                            <constraint firstItem="XpF-Sp-x9l" firstAttribute="top" secondItem="qJI-PO-WLS" secondAttribute="bottom" constant="35.5" id="wHP-rk-W9T"/>
                             <constraint firstItem="2c0-V8-GrM" firstAttribute="top" secondItem="XpF-Sp-x9l" secondAttribute="bottom" constant="4" id="wNu-tW-hPb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="L8O-81-5qw"/>
+                    <connections>
+                        <outlet property="btnForgotPassword" destination="vlk-T9-oMv" id="KpY-Db-4Ef"/>
+                        <outlet property="btnNext" destination="jJD-zm-92A" id="wNV-qF-rui"/>
+                        <outlet property="btnRegister" destination="uPg-mF-So5" id="Chb-TX-1BQ"/>
+                        <outlet property="ctsAltura" destination="wHP-rk-W9T" id="qrG-8q-EaA"/>
+                        <outlet property="txtUserName" destination="qJI-PO-WLS" id="ABg-G5-IK5"/>
+                        <outlet property="txtUserPassword" destination="XpF-Sp-x9l" id="ZfJ-fY-w5V"/>
+                        <outlet property="viewLottie" destination="aeG-MS-1o7" id="DuW-1q-aEW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
