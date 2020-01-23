@@ -240,9 +240,6 @@
                                     <!--2019-12-31 11:00:00 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="es_MX"/>
-                                <connections>
-                                    <action selector="datePickerChanged:" destination="ImK-LG-dzS" eventType="valueChanged" id="cr9-HU-ivr"/>
-                                </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pm6-bX-g90">
                                 <rect key="frame" x="56" y="741" width="82" height="48"/>
@@ -261,7 +258,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="W8N-cg-jAA"/>
                     <connections>
-                        <outlet property="cumpleView" destination="Oof-qQ-cux" id="2xe-0V-6gS"/>
+                        <outlet property="cumpleView" destination="Oof-qQ-cux" id="4pm-B7-ase"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10m-Bh-s2l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -7,42 +7,52 @@
 //
 
 import UIKit
+import PasswordTextField
+import NVActivityIndicatorView
+import Lottie
 
 class RegistroController: UIViewController {
     
     // MARK: Variables
+    let waveAnimationView = AnimationView()
     
     // MARK: Controls
     
+    @IBOutlet weak var txtUserEmail: UITextField!
+    @IBOutlet weak var txtUserPassword: PasswordTextField!
+    @IBOutlet weak var btnRegister: UIButton!
+
+    @IBOutlet weak var viewLottieR: UIView!
     
     // MARK: Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /*--- Animacion ---*/
+        waveAnimationView.animation = Animation.named("wave")
+        waveAnimationView.frame.size = viewLottieR.frame.size
+        waveAnimationView.contentMode = .scaleToFill
+        viewLottieR.addSubview(waveAnimationView)
+        waveAnimationView.backgroundBehavior = .pauseAndRestore
+        waveAnimationView.loopMode = .loop
+        waveAnimationView.play()
     }
     
-    
-    
-    
+    /*--- Control del Teclado ---*/
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-    //TouchBegan Permite que al tocar se oculte el teclado o aparesca
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true) //Al recibir un toque se oculta el teclado
+        self.view.endEditing(true)         //Al recibir un toque se oculta el teclado
     }
-    
-    //Funcionar el boton de intro del teclado
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+        textField.resignFirstResponder()   //Boton de intro del teclado
         return true
     }
     
     // MARK: Actions
     
-    @IBAction func InicioSesion(_ sender: UIButton) {
+    @IBAction func btnInicio_click(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
         self.navigationController?.popViewController(animated: true)
     }

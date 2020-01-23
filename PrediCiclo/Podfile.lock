@@ -5,6 +5,7 @@ PODS:
     - ObjectMapper (~> 3.4)
   - IQKeyboardManager (6.5.4)
   - JTAppleCalendar (8.0.3)
+  - lottie-ios (3.1.5)
   - NVActivityIndicatorView (4.4.0):
     - NVActivityIndicatorView/Presenter (= 4.4.0)
   - NVActivityIndicatorView/Presenter (4.4.0)
@@ -19,6 +20,7 @@ DEPENDENCIES:
   - AlamofireObjectMapper (~> 5.2)
   - IQKeyboardManager (= 6.5.4)
   - JTAppleCalendar (from `https://github.com/patchthecode/JTAppleCalendar.git`, branch `master`)
+  - lottie-ios
   - NVActivityIndicatorView (= 4.4.0)
   - ObjectMapper (~> 3.4)
   - PasswordTextField (= 1.2.0)
@@ -31,6 +33,7 @@ SPEC REPOS:
     - Alamofire
     - AlamofireObjectMapper
     - IQKeyboardManager
+    - lottie-ios
     - NVActivityIndicatorView
     - ObjectMapper
     - PasswordTextField
@@ -53,6 +56,7 @@ SPEC CHECKSUMS:
   AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
   IQKeyboardManager: 72b359cd7e777e3a984cedbe05f8da45320cbb63
   JTAppleCalendar: 932cadea40b1051beab10f67843451d48ba16c99
+  lottie-ios: 32bf84389337d86fbc8b12266e88452e0abf1dee
   NVActivityIndicatorView: ec7440a57af2450319d3a4181cca7da6fc127064
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
   PasswordTextField: 2548de43f150fc90a014da47b0d97e31aada4b94
@@ -60,6 +64,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
   ViewAnimator: 5af1c6f3b310f012bf081259c43717aa54fbae73
 
-PODFILE CHECKSUM: f402c7abe891de896ec84d14c076202403ace749
+PODFILE CHECKSUM: e2ecf7ad2432c055e78a047e71519103ab937001
 
 COCOAPODS: 1.8.4

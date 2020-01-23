@@ -8,6 +8,7 @@ target 'PrediCiclo' do
 
   # Pods for PrediCiclo
 	pod 'IQKeyboardManager','6.5.4'
+  pod 'lottie-ios'
 	pod "SkeletonView"
 	pod 'PasswordTextField','1.2.0'
 	pod "ViewAnimator"
