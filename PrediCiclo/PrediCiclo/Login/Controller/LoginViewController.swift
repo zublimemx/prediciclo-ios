@@ -25,7 +25,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var btnForgotPassword: UIButton!
     @IBOutlet weak var viewLottie: UIView!
     
-    @IBOutlet weak var ctsAltura: NSLayoutConstraint!
     @IBOutlet weak var lblEmaiInvalid: UILabel!
     @IBOutlet weak var lblFieldObligatory: UILabel!
     
@@ -33,6 +32,10 @@ class LoginViewController: UIViewController {
     // MARK: Functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        txtUserPassword.isHidden = true
+        lblEmaiInvalid.isHidden = true
+        lblFieldObligatory.isHidden = true
         
         /*--- Animacion ---*/
         waveAnimationView.animation = Animation.named("wave")
@@ -42,6 +45,19 @@ class LoginViewController: UIViewController {
         waveAnimationView.backgroundBehavior = .pauseAndRestore
         waveAnimationView.loopMode = .loop
         waveAnimationView.play()
+        
+        txtUserEmail.textColor = UIColor.darkText
+        txtUserEmail.layer.borderWidth = 1
+        txtUserEmail.layer.borderColor = UIColor.darkGray.cgColor;
+        txtUserEmail.layer.cornerRadius = 4
+        txtUserEmail.attributedPlaceholder = NSAttributedString(string: "Correo Electrónico",attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
+        
+        
+        txtUserPassword.textColor = UIColor.darkText
+        txtUserPassword.layer.borderWidth = 1
+        txtUserPassword.layer.borderColor = UIColor.darkGray.cgColor;
+        txtUserPassword.layer.cornerRadius = 4
+        txtUserPassword.attributedPlaceholder = NSAttributedString(string: "Contraseña",attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
     
         
     }
@@ -63,5 +79,9 @@ class LoginViewController: UIViewController {
     }
     
     // MARK: Actions
-
+    
+    @IBAction func btnSiguiente_click(_ sender: UIButton) {
+        txtUserPassword.isHidden = false
+    }
+    
 }
