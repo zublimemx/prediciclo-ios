@@ -19,6 +19,22 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    //Agregar el metodo TouchBegan Permite que al tocar se oculte el teclado o aparesca
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true) //Al recibir un toque se oculta el teclado
+    }
+    
+    //Nuestro segundo Problema es hacer funcionar el boton de intro del teclado
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     // MARK: Actions
 
 }
