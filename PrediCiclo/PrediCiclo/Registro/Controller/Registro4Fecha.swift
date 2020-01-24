@@ -19,6 +19,8 @@ class Registro4Fecha: UIViewController {
     // MARK: Functions
     override func viewDidLoad() {
         self.navigationController?.navigationBar.isHidden = true
+        self.cumpleView.setValue(UIColor.black, forKey: "textColor")
+      
     }
    /*
     @IBAction func datePickerChanged(_ sender: UIDatePicker) {

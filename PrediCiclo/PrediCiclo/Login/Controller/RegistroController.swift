@@ -21,12 +21,31 @@ class RegistroController: UIViewController {
     @IBOutlet weak var txtUserEmail: UITextField!
     @IBOutlet weak var txtUserPassword: PasswordTextField!
     @IBOutlet weak var btnRegister: UIButton!
-
+    @IBOutlet weak var lblEmailInvalid: UILabel!
+    
     @IBOutlet weak var viewLottieR: UIView!
+    @IBOutlet weak var lblFieldObligatory: UILabel!
     
     // MARK: Functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //txtUserPassword.isHidden = true
+        lblEmailInvalid.isHidden = true
+        lblFieldObligatory.isHidden = true
+        
+        txtUserEmail.textColor = UIColor.darkText
+        txtUserEmail.layer.borderWidth = 1
+        txtUserEmail.layer.borderColor = UIColor.darkGray.cgColor;
+        txtUserEmail.layer.cornerRadius = 4
+        txtUserEmail.attributedPlaceholder = NSAttributedString(string: "Correo Electrónico",attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
+        
+        
+        txtUserPassword.textColor = UIColor.darkText
+        txtUserPassword.layer.borderWidth = 1
+        txtUserPassword.layer.borderColor = UIColor.darkGray.cgColor;
+        txtUserPassword.layer.cornerRadius = 4
+        txtUserPassword.attributedPlaceholder = NSAttributedString(string: "Contraseña",attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
         
         /*--- Animacion ---*/
         waveAnimationView.animation = Animation.named("wave")

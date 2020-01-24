@@ -22,7 +22,11 @@ class Registro1Periodo: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
+        self.pickerCalendario.setValue(UIColor.black, forKey: "textColor")
         setDates()
+        
+        
+        //pickerCalendario.text
         
     }
     

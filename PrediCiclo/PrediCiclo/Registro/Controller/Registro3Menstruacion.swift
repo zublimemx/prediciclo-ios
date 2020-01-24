@@ -56,6 +56,24 @@ extension Registro3Menstruacion:UIPickerViewDelegate,UIPickerViewDataSource {
         return diasMenstruacion[row]
     }
     
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        var label = UILabel()
+        if let v = view {
+            label = v as! UILabel
+        }
+        label.font = UIFont (name: "Arial Hebrew", size: 80)
+        label.text =  diasMenstruacion[row]
+        label.textAlignment = .center
+        label.textColor = UIColor.black
+        return label
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat
+    {
+        return 90
+    }
+    
 
     
     
