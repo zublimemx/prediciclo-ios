@@ -28,17 +28,6 @@
                                     <constraint firstAttribute="width" constant="150" id="sma-FK-rer"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CCF-F6-OY7">
-                                <rect key="frame" x="287" y="811" width="82" height="36"/>
-                                <color key="backgroundColor" red="1" green="0.097982175650000003" blue="0.097993679340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Siguiente">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="aQF-A1-meo" kind="show" id="5he-BQ-JT3"/>
-                                </connections>
-                            </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="CJR-x9-VGj">
                                 <rect key="frame" x="0.0" y="340" width="414" height="216"/>
                                 <date key="minimumDate" timeIntervalSinceReferenceDate="-1609419600">
@@ -61,21 +50,38 @@
                                     <action selector="btnAtras_click:" destination="vOE-ED-MnM" eventType="touchUpInside" id="mln-nc-BSQ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zji-ge-9Ae">
+                                <rect key="frame" x="271" y="809" width="113" height="38"/>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.35686274509999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                <state key="normal" title="Siguiente">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="aQF-A1-meo" kind="show" id="azw-Ya-4mR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.75674592068893609" blue="0.70603986482398351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Icn-cd-LNS" firstAttribute="leading" secondItem="gaL-kv-AZc" secondAttribute="leading" constant="45" id="14B-Ib-ib8"/>
                             <constraint firstItem="ctl-ZG-CyS" firstAttribute="top" secondItem="0zB-7Q-AoU" secondAttribute="bottom" constant="20" id="62p-Rf-1Sf"/>
+                            <constraint firstItem="gaL-kv-AZc" firstAttribute="bottom" secondItem="Zji-ge-9Ae" secondAttribute="bottom" constant="15" id="7QL-Yp-dQO"/>
                             <constraint firstItem="CJR-x9-VGj" firstAttribute="centerX" secondItem="3Kr-vO-ctD" secondAttribute="centerX" id="C6e-jf-Qat"/>
-                            <constraint firstItem="gaL-kv-AZc" firstAttribute="bottom" secondItem="CCF-F6-OY7" secondAttribute="bottom" constant="15" id="CE8-Th-l6Z"/>
                             <constraint firstItem="gaL-kv-AZc" firstAttribute="bottom" secondItem="Icn-cd-LNS" secondAttribute="bottom" constant="15" id="K9Z-s9-7JT"/>
                             <constraint firstItem="0zB-7Q-AoU" firstAttribute="centerX" secondItem="3Kr-vO-ctD" secondAttribute="centerX" id="Mp1-Fb-1Ke"/>
                             <constraint firstItem="gaL-kv-AZc" firstAttribute="trailing" secondItem="CJR-x9-VGj" secondAttribute="trailing" id="VJj-nx-fF8"/>
                             <constraint firstItem="CJR-x9-VGj" firstAttribute="leading" secondItem="gaL-kv-AZc" secondAttribute="leading" id="XS7-bI-5OI"/>
+                            <constraint firstItem="gaL-kv-AZc" firstAttribute="trailing" secondItem="Zji-ge-9Ae" secondAttribute="trailing" constant="30" id="Znx-Mk-IvT"/>
                             <constraint firstItem="0zB-7Q-AoU" firstAttribute="top" secondItem="gaL-kv-AZc" secondAttribute="top" constant="40" id="esq-DE-GH5"/>
                             <constraint firstItem="ctl-ZG-CyS" firstAttribute="centerX" secondItem="3Kr-vO-ctD" secondAttribute="centerX" id="hgK-6D-My3"/>
                             <constraint firstItem="CJR-x9-VGj" firstAttribute="centerY" secondItem="3Kr-vO-ctD" secondAttribute="centerY" id="ky8-uO-Xxd"/>
-                            <constraint firstItem="gaL-kv-AZc" firstAttribute="trailing" secondItem="CCF-F6-OY7" secondAttribute="trailing" constant="45" id="lBI-NN-dhl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gaL-kv-AZc"/>
                     </view>
@@ -112,17 +118,6 @@
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xaP-0K-fV9">
                                 <rect key="frame" x="0.0" y="340" width="414" height="216"/>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iXA-gb-SVr">
-                                <rect key="frame" x="285" y="813" width="84" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.097982175650000003" blue="0.097993679340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="20"/>
-                                <state key="normal" title="Siguiente">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Wpf-oq-bzl" kind="show" id="aHn-T6-73L"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="muP-m5-jR7">
                                 <rect key="frame" x="45" y="813" width="47" height="34"/>
                                 <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="20"/>
@@ -134,21 +129,38 @@
                                     <action selector="btnAtras_click:" destination="Wpf-oq-bzl" eventType="touchUpInside" id="gys-hp-qI0"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVI-ID-w51">
+                                <rect key="frame" x="269" y="809" width="115" height="38"/>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.35686274509999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                <state key="normal" title="Siguiente">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Wpf-oq-bzl" kind="show" id="Ub6-gW-Mcc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.61533325954572182" green="0.98039215690000003" blue="0.91704965202316668" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="FdA-QM-WEA" firstAttribute="trailing" secondItem="iXA-gb-SVr" secondAttribute="trailing" constant="45" id="1SM-q1-ND7"/>
                             <constraint firstItem="muP-m5-jR7" firstAttribute="leading" secondItem="FdA-QM-WEA" secondAttribute="leading" constant="45" id="81g-p3-cje"/>
                             <constraint firstItem="FdA-QM-WEA" firstAttribute="bottom" secondItem="muP-m5-jR7" secondAttribute="bottom" constant="15" id="Cmg-Dm-lpD"/>
+                            <constraint firstItem="FdA-QM-WEA" firstAttribute="trailing" secondItem="HVI-ID-w51" secondAttribute="trailing" constant="30" id="EqI-nM-of1"/>
                             <constraint firstItem="Y0C-3f-Bfj" firstAttribute="top" secondItem="NgM-f4-NSI" secondAttribute="bottom" constant="20" id="JIX-RN-eAr"/>
                             <constraint firstItem="xaP-0K-fV9" firstAttribute="centerX" secondItem="hp8-Ac-PqH" secondAttribute="centerX" id="Lri-QU-iGA"/>
                             <constraint firstItem="Y0C-3f-Bfj" firstAttribute="centerX" secondItem="hp8-Ac-PqH" secondAttribute="centerX" id="QXX-o1-Dil"/>
                             <constraint firstItem="xaP-0K-fV9" firstAttribute="centerY" secondItem="hp8-Ac-PqH" secondAttribute="centerY" id="Rsf-7E-vQm"/>
                             <constraint firstItem="xaP-0K-fV9" firstAttribute="leading" secondItem="FdA-QM-WEA" secondAttribute="leading" id="aqt-i3-NcA"/>
+                            <constraint firstItem="FdA-QM-WEA" firstAttribute="bottom" secondItem="HVI-ID-w51" secondAttribute="bottom" constant="15" id="feh-rx-zYW"/>
                             <constraint firstItem="FdA-QM-WEA" firstAttribute="trailing" secondItem="xaP-0K-fV9" secondAttribute="trailing" id="nFB-I2-pYC"/>
                             <constraint firstItem="NgM-f4-NSI" firstAttribute="centerX" secondItem="hp8-Ac-PqH" secondAttribute="centerX" id="uFa-xN-Vca"/>
                             <constraint firstItem="NgM-f4-NSI" firstAttribute="top" secondItem="FdA-QM-WEA" secondAttribute="top" constant="40" id="uSE-pn-ego"/>
-                            <constraint firstItem="FdA-QM-WEA" firstAttribute="bottom" secondItem="iXA-gb-SVr" secondAttribute="bottom" constant="15" id="vrq-Tp-sNZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FdA-QM-WEA"/>
                     </view>
@@ -178,17 +190,6 @@
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Whu-2z-Mmf">
                                 <rect key="frame" x="0.0" y="340" width="414" height="216"/>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYx-US-5ep">
-                                <rect key="frame" x="285" y="813" width="84" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.097982175650000003" blue="0.097993679340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="20"/>
-                                <state key="normal" title="Siguiente">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="ImK-LG-dzS" kind="show" id="vMq-EU-0fm"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="yGz-8j-wJE">
                                 <rect key="frame" x="132" y="84" width="150" height="150"/>
                                 <constraints>
@@ -206,20 +207,37 @@
                                     <action selector="btnAtras_click:" destination="Wpf-oq-bzl" eventType="touchUpInside" id="zgO-zB-3x3"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Knf-gf-VZB">
+                                <rect key="frame" x="269" y="809" width="115" height="38"/>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.35686274509999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                <state key="normal" title="Siguiente">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="ImK-LG-dzS" kind="show" id="QUJ-gT-vXJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.67627262840836933" green="1" blue="0.64358290289104358" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="yGz-8j-wJE" firstAttribute="top" secondItem="MSu-Kv-2bD" secondAttribute="top" constant="40" id="9Zr-ie-Vez"/>
-                            <constraint firstItem="MSu-Kv-2bD" firstAttribute="trailing" secondItem="OYx-US-5ep" secondAttribute="trailing" constant="45" id="BXX-JN-2ET"/>
                             <constraint firstItem="MSu-Kv-2bD" firstAttribute="trailing" secondItem="Whu-2z-Mmf" secondAttribute="trailing" id="FV6-Po-qFw"/>
                             <constraint firstItem="ypQ-u8-qte" firstAttribute="leading" secondItem="MSu-Kv-2bD" secondAttribute="leading" constant="45" id="R2O-rB-ZW7"/>
-                            <constraint firstItem="MSu-Kv-2bD" firstAttribute="bottom" secondItem="OYx-US-5ep" secondAttribute="bottom" constant="15" id="XGp-Cb-uPb"/>
                             <constraint firstItem="Whu-2z-Mmf" firstAttribute="centerX" secondItem="H39-kO-oV4" secondAttribute="centerX" id="XZ3-x0-lLK"/>
                             <constraint firstItem="MSu-Kv-2bD" firstAttribute="bottom" secondItem="ypQ-u8-qte" secondAttribute="bottom" constant="13" id="ZPc-2M-hat"/>
                             <constraint firstItem="A9Y-1B-txS" firstAttribute="top" secondItem="yGz-8j-wJE" secondAttribute="bottom" constant="20" id="ZQH-dL-aBM"/>
                             <constraint firstItem="A9Y-1B-txS" firstAttribute="centerX" secondItem="H39-kO-oV4" secondAttribute="centerX" id="hF5-01-3Qb"/>
+                            <constraint firstItem="MSu-Kv-2bD" firstAttribute="bottom" secondItem="Knf-gf-VZB" secondAttribute="bottom" constant="15" id="iTM-TY-IR1"/>
                             <constraint firstItem="Whu-2z-Mmf" firstAttribute="leading" secondItem="MSu-Kv-2bD" secondAttribute="leading" id="ixL-od-Ih7"/>
                             <constraint firstItem="yGz-8j-wJE" firstAttribute="centerX" secondItem="H39-kO-oV4" secondAttribute="centerX" id="lSF-7q-gFl"/>
+                            <constraint firstItem="MSu-Kv-2bD" firstAttribute="trailing" secondItem="Knf-gf-VZB" secondAttribute="trailing" constant="30" id="uKx-nL-ucf"/>
                             <constraint firstItem="Whu-2z-Mmf" firstAttribute="centerY" secondItem="H39-kO-oV4" secondAttribute="centerY" id="w7q-L1-4eJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MSu-Kv-2bD"/>
@@ -254,17 +272,6 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6DQ-Et-MZr">
-                                <rect key="frame" x="285" y="813" width="84" height="34"/>
-                                <color key="backgroundColor" red="1" green="0.097982175650000003" blue="0.097993679340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="20"/>
-                                <state key="normal" title="Siguiente">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <segue destination="5sT-KD-uM5" kind="show" id="pSs-Kh-PhF"/>
-                                </connections>
-                            </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oof-qQ-cux">
                                 <rect key="frame" x="47" y="340" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="601322532.36442995">
@@ -288,18 +295,35 @@
                                     <action selector="btnAtras_click:" destination="ImK-LG-dzS" eventType="touchUpInside" id="g4Q-yE-HV8"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQE-WO-s4o">
+                                <rect key="frame" x="269" y="809" width="115" height="38"/>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.35686274509999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                <state key="normal" title="Siguiente">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="5sT-KD-uM5" kind="show" id="L5B-Kq-MLX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.85968192985138592" blue="0.37417513827999427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Ysg-48-l55" firstAttribute="centerX" secondItem="Syk-iy-l2n" secondAttribute="centerX" id="1UK-nY-WMS"/>
                             <constraint firstItem="Oof-qQ-cux" firstAttribute="centerX" secondItem="Syk-iy-l2n" secondAttribute="centerX" id="6as-sa-oo4"/>
+                            <constraint firstItem="HKR-aW-bnn" firstAttribute="trailing" secondItem="RQE-WO-s4o" secondAttribute="trailing" constant="30" id="7OF-Ry-97l"/>
                             <constraint firstItem="Oof-qQ-cux" firstAttribute="centerY" secondItem="Syk-iy-l2n" secondAttribute="centerY" id="IiV-rv-Oms"/>
-                            <constraint firstItem="HKR-aW-bnn" firstAttribute="bottom" secondItem="6DQ-Et-MZr" secondAttribute="bottom" constant="15" id="a4F-XS-iNn"/>
                             <constraint firstItem="Cxd-wc-CKK" firstAttribute="centerX" secondItem="Syk-iy-l2n" secondAttribute="centerX" id="he0-EL-Mcs"/>
                             <constraint firstItem="pm6-bX-g90" firstAttribute="leading" secondItem="HKR-aW-bnn" secondAttribute="leading" constant="45" id="jE5-LA-YcL"/>
-                            <constraint firstItem="HKR-aW-bnn" firstAttribute="trailing" secondItem="6DQ-Et-MZr" secondAttribute="trailing" constant="45" id="pdf-kX-ltM"/>
                             <constraint firstItem="Cxd-wc-CKK" firstAttribute="top" secondItem="Ysg-48-l55" secondAttribute="bottom" constant="20" id="sFL-kx-Glv"/>
                             <constraint firstItem="HKR-aW-bnn" firstAttribute="bottom" secondItem="pm6-bX-g90" secondAttribute="bottom" constant="15" id="u3O-U3-O8C"/>
+                            <constraint firstItem="HKR-aW-bnn" firstAttribute="bottom" secondItem="RQE-WO-s4o" secondAttribute="bottom" constant="15" id="uhU-9f-2Jm"/>
                             <constraint firstItem="Ysg-48-l55" firstAttribute="top" secondItem="HKR-aW-bnn" secondAttribute="top" constant="40" id="wII-e6-U4T"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HKR-aW-bnn"/>
