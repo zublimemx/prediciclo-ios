@@ -79,6 +79,9 @@
                                 <state key="normal" title="¿Olvidaste tu contraseña?">
                                     <color key="titleColor" red="1" green="0.097982175650000003" blue="0.097993679340000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnRecuperarPassword_click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZvZ-Ih-gr7"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="54J-UH-z8d">
                                 <rect key="frame" x="37" y="351.5" width="340" height="145"/>
@@ -301,9 +304,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="PvW-Bm-Eqe" firstAttribute="top" secondItem="vbt-G1-8VG" secondAttribute="bottom" constant="25" id="M5s-zo-nZt"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

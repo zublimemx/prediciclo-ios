@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
     
     // MARK: Variables
     let waveAnimationView = AnimationView()
-    
+    var changeButtonbtn = false
     
     // MARK: Controls
     @IBOutlet weak var txtUserEmail: UITextField!
@@ -78,10 +78,67 @@ class LoginViewController: UIViewController {
         return true
     }
     
+
     // MARK: Actions
     
+     /* -- Login --*/
     @IBAction func btnSiguiente_click(_ sender: UIButton) {
-        txtUserPassword.isHidden = false
+        
+        var userEmailtxt = txtUserEmail.text
+        userEmailtxt = userEmailtxt?.trimmingCharacters(in: .whitespacesAndNewlines)
+        txtUserEmail.text = userEmailtxt
+        
+        
+        if changeButtonbtn == false{
+            //NVActivityIndicatorPresenter.sharedInstance.startAnimating(ActivityData(), nil)
+            if txtUserEmail.text == "" {
+                //NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
+                self.crearAlertConfirmacion(title:"¡Vacio!", texto: "Ingresa un correo electrónico valido")
+                 txtUserEmail.layer.borderColor = UIColor.red.cgColor;
+                 txtUserEmail.text = ""
+                lblEmaiInvalid.isHidden = false
+                
+            }else if isValidEmail(emailStr: userEmailtxt!) {
+                //NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
+                txtUserPassword.isHidden = false
+                txtUserEmail.layer.borderColor = UIColor.black.cgColor;
+                btnNext.setTitle("Inicia Sesión", for:.normal)
+                lblEmaiInvalid.isHidden = true
+                changeButtonbtn = true
+            }
+            else{
+                //NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
+                txtUserEmail.layer.borderColor = UIColor.red.cgColor;
+                 //txtUserEmail.text = ""
+                self.crearAlertConfirmacion(title:"¡Error!", texto: "El correo electrónico no está registrado.")
+                lblEmaiInvalid.isHidden = false
+            }
+        }else if changeButtonbtn == true{
+            
+            if txtUserPassword.text == "" {
+                lblFieldObligatory.isHidden = false
+            }else{
+                print("Iniciando sesion")
+                lblFieldObligatory.isHidden = true
+            }
+            
+        }
     }
+    
+    
+    /* -- Recuperar Contraseña --*/
+    
+    @IBAction func btnRecuperarPassword_click(_ sender: UIButton) {
+        var userEmailtxt = txtUserEmail.text
+        userEmailtxt = userEmailtxt?.trimmingCharacters(in: .whitespacesAndNewlines)
+        txtUserEmail.text = userEmailtxt
+        
+        if txtUserEmail.text == "" {
+            self.crearAlertConfirmacion(title:"¡Vacio!", texto: "Antes debes ingresar correo electrónico")
+        }else{
+           self.crearAlertConfirmacion2(title:"¡Vacio!", texto: "Te enviaremos por correo electrónico las instrucciones para restablecer tu contraseña")
+        }
+    }
+    
     
 }
