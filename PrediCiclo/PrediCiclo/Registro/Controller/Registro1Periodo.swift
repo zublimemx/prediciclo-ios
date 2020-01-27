@@ -24,10 +24,16 @@ class Registro1Periodo: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
         self.pickerCalendario.setValue(UIColor.black, forKey: "textColor")
         setDates()
-        
-        
-        //pickerCalendario.text
-        
+        pickerCalendario.addTarget(self, action: #selector(dateChanged), for: .valueChanged)
+    }
+    
+    @objc func dateChanged(_ sender: UIDatePicker) {
+        let components = Calendar.current.dateComponents([.year, .month, .day], from: sender.date)
+        if let day = components.day, let month = components.month, let year = components.year {
+            print("\(day) \(month) \(year)")
+            //let dateS:String = "\(year)-\(month)-\(day)"
+            //preferencias.setString(key:"comienzoPeriodo",value:dateS )
+        }
     }
     
     func setDates(){
@@ -37,7 +43,7 @@ class Registro1Periodo: UIViewController {
         components.calendar = calendar
         let maxDate = calendar.date(byAdding: components, to: currentDate)!
         pickerCalendario.maximumDate = maxDate
-        components.day = -30
+        components.year = -60
         let minDate = calendar.date(byAdding: components, to: currentDate)!
         pickerCalendario.minimumDate = minDate
     }

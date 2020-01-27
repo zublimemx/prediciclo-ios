@@ -31,6 +31,14 @@ class Registro3Menstruacion: UIViewController {
                       
         menstruacionPicker.reloadAllComponents()
     }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        // This method is triggered whenever the user makes a change to the picker selection.
+        // The parameter named row and component represents what was selected.
+           print("Dias menstruacion \(diasMenstruacion[row])")
+        //preferencias.setString(key:"diasMenstruacion",value:numbers[row] )
+    }
+    
     // MARK: Actions
     @IBAction func btnAtras_click(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)

@@ -28,6 +28,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var lblEmaiInvalid: UILabel!
     @IBOutlet weak var lblFieldObligatory: UILabel!
     
+    let api = LoginApi()
+    
     
     // MARK: Functions
     override func viewDidLoad() {
@@ -93,24 +95,33 @@ class LoginViewController: UIViewController {
             //NVActivityIndicatorPresenter.sharedInstance.startAnimating(ActivityData(), nil)
             if txtUserEmail.text == "" {
                 //NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
-                self.crearAlertConfirmacion(title:"¡Vacio!", texto: "Ingresa un correo electrónico valido")
+                self.crearAlertConfirmacion(title:"¡Vacio!", texto: "Ingresa un correo electrónico valido.")
                  txtUserEmail.layer.borderColor = UIColor.red.cgColor;
                  txtUserEmail.text = ""
                 lblEmaiInvalid.isHidden = false
                 
             }else if isValidEmail(emailStr: userEmailtxt!) {
-                //NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
-                txtUserPassword.isHidden = false
-                txtUserEmail.layer.borderColor = UIColor.black.cgColor;
-                btnNext.setTitle("Inicia Sesión", for:.normal)
-                lblEmaiInvalid.isHidden = true
-                changeButtonbtn = true
+                api.isEmailRegister(VC: self, email: userEmailtxt!) { (success, respEmailExist) in
+                    NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
+                    if success{
+                        //NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
+                        self.txtUserPassword.isHidden = false
+                        self.txtUserEmail.layer.borderColor = UIColor.black.cgColor;
+                        self.btnNext.setTitle("Inicia Sesión", for:.normal)
+                        self.lblEmaiInvalid.isHidden = true
+                        self.changeButtonbtn = true
+
+                    }else{
+                        self.crearAlertConfirmacion(title:"¡Error!", texto: "El correo electrónico no está registrado.")
+                        //self.step = 0
+                    }
+                }
             }
             else{
                 //NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
                 txtUserEmail.layer.borderColor = UIColor.red.cgColor;
                  //txtUserEmail.text = ""
-                self.crearAlertConfirmacion(title:"¡Error!", texto: "El correo electrónico no está registrado.")
+                self.crearAlertConfirmacion(title:"¡Error!", texto: "Ingresa un correo electrónico valido.")
                 lblEmaiInvalid.isHidden = false
             }
         }else if changeButtonbtn == true{

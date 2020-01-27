@@ -32,6 +32,8 @@ class Registro2Periodo: UIViewController {
         DiasPeriodoPicker.reloadAllComponents()
     }
     
+    
+    
     // MARK: Actions
 
     @IBAction func btnAtras_click(_ sender: UIButton) {
@@ -81,6 +83,13 @@ extension Registro2Periodo:UIPickerViewDelegate,UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat
     {
         return 90
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        // This method is triggered whenever the user makes a change to the picker selection.
+        // The parameter named row and component represents what was selected.
+           print("Dias periodo \( diasPeriodo[row])")
+        //preferencias.setString(key:"diasPeriodo",value:numbers[row] )
     }
     
     

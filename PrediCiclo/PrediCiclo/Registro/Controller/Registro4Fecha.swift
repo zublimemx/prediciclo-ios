@@ -22,17 +22,16 @@ class Registro4Fecha: UIViewController {
         self.cumpleView.setValue(UIColor.black, forKey: "textColor")
       
     }
-   /*
+   
     @IBAction func datePickerChanged(_ sender: UIDatePicker) {
         let components = Calendar.current.dateComponents([.year, .month, .day], from: sender.date)
         if let day = components.day, let month = components.month, let year = components.year {
             print("\(day) \(month) \(year)")
-            let dateS:String = "\(year)-\(month)-\(day)"
+            //let dateS:String = "\(year)-\(month)-\(day)"
             //preferencias.setString(key:"cumple",value:dateS )
-            
+        }
     }
-    }
-    */
+    
 
     /*
     @objc func siguienteAction(){

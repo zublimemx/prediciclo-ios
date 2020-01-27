@@ -14,6 +14,8 @@
 		B22CDC9E23C78A8D0011ADB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B22CDC9C23C78A8D0011ADB0 /* LaunchScreen.storyboard */; };
 		B22CDCA923C78A8D0011ADB0 /* PrediCicloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CDCA823C78A8D0011ADB0 /* PrediCicloTests.swift */; };
 		B52603F751748C8E0872E55E /* Pods_PrediCiclo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4011D2C1197DC787E23E6424 /* Pods_PrediCiclo.framework */; };
+		C612E0A323DE8E8600A3919F /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C612E0A223DE8E8600A3919F /* LoginModel.swift */; };
+		C612E0A523DE8E9900A3919F /* LoginApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C612E0A423DE8E9900A3919F /* LoginApi.swift */; };
 		C6387C0A23D104620090E291 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6387C0923D104620090E291 /* Assets.xcassets */; };
 		C658B6F923D57BB00009D1C5 /* Registro1Periodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B6F823D57BB00009D1C5 /* Registro1Periodo.swift */; };
 		C658B6FB23D57BCB0009D1C5 /* Registro2Periodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B6FA23D57BCB0009D1C5 /* Registro2Periodo.swift */; };
@@ -65,6 +67,8 @@
 		B22CDCA423C78A8D0011ADB0 /* PrediCicloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrediCicloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B22CDCA823C78A8D0011ADB0 /* PrediCicloTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrediCicloTests.swift; sourceTree = "<group>"; };
 		B22CDCAA23C78A8D0011ADB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C612E0A223DE8E8600A3919F /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = SOURCE_ROOT; };
+		C612E0A423DE8E9900A3919F /* LoginApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginApi.swift; path = PrediCiclo/Login/Net/LoginApi.swift; sourceTree = SOURCE_ROOT; };
 		C6387C0923D104620090E291 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../Downloads/Assets.xcassets; sourceTree = "<group>"; };
 		C658B6F823D57BB00009D1C5 /* Registro1Periodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registro1Periodo.swift; sourceTree = "<group>"; };
 		C658B6FA23D57BCB0009D1C5 /* Registro2Periodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registro2Periodo.swift; sourceTree = "<group>"; };
@@ -175,8 +179,8 @@
 			children = (
 				C658B72023D6688C0009D1C5 /* View */,
 				C658B72123D6689E0009D1C5 /* Controller */,
-				C658B72223D668A80009D1C5 /* Model */,
 				C658B72323D668AE0009D1C5 /* Net */,
+				C658B72223D668A80009D1C5 /* Model */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -245,6 +249,7 @@
 		C658B72223D668A80009D1C5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C612E0A223DE8E8600A3919F /* LoginModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -252,6 +257,7 @@
 		C658B72323D668AE0009D1C5 /* Net */ = {
 			isa = PBXGroup;
 			children = (
+				C612E0A423DE8E9900A3919F /* LoginApi.swift */,
 			);
 			path = Net;
 			sourceTree = "<group>";
@@ -579,12 +585,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6BDD9CE23D30DC3000BA7F2 /* LoginViewController.swift in Sources */,
+				C612E0A323DE8E8600A3919F /* LoginModel.swift in Sources */,
 				C658B71423D664330009D1C5 /* AlamofireStatus.swift in Sources */,
 				C658B70723D599410009D1C5 /* Informacion.swift in Sources */,
 				C658B70523D57EF40009D1C5 /* Mas.swift in Sources */,
 				C658B71623D664330009D1C5 /* SharedPreferences.swift in Sources */,
 				C658B6FF23D57C030009D1C5 /* Registro4Fecha.swift in Sources */,
 				C658B6FD23D57BE50009D1C5 /* Registro3Menstruacion.swift in Sources */,
+				C612E0A523DE8E9900A3919F /* LoginApi.swift in Sources */,
 				C658B71523D664330009D1C5 /* GradientView.swift in Sources */,
 				C658B70323D57EE30009D1C5 /* Tienda.swift in Sources */,
 				C6993B3923D8DD5C00C29C9E /* DateHeader.swift in Sources */,
