@@ -16,6 +16,8 @@ class LoginViewController: UIViewController {
     // MARK: Variables
     let waveAnimationView = AnimationView()
     var changeButtonbtn = false
+    let api = LoginApi()
+    var step = 0;
     
     // MARK: Controls
     @IBOutlet weak var txtUserEmail: UITextField!
@@ -28,7 +30,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var lblEmaiInvalid: UILabel!
     @IBOutlet weak var lblFieldObligatory: UILabel!
     
-    let api = LoginApi()
     
     
     // MARK: Functions
@@ -84,55 +85,75 @@ class LoginViewController: UIViewController {
     // MARK: Actions
     
      /* -- Login --*/
-    @IBAction func btnSiguiente_click(_ sender: UIButton) {
-        
+    @IBAction func btnSiguiente_click(_ sender: UIButton){
         var userEmailtxt = txtUserEmail.text
         userEmailtxt = userEmailtxt?.trimmingCharacters(in: .whitespacesAndNewlines)
         txtUserEmail.text = userEmailtxt
         
+        let userPasswordtxt = txtUserPassword.text
         
-        if changeButtonbtn == false{
-            //NVActivityIndicatorPresenter.sharedInstance.startAnimating(ActivityData(), nil)
-            if txtUserEmail.text == "" {
-                //NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
-                self.crearAlertConfirmacion(title:"¡Vacio!", texto: "Ingresa un correo electrónico valido.")
-                 txtUserEmail.layer.borderColor = UIColor.red.cgColor;
-                 txtUserEmail.text = ""
-                lblEmaiInvalid.isHidden = false
-                
-            }else if isValidEmail(emailStr: userEmailtxt!) {
-                api.isEmailRegister(VC: self, email: userEmailtxt!) { (success, respEmailExist) in
+        if step == 0{
+            if changeButtonbtn == false{
+                NVActivityIndicatorPresenter.sharedInstance.startAnimating(ActivityData(), nil)
+                if txtUserEmail.text == "" {
                     NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
-                    if success{
+                    txtUserEmail.layer.borderColor = UIColor.red.cgColor;
+                    txtUserEmail.text = ""
+                    lblEmaiInvalid.isHidden = false
+                    
+                }else if isValidEmail(emailStr: userEmailtxt!) {
+                    step = 1
+                    api.isEmailRegister(VC: self, email: userEmailtxt!) { (success, respEmailExist) in
                         //NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
-                        self.txtUserPassword.isHidden = false
-                        self.txtUserEmail.layer.borderColor = UIColor.black.cgColor;
-                        self.btnNext.setTitle("Inicia Sesión", for:.normal)
-                        self.lblEmaiInvalid.isHidden = true
-                        self.changeButtonbtn = true
+                        if success{
+                            NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
+                            self.txtUserPassword.isHidden = false
+                            self.txtUserEmail.layer.borderColor = UIColor.black.cgColor;
+                            self.btnNext.setTitle("Inicia Sesión", for:.normal)
+                            self.lblEmaiInvalid.isHidden = true
+                            self.changeButtonbtn = true
 
-                    }else{
-                        self.crearAlertConfirmacion(title:"¡Error!", texto: "El correo electrónico no está registrado.")
-                        //self.step = 0
+                        }else{
+                            NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
+                            self.crearAlertConfirmacion(title:"¡Error!", texto: "El correo electrónico no está registrado.")
+                            self.step = 1
+                        }
                     }
                 }
+                else{
+                    NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
+                    txtUserEmail.layer.borderColor = UIColor.red.cgColor;
+                     //txtUserEmail.text = ""
+                    self.crearAlertConfirmacion(title:"¡Error!", texto: "Ingresa un correo electrónico valido.")
+                    lblEmaiInvalid.isHidden = false
+                }
+            }else if changeButtonbtn == true{
+                
+                if txtUserPassword.text == "" {
+                    lblFieldObligatory.isHidden = false
+                }else{
+                    print("Iniciando sesion")
+                    lblFieldObligatory.isHidden = true
+                }
+                
             }
-            else{
-                //NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
-                txtUserEmail.layer.borderColor = UIColor.red.cgColor;
-                 //txtUserEmail.text = ""
-                self.crearAlertConfirmacion(title:"¡Error!", texto: "Ingresa un correo electrónico valido.")
-                lblEmaiInvalid.isHidden = false
+        }else{
+            print(step)
+            api.iniciarSesion(VC: self, email: userEmailtxt!, pass: userPasswordtxt!) { (result, respLogin) in
+                NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
+                if result{
+                    preferencias.setUsername(user: userEmailtxt!)
+                    preferencias.setPasswd(pass:userPasswordtxt!)
+                    preferencias.setLogged(true)
+                    preferencias.setUserId(userId:respLogin.data!.userId!)
+                    self.performSegue(withIdentifier: "gotoHome", sender: nil)
+                }else{
+                    self.txtUserEmail.isEnabled = true
+                    self.crearAlertConfirmacion(title: "¡Error!", texto: "¡Usuario o contraseña incorrecto!")
+                    
+                    //self.setVisibility(view: self.userPasswordtxt, constraint: self.alturaPass, visibility: Visibility.INVISIBLE)
+                }
             }
-        }else if changeButtonbtn == true{
-            
-            if txtUserPassword.text == "" {
-                lblFieldObligatory.isHidden = false
-            }else{
-                print("Iniciando sesion")
-                lblFieldObligatory.isHidden = true
-            }
-            
         }
     }
     
