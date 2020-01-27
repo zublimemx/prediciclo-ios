@@ -19,6 +19,11 @@ class LoginViewController: UIViewController {
     let api = LoginApi()
     var step = 0;
     
+    let yourAttributes: [NSAttributedString.Key: Any] = [
+        .font: UIFont.systemFont(ofSize: 16),
+         .foregroundColor: UIColor.systemPink,
+         .underlineStyle: NSUnderlineStyle.single.rawValue]
+    
     // MARK: Controls
     @IBOutlet weak var txtUserEmail: UITextField!
     @IBOutlet weak var txtUserPassword: PasswordTextField!
@@ -51,16 +56,20 @@ class LoginViewController: UIViewController {
         
         txtUserEmail.textColor = UIColor.darkText
         txtUserEmail.layer.borderWidth = 1
-        txtUserEmail.layer.borderColor = UIColor.darkGray.cgColor;
+        txtUserEmail.layer.borderColor = UIColor.lightGray.cgColor;
         txtUserEmail.layer.cornerRadius = 4
         txtUserEmail.attributedPlaceholder = NSAttributedString(string: "Correo Electrónico",attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
-        
+    
         
         txtUserPassword.textColor = UIColor.darkText
         txtUserPassword.layer.borderWidth = 1
-        txtUserPassword.layer.borderColor = UIColor.darkGray.cgColor;
+        txtUserPassword.layer.borderColor = UIColor.lightGray.cgColor;
         txtUserPassword.layer.cornerRadius = 4
         txtUserPassword.attributedPlaceholder = NSAttributedString(string: "Contraseña",attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
+        
+        let attributeString = NSMutableAttributedString(string: "¿Olvidaste tu contraseña?",
+                                                        attributes: yourAttributes)
+        btnForgotPassword.setAttributedTitle(attributeString, for: .normal)
     
         
     }
@@ -93,65 +102,65 @@ class LoginViewController: UIViewController {
         let userPasswordtxt = txtUserPassword.text
         
         if step == 0{
-            if changeButtonbtn == false{
-                NVActivityIndicatorPresenter.sharedInstance.startAnimating(ActivityData(), nil)
-                if txtUserEmail.text == "" {
+            NVActivityIndicatorPresenter.sharedInstance.startAnimating(ActivityData(), nil)
+            /*Correo Vacio**/
+            if txtUserEmail.text == "" {
+                NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
+                txtUserEmail.layer.borderColor = UIColor.red.cgColor;
+                txtUserEmail.text = ""
+                lblEmaiInvalid.isHidden = false
+            }else if isValidEmail(emailStr: userEmailtxt!) {
+                api.isEmailRegister(VC: self, email: userEmailtxt!) { (success, respEmailExist) in
+                //NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
+                /* -- Email Valido --*/
+                if success{
+                    self.step = 1
                     NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
-                    txtUserEmail.layer.borderColor = UIColor.red.cgColor;
-                    txtUserEmail.text = ""
-                    lblEmaiInvalid.isHidden = false
-                    
-                }else if isValidEmail(emailStr: userEmailtxt!) {
-                    step = 1
-                    api.isEmailRegister(VC: self, email: userEmailtxt!) { (success, respEmailExist) in
-                        //NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
-                        if success{
-                            NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
-                            self.txtUserPassword.isHidden = false
-                            self.txtUserEmail.layer.borderColor = UIColor.black.cgColor;
-                            self.btnNext.setTitle("Inicia Sesión", for:.normal)
-                            self.lblEmaiInvalid.isHidden = true
-                            self.changeButtonbtn = true
-
-                        }else{
-                            NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
-                            self.crearAlertConfirmacion(title:"¡Error!", texto: "El correo electrónico no está registrado.")
-                            self.step = 1
-                        }
-                    }
-                }
-                else{
-                    NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
-                    txtUserEmail.layer.borderColor = UIColor.red.cgColor;
-                     //txtUserEmail.text = ""
-                    self.crearAlertConfirmacion(title:"¡Error!", texto: "Ingresa un correo electrónico valido.")
-                    lblEmaiInvalid.isHidden = false
-                }
-            }else if changeButtonbtn == true{
-                
-                if txtUserPassword.text == "" {
-                    lblFieldObligatory.isHidden = false
+                    self.txtUserPassword.isHidden = false
+                    self.txtUserEmail.layer.borderColor = UIColor.lightGray.cgColor;
+                    self.btnNext.setTitle("Inicia Sesión", for:.normal)
+                    self.lblEmaiInvalid.isHidden = true
+                    self.changeButtonbtn = true
                 }else{
-                    print("Iniciando sesion")
-                    lblFieldObligatory.isHidden = true
+                    /*User no registrado*/
+                    NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
+                    self.lblEmaiInvalid.text = "Usuario no registrado."
                 }
-                
+                }
+            }
+            else{
+                /*Email Invalido*/
+                NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
+                txtUserEmail.layer.borderColor = UIColor.red.cgColor;
+                self.lblEmaiInvalid.text = "Correo no válido."
+                //self.crearAlertConfirmacion(title:"¡Error!", texto: "Ingresa un correo electrónico valido.")
+                lblEmaiInvalid.isHidden = false
             }
         }else{
-            print(step)
-            api.iniciarSesion(VC: self, email: userEmailtxt!, pass: userPasswordtxt!) { (result, respLogin) in
-                NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
-                if result{
-                    preferencias.setUsername(user: userEmailtxt!)
-                    preferencias.setPasswd(pass:userPasswordtxt!)
-                    preferencias.setLogged(true)
-                    preferencias.setUserId(userId:respLogin.data!.userId!)
-                    self.performSegue(withIdentifier: "gotoHome", sender: nil)
-                }else{
-                    self.txtUserEmail.isEnabled = true
-                    self.crearAlertConfirmacion(title: "¡Error!", texto: "¡Usuario o contraseña incorrecto!")
-                    
-                    //self.setVisibility(view: self.userPasswordtxt, constraint: self.alturaPass, visibility: Visibility.INVISIBLE)
+            /*Validando Contraseña*/
+            if txtUserPassword.text == "" {  /*Campo Vacio*/
+                lblFieldObligatory.isHidden = false
+                lblFieldObligatory.text = "Campo Obligatorio *"
+                txtUserPassword.layer.borderColor = UIColor.red.cgColor;
+                txtUserPassword.text = ""
+            }else{
+                api.iniciarSesion(VC: self, email: userEmailtxt!, pass: userPasswordtxt!){
+                    (result, respLogin) in
+                    NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
+                    /*Contrseña Valida*/
+                    if result{
+                        preferencias.setUsername(user: userEmailtxt!)
+                        preferencias.setPasswd(pass:userPasswordtxt!)
+                        preferencias.setLogged(true)
+                        preferencias.setUserId(userId:respLogin.data!.userId!)
+                        /*-- Nos manda al Main -- */
+                        self.performSegue(withIdentifier: "gotoHome", sender: nil)
+                    }else{
+                        /*Contraseña invalida*/
+                        self.txtUserEmail.isEnabled = true
+                        self.crearAlertConfirmacion(title: "¡Error!", texto: "¡Usuario o contraseña incorrecto!")
+                        self.txtUserPassword.text = ""
+                    }
                 }
             }
         }
