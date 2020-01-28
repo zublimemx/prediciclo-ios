@@ -30,6 +30,8 @@ class RegistroController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.hidesBackButton = true
+        
         //txtUserPassword.isHidden = true
         lblEmailInvalid.isHidden = true
         lblFieldObligatory.isHidden = true

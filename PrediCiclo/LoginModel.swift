@@ -37,11 +37,25 @@ struct respLogin:Mappable{
         data <- map["data"]
     }
 }
+
 struct DataLogin :Mappable{
     var userId:Int?
     init?(map: Map) {}
     mutating func mapping(map: Map) {
         userId <- map["user_id"]
+    }
+}
+
+
+struct ForgotPasword :Mappable{
+    var status:Int?
+    var data:Bool?
+    var message:String?
+    init?(map: Map) {}
+    mutating func mapping(map: Map) {
+        status <- map["status"]
+        data <- map["data"]
+        message <- map ["message"]
     }
 }
 

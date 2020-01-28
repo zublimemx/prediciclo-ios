@@ -59,7 +59,7 @@ class LoginViewController: UIViewController {
         txtUserEmail.layer.borderColor = UIColor.lightGray.cgColor;
         txtUserEmail.layer.cornerRadius = 4
         txtUserEmail.attributedPlaceholder = NSAttributedString(string: "Correo Electrónico",attributes: [NSAttributedString.Key.foregroundColor: UIColor.darkGray])
-    
+        
         
         txtUserPassword.textColor = UIColor.darkText
         txtUserPassword.layer.borderWidth = 1
@@ -90,6 +90,9 @@ class LoginViewController: UIViewController {
         return true
     }
     
+    
+
+    
 
     // MARK: Actions
     
@@ -97,9 +100,11 @@ class LoginViewController: UIViewController {
     @IBAction func btnSiguiente_click(_ sender: UIButton){
         var userEmailtxt = txtUserEmail.text
         userEmailtxt = userEmailtxt?.trimmingCharacters(in: .whitespacesAndNewlines)
+        userEmailtxt = userEmailtxt?.lowercased()
         txtUserEmail.text = userEmailtxt
         
         let userPasswordtxt = txtUserPassword.text
+        self.view.endEditing(true)
         
         if step == 0{
             NVActivityIndicatorPresenter.sharedInstance.startAnimating(ActivityData(), nil)
@@ -107,8 +112,12 @@ class LoginViewController: UIViewController {
             if txtUserEmail.text == "" {
                 NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
                 txtUserEmail.layer.borderColor = UIColor.red.cgColor;
+                txtUserEmail.layer.borderWidth = 1.5
                 txtUserEmail.text = ""
                 lblEmaiInvalid.isHidden = false
+                lblEmaiInvalid.text = "Correo no válido"
+                
+                
             }else if isValidEmail(emailStr: userEmailtxt!) {
                 api.isEmailRegister(VC: self, email: userEmailtxt!) { (success, respEmailExist) in
                 //NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
@@ -118,13 +127,16 @@ class LoginViewController: UIViewController {
                     NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
                     self.txtUserPassword.isHidden = false
                     self.txtUserEmail.layer.borderColor = UIColor.lightGray.cgColor;
+                    self.txtUserEmail.layer.borderWidth = 1
                     self.btnNext.setTitle("Inicia Sesión", for:.normal)
                     self.lblEmaiInvalid.isHidden = true
-                    self.changeButtonbtn = true
+                    
                 }else{
                     /*User no registrado*/
                     NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
                     self.lblEmaiInvalid.text = "Usuario no registrado."
+                    self.lblEmaiInvalid.isHidden = false
+                    
                 }
                 }
             }
@@ -132,23 +144,31 @@ class LoginViewController: UIViewController {
                 /*Email Invalido*/
                 NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
                 txtUserEmail.layer.borderColor = UIColor.red.cgColor;
+                txtUserEmail.layer.borderWidth = 1.5
                 self.lblEmaiInvalid.text = "Correo no válido."
                 //self.crearAlertConfirmacion(title:"¡Error!", texto: "Ingresa un correo electrónico valido.")
                 lblEmaiInvalid.isHidden = false
+                
             }
         }else{
             /*Validando Contraseña*/
+            
             if txtUserPassword.text == "" {  /*Campo Vacio*/
+                
                 lblFieldObligatory.isHidden = false
                 lblFieldObligatory.text = "Campo Obligatorio *"
                 txtUserPassword.layer.borderColor = UIColor.red.cgColor;
+                txtUserEmail.layer.borderWidth = 1.5
                 txtUserPassword.text = ""
+                
             }else{
+                NVActivityIndicatorPresenter.sharedInstance.startAnimating(ActivityData(), nil)
                 api.iniciarSesion(VC: self, email: userEmailtxt!, pass: userPasswordtxt!){
                     (result, respLogin) in
-                    NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
+                    
                     /*Contrseña Valida*/
                     if result{
+                        NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
                         preferencias.setUsername(user: userEmailtxt!)
                         preferencias.setPasswd(pass:userPasswordtxt!)
                         preferencias.setLogged(true)
@@ -157,6 +177,7 @@ class LoginViewController: UIViewController {
                         self.performSegue(withIdentifier: "gotoHome", sender: nil)
                     }else{
                         /*Contraseña invalida*/
+                        NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
                         self.txtUserEmail.isEnabled = true
                         self.crearAlertConfirmacion(title: "¡Error!", texto: "¡Usuario o contraseña incorrecto!")
                         self.txtUserPassword.text = ""
@@ -174,12 +195,38 @@ class LoginViewController: UIViewController {
         userEmailtxt = userEmailtxt?.trimmingCharacters(in: .whitespacesAndNewlines)
         txtUserEmail.text = userEmailtxt
         
+        NVActivityIndicatorPresenter.sharedInstance.startAnimating(ActivityData(), nil)
+        
         if txtUserEmail.text == "" {
-            self.crearAlertConfirmacion(title:"¡Vacio!", texto: "Antes debes ingresar correo electrónico")
+            NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
+            self.step = 0
+            self.crearAlertConfirmacion(title:"", texto: "Antes debes ingresar tu correo electrónico")
         }else{
-           self.crearAlertConfirmacion2(title:"¡Vacio!", texto: "Te enviaremos por correo electrónico las instrucciones para restablecer tu contraseña")
+            //self.crearAlertConfirmacion2(title:"", texto: "Te enviaremos por correo electrónico las instrucciones para restablecer tu contraseña")
+            
+            if isValidEmail(emailStr: userEmailtxt!) {
+                api.recuperarEmail(VC:self, email: userEmailtxt!) { (success, ForgotPasword) in
+                if success{
+                    NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
+                    self.crearAlertConfirmacion3(title:"", texto: "Las instrucciones para recuperar la contraseña se han enviado por email")
+                   
+                }else{
+                    NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
+                    self.crearAlertConfirmacion3(title:"", texto: "No pudimos encontrar tu correo")
+                    self.step = 0
+                }
+                }
+            }
+            
         }
+        
+
+        
+        
     }
     
     
 }
+
+
+

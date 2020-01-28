@@ -216,6 +216,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="L71-DU-t7N">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                         <color key="barTintColor" red="0.87792378660000003" green="0.51142561440000001" blue="0.47488272190000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
@@ -370,9 +371,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="oVw-go-z0i"/>
                     </view>
-                    <navigationItem key="navigationItem" id="jbR-eh-ASC">
-                        <barButtonItem key="backBarButtonItem" title="Atrás" id="onX-5m-xyt"/>
-                    </navigationItem>
                     <connections>
                         <outlet property="btnRegister" destination="ucI-4E-Dpf" id="xRp-Su-ngD"/>
                         <outlet property="lblEmailInvalid" destination="hiq-DJ-Euz" id="pdE-WR-2Qz"/>
