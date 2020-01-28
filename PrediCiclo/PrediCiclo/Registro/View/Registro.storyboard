@@ -16,16 +16,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Cuándo comenzó tu último periodo?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctl-ZG-CyS">
-                                <rect key="frame" x="33" y="254" width="348" height="22.5"/>
+                                <rect key="frame" x="33" y="234" width="348" height="22.5"/>
                                 <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="21"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar_new_basic" translatesAutoresizingMaskIntoConstraints="NO" id="0zB-7Q-AoU">
-                                <rect key="frame" x="132" y="84" width="150" height="150"/>
+                                <rect key="frame" x="147" y="84" width="120" height="120"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="MnC-0l-5Ly"/>
-                                    <constraint firstAttribute="width" constant="150" id="sma-FK-rer"/>
+                                    <constraint firstAttribute="height" constant="120" id="MnC-0l-5Ly"/>
+                                    <constraint firstAttribute="width" constant="120" id="sma-FK-rer"/>
                                 </constraints>
                             </imageView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="CJR-x9-VGj">
@@ -75,7 +75,7 @@
                         <color key="backgroundColor" red="1" green="0.75674592068893609" blue="0.70603986482398351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Icn-cd-LNS" firstAttribute="leading" secondItem="gaL-kv-AZc" secondAttribute="leading" constant="45" id="14B-Ib-ib8"/>
-                            <constraint firstItem="ctl-ZG-CyS" firstAttribute="top" secondItem="0zB-7Q-AoU" secondAttribute="bottom" constant="20" id="62p-Rf-1Sf"/>
+                            <constraint firstItem="ctl-ZG-CyS" firstAttribute="top" secondItem="0zB-7Q-AoU" secondAttribute="bottom" constant="30" id="62p-Rf-1Sf"/>
                             <constraint firstItem="CJR-x9-VGj" firstAttribute="centerX" secondItem="3Kr-vO-ctD" secondAttribute="centerX" id="C6e-jf-Qat"/>
                             <constraint firstItem="gaL-kv-AZc" firstAttribute="bottom" secondItem="Icn-cd-LNS" secondAttribute="bottom" constant="15" id="K9Z-s9-7JT"/>
                             <constraint firstItem="gaL-kv-AZc" firstAttribute="trailing" secondItem="Zji-ge-9Ae" secondAttribute="trailing" constant="30" id="KaN-y7-CY2"/>
@@ -107,14 +107,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="NgM-f4-NSI">
-                                <rect key="frame" x="132" y="84" width="150" height="150"/>
+                                <rect key="frame" x="147" y="84" width="120" height="120"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="7Du-gE-Zyu"/>
-                                    <constraint firstAttribute="height" constant="150" id="nyU-Tg-m9B"/>
+                                    <constraint firstAttribute="width" constant="120" id="7Du-gE-Zyu"/>
+                                    <constraint firstAttribute="height" constant="120" id="nyU-Tg-m9B"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Cuántos dias dura tu periodo?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0C-3f-Bfj">
-                                <rect key="frame" x="60" y="254" width="294.5" height="26.5"/>
+                                <rect key="frame" x="60" y="234" width="294.5" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -159,7 +159,7 @@
                         <constraints>
                             <constraint firstItem="muP-m5-jR7" firstAttribute="leading" secondItem="FdA-QM-WEA" secondAttribute="leading" constant="45" id="81g-p3-cje"/>
                             <constraint firstItem="FdA-QM-WEA" firstAttribute="bottom" secondItem="muP-m5-jR7" secondAttribute="bottom" constant="15" id="Cmg-Dm-lpD"/>
-                            <constraint firstItem="Y0C-3f-Bfj" firstAttribute="top" secondItem="NgM-f4-NSI" secondAttribute="bottom" constant="20" id="JIX-RN-eAr"/>
+                            <constraint firstItem="Y0C-3f-Bfj" firstAttribute="top" secondItem="NgM-f4-NSI" secondAttribute="bottom" constant="30" id="JIX-RN-eAr"/>
                             <constraint firstItem="xaP-0K-fV9" firstAttribute="centerX" secondItem="hp8-Ac-PqH" secondAttribute="centerX" id="Lri-QU-iGA"/>
                             <constraint firstItem="Y0C-3f-Bfj" firstAttribute="centerX" secondItem="hp8-Ac-PqH" secondAttribute="centerX" id="QXX-o1-Dil"/>
                             <constraint firstItem="xaP-0K-fV9" firstAttribute="centerY" secondItem="hp8-Ac-PqH" secondAttribute="centerY" id="Rsf-7E-vQm"/>
@@ -190,7 +190,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Cuántos días dura tu menstruación?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9Y-1B-txS">
-                                <rect key="frame" x="31" y="254" width="352" height="26.5"/>
+                                <rect key="frame" x="31" y="244" width="352" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -199,10 +199,10 @@
                                 <rect key="frame" x="0.0" y="340" width="414" height="216"/>
                             </pickerView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="yGz-8j-wJE">
-                                <rect key="frame" x="132" y="84" width="150" height="150"/>
+                                <rect key="frame" x="142" y="84" width="130" height="130"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="Oi4-vf-ERN"/>
-                                    <constraint firstAttribute="width" constant="150" id="nV2-8Z-dVN"/>
+                                    <constraint firstAttribute="height" constant="130" id="Oi4-vf-ERN"/>
+                                    <constraint firstAttribute="width" constant="130" id="nV2-8Z-dVN"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ypQ-u8-qte">
@@ -237,7 +237,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.67627262840836933" green="1" blue="0.64358290289104358" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.59715816342318584" green="1" blue="0.6963170622092143" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="yGz-8j-wJE" firstAttribute="top" secondItem="MSu-Kv-2bD" secondAttribute="top" constant="40" id="9Zr-ie-Vez"/>
                             <constraint firstItem="MSu-Kv-2bD" firstAttribute="bottom" secondItem="Knf-gf-VZB" secondAttribute="bottom" constant="15" id="DJE-Lh-MA5"/>
@@ -245,7 +245,7 @@
                             <constraint firstItem="ypQ-u8-qte" firstAttribute="leading" secondItem="MSu-Kv-2bD" secondAttribute="leading" constant="45" id="R2O-rB-ZW7"/>
                             <constraint firstItem="Whu-2z-Mmf" firstAttribute="centerX" secondItem="H39-kO-oV4" secondAttribute="centerX" id="XZ3-x0-lLK"/>
                             <constraint firstItem="MSu-Kv-2bD" firstAttribute="bottom" secondItem="ypQ-u8-qte" secondAttribute="bottom" constant="13" id="ZPc-2M-hat"/>
-                            <constraint firstItem="A9Y-1B-txS" firstAttribute="top" secondItem="yGz-8j-wJE" secondAttribute="bottom" constant="20" id="ZQH-dL-aBM"/>
+                            <constraint firstItem="A9Y-1B-txS" firstAttribute="top" secondItem="yGz-8j-wJE" secondAttribute="bottom" constant="30" id="ZQH-dL-aBM"/>
                             <constraint firstItem="A9Y-1B-txS" firstAttribute="centerX" secondItem="H39-kO-oV4" secondAttribute="centerX" id="hF5-01-3Qb"/>
                             <constraint firstItem="Whu-2z-Mmf" firstAttribute="leading" secondItem="MSu-Kv-2bD" secondAttribute="leading" id="ixL-od-Ih7"/>
                             <constraint firstItem="yGz-8j-wJE" firstAttribute="centerX" secondItem="H39-kO-oV4" secondAttribute="centerX" id="lSF-7q-gFl"/>
@@ -272,14 +272,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="birthday" translatesAutoresizingMaskIntoConstraints="NO" id="Ysg-48-l55">
-                                <rect key="frame" x="132" y="84" width="150" height="150"/>
+                                <rect key="frame" x="142" y="84" width="130" height="130"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="INz-Pr-GIE"/>
-                                    <constraint firstAttribute="height" constant="150" id="Yl3-kC-sxV"/>
+                                    <constraint firstAttribute="width" constant="130" id="INz-Pr-GIE"/>
+                                    <constraint firstAttribute="height" constant="130" id="Yl3-kC-sxV"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Cuál es tu fecha de nacimiento?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cxd-wc-CKK">
-                                <rect key="frame" x="51" y="254" width="312.5" height="26.5"/>
+                                <rect key="frame" x="51" y="244" width="312.5" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -329,7 +329,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.85968192985138592" blue="0.37417513827999427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.931047099774021" blue="0.55426965809356687" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Ysg-48-l55" firstAttribute="centerX" secondItem="Syk-iy-l2n" secondAttribute="centerX" id="1UK-nY-WMS"/>
                             <constraint firstItem="HKR-aW-bnn" firstAttribute="bottom" secondItem="RQE-WO-s4o" secondAttribute="bottom" constant="15" id="3lO-pH-oZK"/>
@@ -338,7 +338,7 @@
                             <constraint firstItem="HKR-aW-bnn" firstAttribute="trailing" secondItem="RQE-WO-s4o" secondAttribute="trailing" constant="30" id="crt-aE-5Pq"/>
                             <constraint firstItem="Cxd-wc-CKK" firstAttribute="centerX" secondItem="Syk-iy-l2n" secondAttribute="centerX" id="he0-EL-Mcs"/>
                             <constraint firstItem="pm6-bX-g90" firstAttribute="leading" secondItem="HKR-aW-bnn" secondAttribute="leading" constant="45" id="jE5-LA-YcL"/>
-                            <constraint firstItem="Cxd-wc-CKK" firstAttribute="top" secondItem="Ysg-48-l55" secondAttribute="bottom" constant="20" id="sFL-kx-Glv"/>
+                            <constraint firstItem="Cxd-wc-CKK" firstAttribute="top" secondItem="Ysg-48-l55" secondAttribute="bottom" constant="30" id="sFL-kx-Glv"/>
                             <constraint firstItem="HKR-aW-bnn" firstAttribute="bottom" secondItem="pm6-bX-g90" secondAttribute="bottom" constant="15" id="u3O-U3-O8C"/>
                             <constraint firstItem="Ysg-48-l55" firstAttribute="top" secondItem="HKR-aW-bnn" secondAttribute="top" constant="40" id="wII-e6-U4T"/>
                         </constraints>

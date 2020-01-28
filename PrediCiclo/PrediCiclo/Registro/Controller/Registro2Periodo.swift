@@ -27,7 +27,7 @@ class Registro2Periodo: UIViewController {
         repeat{
             self.diasPeriodo.append("\(i)")
             i += 1;
-        }while(i<42)
+        }while(i<43)
                       
         DiasPeriodoPicker.reloadAllComponents()
     }
@@ -73,7 +73,7 @@ extension Registro2Periodo:UIPickerViewDelegate,UIPickerViewDataSource {
         if let v = view {
             label = v as! UILabel
         }
-        label.font = UIFont (name: "Arial Hebrew", size: 80)
+        label.font = UIFont (name: "Arial Hebrew", size: 60)
         label.text =  diasPeriodo[row]
         label.textAlignment = .center
         label.textColor = UIColor.black
@@ -82,7 +82,7 @@ extension Registro2Periodo:UIPickerViewDelegate,UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat
     {
-        return 90
+        return 60
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {

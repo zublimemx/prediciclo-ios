@@ -23,11 +23,11 @@ class Registro3Menstruacion: UIViewController {
         menstruacionPicker.dataSource = self
         menstruacionPicker.delegate = self
         
-        var i = 21;
+        var i = 3;
         repeat{
             self.diasMenstruacion.append("\(i)")
             i += 1;
-        }while(i<42)
+        }while(i<7)
                       
         menstruacionPicker.reloadAllComponents()
     }
@@ -70,7 +70,7 @@ extension Registro3Menstruacion:UIPickerViewDelegate,UIPickerViewDataSource {
         if let v = view {
             label = v as! UILabel
         }
-        label.font = UIFont (name: "Arial Hebrew", size: 80)
+        label.font = UIFont (name: "Arial Hebrew", size: 60)
         label.text =  diasMenstruacion[row]
         label.textAlignment = .center
         label.textColor = UIColor.black
@@ -79,7 +79,7 @@ extension Registro3Menstruacion:UIPickerViewDelegate,UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat
     {
-        return 90
+        return 60
     }
     
 

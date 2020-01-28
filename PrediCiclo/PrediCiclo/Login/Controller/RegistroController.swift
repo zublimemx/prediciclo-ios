@@ -59,6 +59,10 @@ class RegistroController: UIViewController {
         waveAnimationView.play()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
     /*--- Control del Teclado ---*/
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
