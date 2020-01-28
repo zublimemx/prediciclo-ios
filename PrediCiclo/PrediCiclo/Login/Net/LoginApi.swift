@@ -26,6 +26,8 @@ class LoginApi {
     let URL_LOGIN = "https://prediciclo.zublime.mx/wp-json/zublime/prediciclo/v1/login"
     let URL_RECUPERAR_EMAIL = "https://prediciclo.zublime.mx/wp-json/zublime/prediciclo/v1/customer/lost_password"
     
+    //let URL_REGISTRO_EMAIL = "https://prediciclo.zublime.mx/wp-json/wc/v3/customers "
+    
     public func isEmailRegister(VC : UIViewController,email:String,callback: @escaping (_ success: Bool, _ callback:respEmailExist)->Void){
         
         let params = ["email":email]

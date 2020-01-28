@@ -15,16 +15,16 @@ class RegistroController: UIViewController {
     
     // MARK: Variables
     let waveAnimationView = AnimationView()
-    
+    let api = LoginApi()
     // MARK: Controls
     
     @IBOutlet weak var txtUserEmail: UITextField!
     @IBOutlet weak var txtUserPassword: PasswordTextField!
     @IBOutlet weak var btnRegister: UIButton!
     @IBOutlet weak var lblEmailInvalid: UILabel!
-    
-    @IBOutlet weak var viewLottieR: UIView!
     @IBOutlet weak var lblFieldObligatory: UILabel!
+    @IBOutlet weak var viewLottieR: UIView!
+    
     
     // MARK: Functions
     override func viewDidLoad() {
@@ -80,6 +80,67 @@ class RegistroController: UIViewController {
     @IBAction func btnInicio_click(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func btnRegistro_click(_ sender: UIButton) {
+        
+        var userEmailtxt = txtUserEmail.text
+        userEmailtxt = userEmailtxt?.trimmingCharacters(in: .whitespacesAndNewlines)
+        userEmailtxt = userEmailtxt?.lowercased()
+        txtUserEmail.text = userEmailtxt
+        
+        let userPasswordTxt = txtUserPassword.text
+        txtUserPassword.text = userPasswordTxt
+    
+        if txtUserEmail.text == "" {
+            lblEmailInvalid.isHidden = false
+            lblEmailInvalid.text = "Correo no válido"
+            txtUserEmail.layer.borderColor = UIColor.red.cgColor;
+            txtUserEmail.layer.borderWidth = 1.5
+        }
+        if txtUserPassword.text == "" {
+            lblFieldObligatory.isHidden = false
+            lblFieldObligatory.text = "Campo obligatorio *"
+            txtUserPassword.layer.borderColor = UIColor.red.cgColor;
+            txtUserPassword.layer.borderWidth = 1.5
+        }
+        
+        
+        if isValidEmail(emailStr: userEmailtxt!){
+            lblEmailInvalid.isHidden = true
+            txtUserEmail.layer.borderColor = UIColor.lightGray.cgColor;
+            txtUserEmail.layer.borderWidth = 1
+            
+            if txtUserPassword.text == "" {
+                lblFieldObligatory.isHidden = false
+                lblFieldObligatory.text = "Campo obligatorio *"
+                txtUserPassword.layer.borderColor = UIColor.red.cgColor;
+                txtUserPassword.layer.borderWidth = 1.5
+            }else{
+                if(userPasswordTxt!.count >= 6){
+                    txtUserPassword.layer.borderColor = UIColor.lightGray.cgColor;
+                    txtUserPassword.layer.borderWidth = 1
+                    lblFieldObligatory.isHidden = true
+                    NVActivityIndicatorPresenter.sharedInstance.startAnimating(ActivityData(), nil)
+                    api.isEmailRegister(VC: self, email: userEmailtxt!) { (success, respEmailExist) in
+                    
+                    /* -- Email Valido --*/
+                    if success{
+                        NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
+                        self.crearAlertConfirmacion(title: "", texto: "Ya hay una cuenta registrada con tu correo eléctronico. Por favor, accede")
+                        
+                    }else{
+                        /*User no registrado*/
+                        print("Registrando")
+                        NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
+                    }
+                    }
+                    
+                }else{
+                    print("Contraseña Corta")
+                }
+            }
+        }
     }
     
 }

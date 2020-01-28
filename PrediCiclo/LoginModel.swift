@@ -105,5 +105,38 @@ struct DataCalendarFinal :Mappable{
         reiniciar_sangrado <- map["reiniciar_sangrado"]
         caso <- map["caso"]
     }
+    
+    struct RegistroUsuario :Mappable{
+        var id : Int?
+        var date_created : String?
+        var date_created_gmt : Bool?
+        var date_modified : String?
+        var date_modified_gmt : String?
+        var email : String?
+        var first_name : String?
+        var last_name : String?
+        var role : String?
+        var username : String?
+
+        init?(map: Map) {
+
+        }
+
+        mutating func mapping(map: Map) {
+
+            id <- map["id"]
+            date_created <- map["date_created"]
+            date_created_gmt <- map["date_created_gmt"]
+            date_modified <- map["date_modified"]
+            date_modified_gmt <- map["date_modified_gmt"]
+            email <- map["email"]
+            first_name <- map["first_name"]
+            last_name <- map["last_name"]
+            role <- map["role"]
+            username <- map["username"]
+        }
+
+    }
+
 
 }
