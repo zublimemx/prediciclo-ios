@@ -194,8 +194,8 @@
 			children = (
 				C658B72423D669F10009D1C5 /* View */,
 				C658B72523D669FC0009D1C5 /* Controller */,
-				C658B72623D66A0D0009D1C5 /* Model */,
 				C658B72723D66A130009D1C5 /* Net */,
+				C658B72623D66A0D0009D1C5 /* Model */,
 			);
 			path = Registro;
 			sourceTree = "<group>";
