@@ -26,7 +26,6 @@ let manager : SessionManager = {
 
 
 
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

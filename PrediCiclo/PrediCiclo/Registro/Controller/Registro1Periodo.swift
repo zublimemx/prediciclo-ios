@@ -31,8 +31,8 @@ class Registro1Periodo: UIViewController {
         let components = Calendar.current.dateComponents([.year, .month, .day], from: sender.date)
         if let day = components.day, let month = components.month, let year = components.year {
             print("\(day) \(month) \(year)")
-            //let dateS:String = "\(year)-\(month)-\(day)"
-            //preferencias.setString(key:"comienzoPeriodo",value:dateS )
+            let dateS:String = "\(year)-\(month)-\(day)"
+            preferencias.setString(key:"comienzoPeriodo",value:dateS )
         }
     }
     

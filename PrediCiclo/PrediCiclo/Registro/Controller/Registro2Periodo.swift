@@ -89,7 +89,7 @@ extension Registro2Periodo:UIPickerViewDelegate,UIPickerViewDataSource {
         // This method is triggered whenever the user makes a change to the picker selection.
         // The parameter named row and component represents what was selected.
            print("Dias periodo \( diasPeriodo[row])")
-        //preferencias.setString(key:"diasPeriodo",value:numbers[row] )
+           preferencias.setString(key:"diasPeriodo",value:diasPeriodo[row] )
     }
     
     

@@ -325,7 +325,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="5sT-KD-uM5" kind="show" id="L5B-Kq-MLX"/>
+                                    <action selector="btnSiguiente_click:" destination="ImK-LG-dzS" eventType="touchUpInside" id="UQm-Ds-thy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -347,6 +347,7 @@
                     <navigationItem key="navigationItem" id="W8N-cg-jAA"/>
                     <connections>
                         <outlet property="cumpleView" destination="Oof-qQ-cux" id="4pm-B7-ase"/>
+                        <segue destination="5sT-KD-uM5" kind="presentation" identifier="gotoMain" id="fBy-hP-JRK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10m-Bh-s2l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

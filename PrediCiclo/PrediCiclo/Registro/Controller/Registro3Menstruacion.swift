@@ -36,7 +36,7 @@ class Registro3Menstruacion: UIViewController {
         // This method is triggered whenever the user makes a change to the picker selection.
         // The parameter named row and component represents what was selected.
            print("Dias menstruacion \(diasMenstruacion[row])")
-        //preferencias.setString(key:"diasMenstruacion",value:numbers[row] )
+           preferencias.setString(key:"diasMenstruacion",value:diasMenstruacion[row] )
     }
     
     // MARK: Actions
