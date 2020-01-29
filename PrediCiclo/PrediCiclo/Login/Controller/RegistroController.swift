@@ -84,6 +84,7 @@ class RegistroController: UIViewController {
     
     @IBAction func btnRegistro_click(_ sender: UIButton) {
         
+        self.view.endEditing(true)
         var userEmailtxt = txtUserEmail.text
         userEmailtxt = userEmailtxt?.trimmingCharacters(in: .whitespacesAndNewlines)
         userEmailtxt = userEmailtxt?.lowercased()
@@ -91,13 +92,15 @@ class RegistroController: UIViewController {
         
         let userPasswordTxt = txtUserPassword.text
         txtUserPassword.text = userPasswordTxt
-    
+        
+        /* --Email Vacio--*/
         if txtUserEmail.text == "" {
             lblEmailInvalid.isHidden = false
             lblEmailInvalid.text = "Correo no válido"
             txtUserEmail.layer.borderColor = UIColor.red.cgColor;
             txtUserEmail.layer.borderWidth = 1.5
         }
+        /* --Password Vacio--*/
         if txtUserPassword.text == "" {
             lblFieldObligatory.isHidden = false
             lblFieldObligatory.text = "Campo obligatorio *"
@@ -105,18 +108,20 @@ class RegistroController: UIViewController {
             txtUserPassword.layer.borderWidth = 1.5
         }
         
-        
+        /*--Validando Email--*/
         if isValidEmail(emailStr: userEmailtxt!){
             lblEmailInvalid.isHidden = true
             txtUserEmail.layer.borderColor = UIColor.lightGray.cgColor;
             txtUserEmail.layer.borderWidth = 1
             
+            /* --Password Vacio--*/
             if txtUserPassword.text == "" {
                 lblFieldObligatory.isHidden = false
                 lblFieldObligatory.text = "Campo obligatorio *"
                 txtUserPassword.layer.borderColor = UIColor.red.cgColor;
                 txtUserPassword.layer.borderWidth = 1.5
             }else{
+                /*--Campo de Contraseña con datos--*/
                 if(userPasswordTxt!.count >= 6){
                     txtUserPassword.layer.borderColor = UIColor.lightGray.cgColor;
                     txtUserPassword.layer.borderWidth = 1
@@ -128,16 +133,27 @@ class RegistroController: UIViewController {
                     if success{
                         NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
                         self.crearAlertConfirmacion(title: "", texto: "Ya hay una cuenta registrada con tu correo eléctronico. Por favor, accede")
-                        
+                        self.txtUserPassword.text = ""
                     }else{
                         /*User no registrado*/
+                        //NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
                         print("Registrando")
-                        NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
+                        
+                        /*--Registrando Correo y contrasena Validos--*/
+                        self.api.registrarUser(VC: self, email: userEmailtxt!, pass: userPasswordTxt!) { (result, respEmailExist) in
+                            print("adentro")
+                            if result{
+                                NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
+                                self.performSegue(withIdentifier: "gotoRegistro", sender: nil)
+                            }
+                        }
+                        //*/
                     }
                     }
                     
                 }else{
-                    print("Contraseña Corta")
+                    self.crearAlertConfirmacion(title: "", texto: "Contraseña muy Corta.")
+
                 }
             }
         }

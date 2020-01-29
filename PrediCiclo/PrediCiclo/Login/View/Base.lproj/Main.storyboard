@@ -381,6 +381,7 @@
                         <outlet property="txtUserEmail" destination="vbt-G1-8VG" id="6c1-Kf-zJm"/>
                         <outlet property="txtUserPassword" destination="PvW-Bm-Eqe" id="8P7-c6-HBo"/>
                         <outlet property="viewLottieR" destination="Rxa-uP-K84" id="qdL-5g-yj7"/>
+                        <segue destination="E8W-rg-j3I" kind="presentation" identifier="gotoRegistro" id="Fuq-Vn-vZp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kdz-4v-XUx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

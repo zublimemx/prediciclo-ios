@@ -25,6 +25,7 @@ class LoginApi {
     let URL_CHECK_EMAIL = "https://prediciclo.zublime.mx/wp-json/zublime/prediciclo/v1/email_exists"
     let URL_LOGIN = "https://prediciclo.zublime.mx/wp-json/zublime/prediciclo/v1/login"
     let URL_RECUPERAR_EMAIL = "https://prediciclo.zublime.mx/wp-json/zublime/prediciclo/v1/customer/lost_password"
+    let URL_REGISTRAR_USUARIA = "https://prediciclo.zublime.mx/wp-json/wc/v3/customers"
     
     public func isEmailRegister(VC : UIViewController,email:String,callback: @escaping (_ success: Bool, _ callback:respEmailExist)->Void){
         
@@ -85,7 +86,7 @@ class LoginApi {
                                 callback(false,value)
                                 
                             }else{
-                                callback((value.data?.userId != nil),value)
+                                callback(true,value)
                             }
                         }
                     break
@@ -121,8 +122,10 @@ class LoginApi {
                                //if(value.status == 500 || value.status == 400){
                                if value.status != 200 {
                                    callback(false,value)
+                                //callback((value.message != nil) ,value)
                                }else{
                                 callback(true,value)
+                                //callback((value.message != nil),value)
                                }
                            }
                            break
@@ -137,4 +140,59 @@ class LoginApi {
         
     }
     
+    
+    public func registrarUser(VC : UIViewController,email:String,pass:String,callback: @escaping (_ success: Bool, _ callback:resRegistro)->Void){
+        
+        let first_name:String = ""
+        let last_name:String = ""
+        
+        let params = ["username":email,"first_name": first_name,"last_name":last_name ,"password":pass]
+        manager.request(URL_REGISTRAR_USUARIA, method: .post, parameters: params, encoding: URLEncoding.default).responseObject{(response: DataResponse<resRegistro>) in
+
+            if let httpStatusCode = response.response?.statusCode {
+                let status_request = Valida_Status.Valida_Status(Status: httpStatusCode, CurrentView: VC, Mensaje: response.error ?? nil)
+                print(status_request)
+                
+                switch(status_request){
+                case true:
+                    switch response.result {
+                    case .success(let value_success):
+                        print(value_success)
+                        
+                    case .failure(let value_fail):
+                        print(value_fail)
+                        
+                    }
+                    
+                    break
+                
+                
+                case false:
+                    switch response.result{
+                        case .failure(let fail):
+                            print("Consultar status fail \(fail)")
+                        break
+                        case .success(let value):
+                            if value.data?.status != 400 {
+                                callback(false,value)
+                                print("regresa false")
+                                print(value)
+                            }else{
+                                callback(true,value)
+                                print("Regresa true")
+                                print(value)
+                            }
+                    }
+                    break
+                }
+        }
+        }
+        
+    }
+    
+    
 }
+
+
+
+

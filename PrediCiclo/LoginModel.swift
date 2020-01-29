@@ -129,7 +129,6 @@ struct resRegistro : Mappable {
     var is_paying_customer : Bool?
     var avatar_url : String?
     var meta_data : [String]?
-    var _links : _links?
 
     init?(map: Map) {
 
@@ -140,6 +139,7 @@ struct resRegistro : Mappable {
         code <- map["code"]
         message <- map["message"]
         data <- map["data"]
+        
         id <- map["id"]
         date_created <- map["date_created"]
         date_created_gmt <- map["date_created_gmt"]
@@ -155,7 +155,6 @@ struct resRegistro : Mappable {
         is_paying_customer <- map["is_paying_customer"]
         avatar_url <- map["avatar_url"]
         meta_data <- map["meta_data"]
-        _links <- map["_links"]
     }
 
 }
@@ -254,6 +253,7 @@ struct Collection : Mappable {
 
 }
 
+/*
 struct selfi : Mappable {
     var href : String?
 
@@ -283,3 +283,4 @@ struct _links : Mappable {
     }
 
 }
+*/
