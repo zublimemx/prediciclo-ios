@@ -10,6 +10,7 @@ import UIKit
 import PasswordTextField
 import NVActivityIndicatorView
 import Lottie
+import SCLAlertView
 
 class LoginViewController: UIViewController {
     
@@ -200,9 +201,21 @@ class LoginViewController: UIViewController {
         if txtUserEmail.text == "" {
             NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
             self.step = 0
-            self.crearAlertConfirmacion(title:"", texto: "Antes debes ingresar tu correo electrónico")
+            //self.crearAlertConfirmacion(title:"", texto: "Antes debes ingresar tu correo electrónico")
+            
+            /**/
+            let utils = Utils();
+            let button = AlertButton(title: "Aceptar", action: {
+                print("OK clicked");
+            }, titleColor: UIColor.blue, backgroundColor: UIColor.cyan);
+            
+            let alertPayload = AlertPayload(title: "One Button Alert", titleColor: UIColor.red, message: "Antes debes ingresar tu correo electrónico", messageColor: UIColor.green, buttons: [button], backgroundColor: UIColor.white)
+            
+            utils.showAlert(payload: alertPayload, parentViewController: self);
+            
+            /**/
         }else{
-            //self.crearAlertConfirmacion2(title:"", texto: "Te enviaremos por correo electrónico las instrucciones para restablecer tu contraseña")
+            
             
             if isValidEmail(emailStr: userEmailtxt!) {
                 api.recuperarEmail(VC:self, email: userEmailtxt!) { (success, ForgotPasword) in
@@ -219,10 +232,7 @@ class LoginViewController: UIViewController {
             }
             
         }
-        
 
-        
-        
     }
     
     
