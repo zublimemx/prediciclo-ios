@@ -36,7 +36,10 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var lblEmaiInvalid: UILabel!
     @IBOutlet weak var lblFieldObligatory: UILabel!
     
+    @IBOutlet weak var viewAdvertencia: UIView!
     
+    @IBOutlet weak var viewSombra: UIView!
+    @IBOutlet weak var viewError: UIView!
     
     // MARK: Functions
     override func viewDidLoad() {
@@ -45,6 +48,10 @@ class LoginViewController: UIViewController {
         txtUserPassword.isHidden = true
         lblEmaiInvalid.isHidden = true
         lblFieldObligatory.isHidden = true
+        
+        viewError.isHidden = true
+        viewSombra.isHidden = true
+        viewAdvertencia.isHidden = true
         
         /*--- Animacion ---*/
         waveAnimationView.animation = Animation.named("wave")
@@ -189,6 +196,15 @@ class LoginViewController: UIViewController {
     }
     
     
+    @IBAction func btnEnviarCorreo_click(_ sender: Any) {
+    }
+    
+    @IBAction func btnOK_click(_ sender: Any) {
+        viewError.isHidden = true
+        viewSombra.isHidden = true
+        viewAdvertencia.isHidden = true
+    }
+    
     /* -- Recuperar Contraseña --*/
     
     @IBAction func btnRecuperarPassword_click(_ sender: UIButton) {
@@ -204,14 +220,11 @@ class LoginViewController: UIViewController {
             //self.crearAlertConfirmacion(title:"", texto: "Antes debes ingresar tu correo electrónico")
             
             /**/
-            let utils = Utils();
-            let button = AlertButton(title: "Aceptar", action: {
-                print("OK clicked");
-            }, titleColor: UIColor.blue, backgroundColor: UIColor.cyan);
-            
-            let alertPayload = AlertPayload(title: "One Button Alert", titleColor: UIColor.red, message: "Antes debes ingresar tu correo electrónico", messageColor: UIColor.green, buttons: [button], backgroundColor: UIColor.white)
-            
-            utils.showAlert(payload: alertPayload, parentViewController: self);
+            viewSombra.isHidden = false
+            viewError.isHidden = false
+            viewError.layer.borderWidth = 0.2
+            viewError.layer.borderColor = UIColor.lightGray.cgColor;
+            viewError.layer.cornerRadius = 20
             
             /**/
         }else{
