@@ -57,6 +57,10 @@ class LoginViewController: UIViewController {
         viewSombra.isHidden = true
         viewAdvertencia.isHidden = true
         
+        if preferencias.isLogged() {
+            self.performSegue(withIdentifier: "gotoHome", sender: nil)
+        }
+        
         /*--- Animacion ---*/
         waveAnimationView.animation = Animation.named("wave")
         waveAnimationView.frame.size = viewLottie.frame.size
@@ -269,6 +273,8 @@ class LoginViewController: UIViewController {
         }else{
         
             if isValidEmail(emailStr: userEmailtxt!) {
+                
+                
                 api.recuperarEmail(VC:self, email: userEmailtxt!) { (success, ForgotPasword) in
                 if success{
                     NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
