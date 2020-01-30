@@ -158,6 +158,7 @@ class LoginViewController: UIViewController {
             }
             else{
                 /*Email Invalido*/
+                self.viewSombra.isHidden = true
                 NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
                 txtUserEmail.layer.borderColor = UIColor.red.cgColor;
                 txtUserEmail.layer.borderWidth = 1.5
@@ -177,6 +178,19 @@ class LoginViewController: UIViewController {
                 txtUserEmail.layer.borderWidth = 1.5
                 txtUserPassword.text = ""
                 
+            }else if txtUserPassword.text == "" && txtUserEmail.text == "" {
+                NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
+                viewSombra.isHidden = true
+                txtUserEmail.layer.borderColor = UIColor.red.cgColor;
+                txtUserEmail.layer.borderWidth = 1.5
+                txtUserEmail.text = ""
+                lblEmaiInvalid.isHidden = false
+                lblEmaiInvalid.text = "Correo no válido"
+                lblFieldObligatory.isHidden = false
+                lblFieldObligatory.text = "Campo Obligatorio *"
+                txtUserPassword.layer.borderColor = UIColor.red.cgColor;
+                txtUserEmail.layer.borderWidth = 1.5
+                txtUserPassword.text = ""
             }else{
                 NVActivityIndicatorPresenter.sharedInstance.startAnimating(ActivityData(), nil)
                 viewSombra.isHidden = false
@@ -205,11 +219,11 @@ class LoginViewController: UIViewController {
                         self.btnAlertaError.setTitle("Aceptar",for: .normal)
                         self.lblTextoAlerta.text = "Correo o contraseña incorrectos, intente de nuevo."
                         self.txtUserPassword.text = ""
-                        
+                        self.imgAlerta.image = UIImage(named: "tache")
                     }
                 }
             }
-        }
+    }
     }
     
     
@@ -237,7 +251,7 @@ class LoginViewController: UIViewController {
         
         NVActivityIndicatorPresenter.sharedInstance.startAnimating(ActivityData(), nil)
         
-        if txtUserEmail.text == "" {
+        if userEmailtxt == "" {
             NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
             self.step = 0
             //self.crearAlertConfirmacion(title:"", texto: "Antes debes ingresar tu correo electrónico")
@@ -248,17 +262,19 @@ class LoginViewController: UIViewController {
             viewError.layer.borderWidth = 0.2
             viewError.layer.borderColor = UIColor.lightGray.cgColor;
             viewError.layer.cornerRadius = 20
-            
+            self.btnAlertaError.setTitle("Ok",for: .normal)
+            self.lblTextoAlerta.text = "Antes debes ingresar tu correo electrónico."
+            self.imgAlerta.image = UIImage(named: "tache")
             /**/
         }else{
-            
-            
+        
             if isValidEmail(emailStr: userEmailtxt!) {
                 api.recuperarEmail(VC:self, email: userEmailtxt!) { (success, ForgotPasword) in
                 if success{
                     NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
                     
                     //carga de alerta
+                    userEmailtxt = ""
                     self.viewError.isHidden = false
                     self.viewError.layer.borderWidth = 0.2
                     self.viewError.layer.borderColor = UIColor.lightGray.cgColor;
@@ -266,12 +282,14 @@ class LoginViewController: UIViewController {
                     self.btnAlertaError.setTitle("Aceptar",for: .normal)
                     self.lblTextoAlerta.text = "Las instrucciones para recuperar la contraseña se han enviado por email"
                     self.imgAlerta.image = UIImage(named: "paloma")
+                    
                     //fin carga
                     
                    
                 }else{
                     NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
                     /*Alerta de Error*/
+                    userEmailtxt = ""
                     self.viewError.isHidden = false
                     self.viewError.layer.borderWidth = 0.2
                     self.viewError.layer.borderColor = UIColor.lightGray.cgColor;
@@ -279,6 +297,7 @@ class LoginViewController: UIViewController {
                     self.btnAlertaError.setTitle("Aceptar",for: .normal)
                     self.lblTextoAlerta.text = "No pudimos encontrar tu correo."
                     self.imgAlerta.image = UIImage(named: "tache")
+                    self.txtUserEmail.text = userEmailtxt
                     self.step = 0
                 }
                 }
