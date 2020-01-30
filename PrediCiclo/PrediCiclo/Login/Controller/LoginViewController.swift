@@ -41,6 +41,10 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var viewSombra: UIView!
     @IBOutlet weak var viewError: UIView!
     
+    @IBOutlet weak var lblTextoAlerta: UILabel!
+    @IBOutlet weak var btnAlertaError: UIButton!
+    @IBOutlet weak var imgAlerta: UIImageView!
+    
     // MARK: Functions
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,9 +120,11 @@ class LoginViewController: UIViewController {
         
         if step == 0{
             NVActivityIndicatorPresenter.sharedInstance.startAnimating(ActivityData(), nil)
+            viewSombra.isHidden = false
             /*Correo Vacio**/
             if txtUserEmail.text == "" {
                 NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
+                viewSombra.isHidden = true
                 txtUserEmail.layer.borderColor = UIColor.red.cgColor;
                 txtUserEmail.layer.borderWidth = 1.5
                 txtUserEmail.text = ""
@@ -132,6 +138,7 @@ class LoginViewController: UIViewController {
                 /* -- Email Valido --*/
                 if success{
                     self.step = 1
+                    self.viewSombra.isHidden = true
                     NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
                     self.txtUserPassword.isHidden = false
                     self.txtUserEmail.layer.borderColor = UIColor.lightGray.cgColor;
@@ -141,6 +148,7 @@ class LoginViewController: UIViewController {
                     
                 }else{
                     /*User no registrado*/
+                    self.viewSombra.isHidden = true
                     NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
                     self.lblEmaiInvalid.text = "Usuario no registrado."
                     self.lblEmaiInvalid.isHidden = false
@@ -171,11 +179,13 @@ class LoginViewController: UIViewController {
                 
             }else{
                 NVActivityIndicatorPresenter.sharedInstance.startAnimating(ActivityData(), nil)
+                viewSombra.isHidden = false
                 api.iniciarSesion(VC: self, email: userEmailtxt!, pass: userPasswordtxt!){
                     (result, respLogin) in
                     
                     /*Contrseña Valida*/
                     if result{
+                        self.viewSombra.isHidden = true
                         NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
                         preferencias.setUsername(user: userEmailtxt!)
                         preferencias.setPasswd(pass:userPasswordtxt!)
@@ -187,8 +197,15 @@ class LoginViewController: UIViewController {
                         /*Contraseña invalida*/
                         NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
                         self.txtUserEmail.isEnabled = true
-                        self.crearAlertConfirmacion(title: "¡Error!", texto: "¡Usuario o contraseña incorrecto!")
+                        /*Alerta de Error*/
+                        self.viewError.isHidden = false
+                        self.viewError.layer.borderWidth = 0.2
+                        self.viewError.layer.borderColor = UIColor.lightGray.cgColor;
+                        self.viewError.layer.cornerRadius = 20
+                        self.btnAlertaError.setTitle("Aceptar",for: .normal)
+                        self.lblTextoAlerta.text = "Correo o contraseña incorrectos, intente de nuevo."
                         self.txtUserPassword.text = ""
+                        
                     }
                 }
             }
@@ -197,6 +214,12 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func btnEnviarCorreo_click(_ sender: Any) {
+        /*Alerta de Error*/
+        
+        viewError.isHidden = true
+        viewSombra.isHidden = true
+
+        
     }
     
     @IBAction func btnOK_click(_ sender: Any) {
@@ -234,11 +257,28 @@ class LoginViewController: UIViewController {
                 api.recuperarEmail(VC:self, email: userEmailtxt!) { (success, ForgotPasword) in
                 if success{
                     NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
-                    self.crearAlertConfirmacion3(title:"", texto: "Las instrucciones para recuperar la contraseña se han enviado por email")
+                    
+                    //carga de alerta
+                    self.viewError.isHidden = false
+                    self.viewError.layer.borderWidth = 0.2
+                    self.viewError.layer.borderColor = UIColor.lightGray.cgColor;
+                    self.viewError.layer.cornerRadius = 20
+                    self.btnAlertaError.setTitle("Aceptar",for: .normal)
+                    self.lblTextoAlerta.text = "Las instrucciones para recuperar la contraseña se han enviado por email"
+                    self.imgAlerta.image = UIImage(named: "paloma")
+                    //fin carga
+                    
                    
                 }else{
                     NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
-                    self.crearAlertConfirmacion3(title:"", texto: "No pudimos encontrar tu correo")
+                    /*Alerta de Error*/
+                    self.viewError.isHidden = false
+                    self.viewError.layer.borderWidth = 0.2
+                    self.viewError.layer.borderColor = UIColor.lightGray.cgColor;
+                    self.viewError.layer.cornerRadius = 20
+                    self.btnAlertaError.setTitle("Aceptar",for: .normal)
+                    self.lblTextoAlerta.text = "No pudimos encontrar tu correo."
+                    self.imgAlerta.image = UIImage(named: "tache")
                     self.step = 0
                 }
                 }

@@ -23,8 +23,11 @@ class RegistroController: UIViewController {
     @IBOutlet weak var btnRegister: UIButton!
     @IBOutlet weak var lblEmailInvalid: UILabel!
     @IBOutlet weak var lblFieldObligatory: UILabel!
-    @IBOutlet weak var viewLottieR: UIView!
     
+    
+    @IBOutlet weak var viewLottieR: UIView!
+    @IBOutlet weak var viewError: UIView!
+    @IBOutlet weak var viewSombra: UIView!
     
     // MARK: Functions
     override func viewDidLoad() {
@@ -35,6 +38,9 @@ class RegistroController: UIViewController {
         //txtUserPassword.isHidden = true
         lblEmailInvalid.isHidden = true
         lblFieldObligatory.isHidden = true
+    
+        viewError.isHidden = true
+        viewSombra.isHidden = true
         
         txtUserEmail.textColor = UIColor.darkText
         txtUserEmail.layer.borderWidth = 1

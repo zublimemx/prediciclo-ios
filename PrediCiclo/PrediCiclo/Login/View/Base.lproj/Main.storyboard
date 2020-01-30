@@ -150,57 +150,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39520012840000002" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POl-30-9nx">
-                                <rect key="frame" x="37" y="378.5" width="340" height="264"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tache" translatesAutoresizingMaskIntoConstraints="NO" id="uCC-oT-FM1">
-                                        <rect key="frame" x="130" y="25" width="80" height="80"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="5Zc-CE-TWi"/>
-                                            <constraint firstAttribute="height" constant="80" id="kfR-DJ-I7L"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Antes debes ingresar tu correo Electrónico" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9RV-D4-mou">
-                                        <rect key="frame" x="60" y="135" width="220" height="36.5"/>
-                                        <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="17"/>
-                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a48-ok-Wdo">
-                                        <rect key="frame" x="130" y="201.5" width="80" height="35"/>
-                                        <color key="backgroundColor" red="0.93333333330000001" green="0.35686274509999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="LSL-Lb-RrN"/>
-                                            <constraint firstAttribute="width" constant="80" id="rmh-2a-xEu"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="17"/>
-                                        <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
-                                        <state key="normal" title="OK">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="btnOK_click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NI5-Ga-AJB"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="uCC-oT-FM1" firstAttribute="top" secondItem="POl-30-9nx" secondAttribute="top" constant="25" id="1hA-dA-MWh"/>
-                                    <constraint firstItem="9RV-D4-mou" firstAttribute="leading" secondItem="POl-30-9nx" secondAttribute="leading" constant="60" id="4Xy-7S-VG6"/>
-                                    <constraint firstItem="uCC-oT-FM1" firstAttribute="centerX" secondItem="POl-30-9nx" secondAttribute="centerX" id="Fyd-Od-p29"/>
-                                    <constraint firstAttribute="width" constant="340" id="TZB-Fb-dEY"/>
-                                    <constraint firstAttribute="height" constant="264" id="hYf-Ub-TgW"/>
-                                    <constraint firstItem="a48-ok-Wdo" firstAttribute="top" secondItem="9RV-D4-mou" secondAttribute="bottom" constant="30" id="iq7-Us-KsH"/>
-                                    <constraint firstItem="9RV-D4-mou" firstAttribute="top" secondItem="uCC-oT-FM1" secondAttribute="bottom" constant="30" id="pcd-Rx-8YY"/>
-                                    <constraint firstItem="a48-ok-Wdo" firstAttribute="centerX" secondItem="POl-30-9nx" secondAttribute="centerX" id="sYr-ke-hil"/>
-                                    <constraint firstAttribute="trailing" secondItem="9RV-D4-mou" secondAttribute="trailing" constant="60" id="v9j-yx-2rq"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8La-EZ-Dlg">
                                 <rect key="frame" x="37" y="378.5" width="340" height="270"/>
                                 <subviews>
@@ -278,6 +227,57 @@
                                     <constraint firstItem="IP8-U1-RvM" firstAttribute="centerX" secondItem="8La-EZ-Dlg" secondAttribute="centerX" id="zmO-cn-eEk"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="POl-30-9nx">
+                                <rect key="frame" x="37" y="378.5" width="340" height="264"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tache" translatesAutoresizingMaskIntoConstraints="NO" id="uCC-oT-FM1">
+                                        <rect key="frame" x="130" y="25" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="5Zc-CE-TWi"/>
+                                            <constraint firstAttribute="height" constant="80" id="kfR-DJ-I7L"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Antes debes ingresar tu correo Electrónico" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9RV-D4-mou">
+                                        <rect key="frame" x="60" y="135" width="220" height="36.5"/>
+                                        <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a48-ok-Wdo">
+                                        <rect key="frame" x="130" y="201.5" width="80" height="35"/>
+                                        <color key="backgroundColor" red="0.93333333330000001" green="0.35686274509999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="LSL-Lb-RrN"/>
+                                            <constraint firstAttribute="width" constant="80" id="rmh-2a-xEu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="17"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                        <state key="normal" title="OK">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnOK_click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NI5-Ga-AJB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="uCC-oT-FM1" firstAttribute="top" secondItem="POl-30-9nx" secondAttribute="top" constant="25" id="1hA-dA-MWh"/>
+                                    <constraint firstItem="9RV-D4-mou" firstAttribute="leading" secondItem="POl-30-9nx" secondAttribute="leading" constant="60" id="4Xy-7S-VG6"/>
+                                    <constraint firstItem="uCC-oT-FM1" firstAttribute="centerX" secondItem="POl-30-9nx" secondAttribute="centerX" id="Fyd-Od-p29"/>
+                                    <constraint firstAttribute="width" constant="340" id="TZB-Fb-dEY"/>
+                                    <constraint firstAttribute="height" constant="264" id="hYf-Ub-TgW"/>
+                                    <constraint firstItem="a48-ok-Wdo" firstAttribute="top" secondItem="9RV-D4-mou" secondAttribute="bottom" constant="30" id="iq7-Us-KsH"/>
+                                    <constraint firstItem="9RV-D4-mou" firstAttribute="top" secondItem="uCC-oT-FM1" secondAttribute="bottom" constant="30" id="pcd-Rx-8YY"/>
+                                    <constraint firstItem="a48-ok-Wdo" firstAttribute="centerX" secondItem="POl-30-9nx" secondAttribute="centerX" id="sYr-ke-hil"/>
+                                    <constraint firstAttribute="trailing" secondItem="9RV-D4-mou" secondAttribute="trailing" constant="60" id="v9j-yx-2rq"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -313,11 +313,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="L8O-81-5qw"/>
                     <connections>
+                        <outlet property="btnAlertaError" destination="a48-ok-Wdo" id="kS4-tw-rN3"/>
                         <outlet property="btnForgotPassword" destination="vlk-T9-oMv" id="KpY-Db-4Ef"/>
                         <outlet property="btnNext" destination="jJD-zm-92A" id="wNV-qF-rui"/>
                         <outlet property="btnRegister" destination="uPg-mF-So5" id="Chb-TX-1BQ"/>
+                        <outlet property="imgAlerta" destination="uCC-oT-FM1" id="BaS-zL-HbG"/>
                         <outlet property="lblEmaiInvalid" destination="dIr-u9-PHX" id="Wb0-So-zU4"/>
                         <outlet property="lblFieldObligatory" destination="2c0-V8-GrM" id="hL3-Fu-76y"/>
+                        <outlet property="lblTextoAlerta" destination="9RV-D4-mou" id="E1m-Ku-Yg8"/>
                         <outlet property="txtUserEmail" destination="qJI-PO-WLS" id="hdI-he-BX6"/>
                         <outlet property="txtUserPassword" destination="XpF-Sp-x9l" id="ZfJ-fY-w5V"/>
                         <outlet property="viewAdvertencia" destination="8La-EZ-Dlg" id="QDx-nc-pNz"/>
@@ -581,7 +584,9 @@
                         <outlet property="lblFieldObligatory" destination="3Bw-da-fmi" id="tWe-67-OnM"/>
                         <outlet property="txtUserEmail" destination="vbt-G1-8VG" id="6c1-Kf-zJm"/>
                         <outlet property="txtUserPassword" destination="PvW-Bm-Eqe" id="8P7-c6-HBo"/>
+                        <outlet property="viewError" destination="KFP-qO-Mgc" id="reO-82-6Yh"/>
                         <outlet property="viewLottieR" destination="Rxa-uP-K84" id="qdL-5g-yj7"/>
+                        <outlet property="viewSombra" destination="PeV-7H-Llf" id="wB9-Lq-rOT"/>
                         <segue destination="E8W-rg-j3I" kind="presentation" identifier="gotoRegistro" id="Fuq-Vn-vZp"/>
                     </connections>
                 </viewController>
