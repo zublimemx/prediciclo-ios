@@ -11,9 +11,9 @@ PODS:
   - NVActivityIndicatorView/Presenter (4.4.0)
   - ObjectMapper (3.5.1)
   - PasswordTextField (1.2.0)
-  - SCLAlertView (0.8)
   - SkeletonView (1.8.2)
   - SwiftyJSON (4.2.0)
+  - Toast-Swift (5.0.1)
   - ViewAnimator (2.7.0)
 
 DEPENDENCIES:
@@ -25,9 +25,9 @@ DEPENDENCIES:
   - NVActivityIndicatorView (= 4.4.0)
   - ObjectMapper (~> 3.4)
   - PasswordTextField (= 1.2.0)
-  - SCLAlertView
   - SkeletonView
   - SwiftyJSON (= 4.2.0)
+  - Toast-Swift (~> 5.0.0)
   - ViewAnimator
 
 SPEC REPOS:
@@ -39,9 +39,9 @@ SPEC REPOS:
     - NVActivityIndicatorView
     - ObjectMapper
     - PasswordTextField
-    - SCLAlertView
     - SkeletonView
     - SwiftyJSON
+    - Toast-Swift
     - ViewAnimator
 
 EXTERNAL SOURCES:
@@ -63,11 +63,11 @@ SPEC CHECKSUMS:
   NVActivityIndicatorView: ec7440a57af2450319d3a4181cca7da6fc127064
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
   PasswordTextField: 2548de43f150fc90a014da47b0d97e31aada4b94
-  SCLAlertView: 6a77bb2edfc65e04dbe57725546cb4107a506b85
   SkeletonView: bb27c39857e5492136f02ee8a3aa78de55d12ecd
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
   ViewAnimator: 5af1c6f3b310f012bf081259c43717aa54fbae73
 
-PODFILE CHECKSUM: 25c87824377b148998e420428a1a6dbe906122b1
+PODFILE CHECKSUM: e54816bff7742f589d13e4f7bd181a0ea21fa747
 
 COCOAPODS: 1.8.4

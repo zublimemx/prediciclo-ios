@@ -540,6 +540,9 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnOk_click:" destination="waw-Ij-0Zp" eventType="touchUpInside" id="62a-ex-zBR"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -586,6 +589,7 @@
                         <outlet property="btnRegister" destination="ucI-4E-Dpf" id="xRp-Su-ngD"/>
                         <outlet property="lblEmailInvalid" destination="hiq-DJ-Euz" id="pdE-WR-2Qz"/>
                         <outlet property="lblFieldObligatory" destination="3Bw-da-fmi" id="tWe-67-OnM"/>
+                        <outlet property="lblTextoLabel" destination="bOR-lH-paK" id="ejQ-r3-h0I"/>
                         <outlet property="txtUserEmail" destination="vbt-G1-8VG" id="6c1-Kf-zJm"/>
                         <outlet property="txtUserPassword" destination="PvW-Bm-Eqe" id="8P7-c6-HBo"/>
                         <outlet property="viewError" destination="KFP-qO-Mgc" id="reO-82-6Yh"/>

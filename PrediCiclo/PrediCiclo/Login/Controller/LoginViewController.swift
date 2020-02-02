@@ -10,7 +10,7 @@ import UIKit
 import PasswordTextField
 import NVActivityIndicatorView
 import Lottie
-import SCLAlertView
+
 
 class LoginViewController: UIViewController {
     
@@ -232,10 +232,49 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func btnEnviarCorreo_click(_ sender: Any) {
-        /*Alerta de Error*/
         
+        var userEmailtxt = txtUserEmail.text
+        userEmailtxt = userEmailtxt?.trimmingCharacters(in: .whitespacesAndNewlines)
+        txtUserEmail.text = userEmailtxt
+        
+        /*Alerta de Error*/
+        NVActivityIndicatorPresenter.sharedInstance.startAnimating(ActivityData(), nil)
+        api.recuperarEmail(VC:self, email: userEmailtxt!) { (success, ForgotPasword) in
+        if success{
+            NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
+            
+            //carga de alerta
+            userEmailtxt = ""
+            self.viewError.isHidden = false
+            self.viewError.layer.borderWidth = 0.2
+            self.viewError.layer.borderColor = UIColor.lightGray.cgColor;
+            self.viewError.layer.cornerRadius = 20
+            self.btnAlertaError.setTitle("Aceptar",for: .normal)
+            self.lblTextoAlerta.text = "Las instrucciones para recuperar la contraseña se han enviado por email"
+            self.imgAlerta.image = UIImage(named: "paloma")
+            
+            //fin carga
+            
+           
+        }else{
+            NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
+            /*Alerta de Error*/
+            userEmailtxt = ""
+            self.viewError.isHidden = false
+            self.viewError.layer.borderWidth = 0.2
+            self.viewError.layer.borderColor = UIColor.lightGray.cgColor;
+            self.viewError.layer.cornerRadius = 20
+            self.btnAlertaError.setTitle("Aceptar",for: .normal)
+            self.lblTextoAlerta.text = "No pudimos encontrar tu correo."
+            self.imgAlerta.image = UIImage(named: "tache")
+            self.txtUserEmail.text = userEmailtxt
+            self.step = 0
+        }
+        }
         viewError.isHidden = true
         viewSombra.isHidden = true
+        viewAdvertencia.isHidden = true
+        
 
         
     }
@@ -274,39 +313,8 @@ class LoginViewController: UIViewController {
         
             if isValidEmail(emailStr: userEmailtxt!) {
                 
+                viewAdvertencia.isHidden = false
                 
-                api.recuperarEmail(VC:self, email: userEmailtxt!) { (success, ForgotPasword) in
-                if success{
-                    NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
-                    
-                    //carga de alerta
-                    userEmailtxt = ""
-                    self.viewError.isHidden = false
-                    self.viewError.layer.borderWidth = 0.2
-                    self.viewError.layer.borderColor = UIColor.lightGray.cgColor;
-                    self.viewError.layer.cornerRadius = 20
-                    self.btnAlertaError.setTitle("Aceptar",for: .normal)
-                    self.lblTextoAlerta.text = "Las instrucciones para recuperar la contraseña se han enviado por email"
-                    self.imgAlerta.image = UIImage(named: "paloma")
-                    
-                    //fin carga
-                    
-                   
-                }else{
-                    NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
-                    /*Alerta de Error*/
-                    userEmailtxt = ""
-                    self.viewError.isHidden = false
-                    self.viewError.layer.borderWidth = 0.2
-                    self.viewError.layer.borderColor = UIColor.lightGray.cgColor;
-                    self.viewError.layer.cornerRadius = 20
-                    self.btnAlertaError.setTitle("Aceptar",for: .normal)
-                    self.lblTextoAlerta.text = "No pudimos encontrar tu correo."
-                    self.imgAlerta.image = UIImage(named: "tache")
-                    self.txtUserEmail.text = userEmailtxt
-                    self.step = 0
-                }
-                }
             }
             
         }

@@ -18,8 +18,7 @@ target 'PrediCiclo' do
 	pod 'SwiftyJSON','4.2.0'
 	pod 'NVActivityIndicatorView','4.4.0'
   pod 'JTAppleCalendar', :git => 'https://github.com/patchthecode/JTAppleCalendar.git', :branch => 'master'
-  
-  pod 'SCLAlertView'
+  pod 'Toast-Swift', '~> 5.0.0'
 	
 
   target 'PrediCicloTests' do

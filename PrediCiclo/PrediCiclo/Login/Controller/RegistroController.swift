@@ -29,6 +29,9 @@ class RegistroController: UIViewController {
     @IBOutlet weak var viewError: UIView!
     @IBOutlet weak var viewSombra: UIView!
     
+    @IBOutlet weak var lblTextoLabel: UILabel!
+    
+    
     // MARK: Functions
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,6 +90,10 @@ class RegistroController: UIViewController {
         self.dismiss(animated: true, completion: nil)
         self.navigationController?.popViewController(animated: true)
     }
+    @IBAction func btnOk_click(_ sender: Any) {
+       viewError.isHidden = true
+        viewSombra.isHidden = true
+    }
     
     @IBAction func btnRegistro_click(_ sender: UIButton) {
         
@@ -138,7 +145,15 @@ class RegistroController: UIViewController {
                     /* -- Email Valido --*/
                     if success{
                         NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
-                        self.crearAlertConfirmacion(title: "", texto: "Ya hay una cuenta registrada con tu correo eléctronico. Por favor, accede")
+                        //self.crearAlertConfirmacion(title: "", texto: "")
+                        self.viewError.isHidden = false
+                        self.viewSombra.isHidden = false
+                        self.viewError.layer.borderWidth = 0.2
+                        self.viewError.layer.borderColor = UIColor.lightGray.cgColor;
+                        self.viewError.layer.cornerRadius = 20
+                        //self.btnAlertaError.setTitle("Aceptar",for: .normal)
+                        self.lblTextoLabel.text = "Ya hay una cuenta registrada con tu correo eléctronico. Por favor, accede"
+                        //self.imgAlerta.image = UIImage(named: "paloma")
                         self.txtUserPassword.text = ""
                     }else{
                         /*User no registrado*/
