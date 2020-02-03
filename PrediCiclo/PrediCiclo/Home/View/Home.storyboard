@@ -20,9 +20,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="frU-V9-h8g" kind="relationship" relationship="viewControllers" id="jE1-iG-Zvx"/>
                         <segue destination="aby-N5-8Gp" kind="relationship" relationship="viewControllers" id="9i7-9f-9pP"/>
                         <segue destination="nOg-gB-bor" kind="relationship" relationship="viewControllers" id="lW9-2u-5Gy"/>
-                        <segue destination="frU-V9-h8g" kind="relationship" relationship="viewControllers" id="jE1-iG-Zvx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Z1-d6-tKu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -142,6 +142,9 @@
                                 <state key="normal" title="X">
                                     <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="cerrar:" destination="ZDN-El-hN7" eventType="touchUpInside" id="lgG-2K-8bf"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pico de fertilidad (Mayor probabilidad de embarazo)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b04-5n-l4f">
                                 <rect key="frame" x="129" y="464" width="240" height="50"/>
@@ -234,8 +237,10 @@
         <!--Item-->
         <scene sceneID="CpS-lh-wZ6">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dak-8A-fMC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController hidesBottomBarWhenPushed="YES" id="aby-N5-8Gp" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="rCC-nw-LdO"/>
+                    <navigationItem key="navigationItem" id="XHP-uU-0Fz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ng2-oU-YBl">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -244,7 +249,6 @@
                         <segue destination="52y-cB-dqx" kind="relationship" relationship="rootViewController" id="peO-ZS-oOU"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dak-8A-fMC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2696" y="-577"/>
         </scene>

@@ -22,7 +22,8 @@ class Registro4Fecha: UIViewController {
     override func viewDidLoad() {
         self.navigationController?.navigationBar.isHidden = true
         self.cumpleView.setValue(UIColor.black, forKey: "textColor")
-      
+        setDates()
+        cumpleView.addTarget(self, action: #selector(datePickerChanged), for: .valueChanged)
     }
    
     @IBAction func datePickerChanged(_ sender: UIDatePicker) {
@@ -34,30 +35,25 @@ class Registro4Fecha: UIViewController {
         }
     }
     
-
-    /*
-    @objc func siguienteAction(){
-        let api = PredicicloApi()
-        NVActivityIndicatorPresenter.sharedInstance.startAnimating(ActivityData(), nil)
-                       
-        api.updateInfo(VC: self, callback: { (result, respLogin) in
-            NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
-            self.performSegue(withIdentifier: "gotoMain", sender: nil)
-        })
-                      
-    }
- */
             
     func setDates(){
+        
         let calendar = Calendar(identifier: .gregorian)
         let currentDate = Date()
         var components = DateComponents()
         components.calendar = calendar
+            
+        components.month = 12
         let maxDate = calendar.date(byAdding: components, to: currentDate)!
-        cumpleView.maximumDate = maxDate
+
         components.year = -60
         let minDate = calendar.date(byAdding: components, to: currentDate)!
+
         cumpleView.minimumDate = minDate
+        cumpleView.maximumDate = maxDate
+        
+        cumpleView.setDate(currentDate, animated: true)
+        
     }
     
      // MARK: Actions
@@ -68,8 +64,8 @@ class Registro4Fecha: UIViewController {
                        
         api.updateInfo(VC: self, callback: { (result, respLogin) in
             NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
-            self.performSegue(withIdentifier: "gotoMain", sender: nil)
             print("Exito perros !! ")
+            self.performSegue(withIdentifier: "gotoMain", sender: nil)
             
             
         })

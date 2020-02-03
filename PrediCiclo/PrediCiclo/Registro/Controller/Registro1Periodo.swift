@@ -43,7 +43,7 @@ class Registro1Periodo: UIViewController {
         components.calendar = calendar
         let maxDate = calendar.date(byAdding: components, to: currentDate)!
         pickerCalendario.maximumDate = maxDate
-        components.year = -60
+        components.day = -6
         let minDate = calendar.date(byAdding: components, to: currentDate)!
         pickerCalendario.minimumDate = minDate
     }

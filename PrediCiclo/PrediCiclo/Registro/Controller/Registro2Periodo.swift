@@ -20,8 +20,10 @@ class Registro2Periodo: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
+    
         DiasPeriodoPicker.dataSource = self
         DiasPeriodoPicker.delegate = self
+        
         
         var i = 21;
         repeat{
@@ -30,6 +32,7 @@ class Registro2Periodo: UIViewController {
         }while(i<43)
                       
         DiasPeriodoPicker.reloadAllComponents()
+        DiasPeriodoPicker.selectRow(7, inComponent:0, animated:true)
     }
     
     

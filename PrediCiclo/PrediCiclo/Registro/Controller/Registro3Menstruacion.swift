@@ -30,6 +30,7 @@ class Registro3Menstruacion: UIViewController {
         }while(i<7)
                       
         menstruacionPicker.reloadAllComponents()
+        menstruacionPicker.selectRow(2, inComponent:0, animated:true)
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
