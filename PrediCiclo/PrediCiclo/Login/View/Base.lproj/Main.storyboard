@@ -28,6 +28,66 @@
                                 <color key="textColor" red="0.25193661103393827" green="0.25193661103393827" blue="0.25193661103393827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="54J-UH-z8d">
+                                <rect key="frame" x="37" y="331.5" width="340" height="147"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo electrónico" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qJI-PO-WLS">
+                                        <rect key="frame" x="0.0" y="0.0" width="340" height="45"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.94999999999999996" height="1"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="Srm-4V-bsM"/>
+                                        </constraints>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo no válido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIr-u9-PHX">
+                                        <rect key="frame" x="0.0" y="54" width="340" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="2O2-Xz-W3u"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="14"/>
+                                        <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XpF-Sp-x9l" customClass="PasswordTextField" customModule="PasswordTextField">
+                                        <rect key="frame" x="0.0" y="78" width="340" height="45"/>
+                                        <color key="backgroundColor" red="0.9999235272" green="1" blue="0.99988299609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="4xo-Ur-DHF"/>
+                                        </constraints>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="imageTintColor">
+                                                <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="customShowSecureTextImage" value="no_eye_640"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="customHideSecureTextImage" value="eye_640"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="showToggleButtonWhile" value="editing"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campo obligatorio *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2c0-V8-GrM">
+                                        <rect key="frame" x="0.0" y="132" width="340" height="15"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="n3G-qr-eT7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="14"/>
+                                        <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="XpF-Sp-x9l" firstAttribute="top" relation="greaterThanOrEqual" secondItem="qJI-PO-WLS" secondAttribute="bottom" constant="15" id="9ze-TM-qWg"/>
+                                </constraints>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJD-zm-92A">
                                 <rect key="frame" x="227" y="503.5" width="150" height="42"/>
                                 <color key="backgroundColor" red="0.93333333330000001" green="0.35686274509999999" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
@@ -86,66 +146,6 @@
                                     <action selector="btnRecuperarPassword_click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZvZ-Ih-gr7"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="54J-UH-z8d">
-                                <rect key="frame" x="37" y="331.5" width="340" height="147"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo electrónico" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qJI-PO-WLS">
-                                        <rect key="frame" x="0.0" y="0.0" width="340" height="45"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <rect key="contentStretch" x="0.0" y="0.0" width="0.94999999999999996" height="1"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="Srm-4V-bsM"/>
-                                        </constraints>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo no válido" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIr-u9-PHX">
-                                        <rect key="frame" x="0.0" y="54" width="340" height="15"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="15" id="2O2-Xz-W3u"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="14"/>
-                                        <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XpF-Sp-x9l" customClass="PasswordTextField" customModule="PasswordTextField">
-                                        <rect key="frame" x="0.0" y="78" width="340" height="45"/>
-                                        <color key="backgroundColor" red="0.9999235272" green="1" blue="0.99988299609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="4xo-Ur-DHF"/>
-                                        </constraints>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="imageTintColor">
-                                                <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="image" keyPath="customShowSecureTextImage" value="eye.slash.fill" catalog="system"/>
-                                            <userDefinedRuntimeAttribute type="image" keyPath="customHideSecureTextImage" value="eye.fill" catalog="system"/>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="showToggleButtonWhile" value="editing"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campo obligatorio *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2c0-V8-GrM">
-                                        <rect key="frame" x="0.0" y="132" width="340" height="15"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="15" id="n3G-qr-eT7"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="14"/>
-                                        <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="XpF-Sp-x9l" firstAttribute="top" relation="greaterThanOrEqual" secondItem="qJI-PO-WLS" secondAttribute="bottom" constant="15" id="9ze-TM-qWg"/>
-                                </constraints>
-                            </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K7T-HK-Yfh">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39520012840000002" colorSpace="custom" customColorSpace="sRGB"/>
@@ -239,10 +239,10 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Antes debes ingresar tu correo Electrónico" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9RV-D4-mou">
-                                        <rect key="frame" x="60" y="110" width="220" height="45"/>
+                                        <rect key="frame" x="60" y="98" width="220" height="64"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="220" id="GIW-Ye-9QR"/>
-                                            <constraint firstAttribute="height" constant="45" id="Zi1-lp-LWY"/>
+                                            <constraint firstAttribute="height" constant="64" id="SHD-OJ-xV0"/>
+                                            <constraint firstAttribute="width" constant="220" id="TJh-04-Xi4"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="17"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -273,13 +273,13 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="uCC-oT-FM1" firstAttribute="top" secondItem="POl-30-9nx" secondAttribute="top" constant="20" id="1hA-dA-MWh"/>
+                                    <constraint firstItem="a48-ok-Wdo" firstAttribute="top" secondItem="9RV-D4-mou" secondAttribute="bottom" constant="8" id="CiZ-l2-DP8"/>
+                                    <constraint firstItem="9RV-D4-mou" firstAttribute="centerX" secondItem="POl-30-9nx" secondAttribute="centerX" id="Eek-kG-jPq"/>
                                     <constraint firstItem="uCC-oT-FM1" firstAttribute="centerX" secondItem="POl-30-9nx" secondAttribute="centerX" id="Fyd-Od-p29"/>
-                                    <constraint firstItem="a48-ok-Wdo" firstAttribute="top" secondItem="9RV-D4-mou" secondAttribute="bottom" constant="15" id="K2s-d7-9C0"/>
+                                    <constraint firstItem="9RV-D4-mou" firstAttribute="top" secondItem="uCC-oT-FM1" secondAttribute="bottom" constant="8" id="MYh-iZ-fRj"/>
                                     <constraint firstAttribute="width" constant="340" id="TZB-Fb-dEY"/>
                                     <constraint firstItem="a48-ok-Wdo" firstAttribute="centerX" secondItem="POl-30-9nx" secondAttribute="centerX" id="WMN-fV-4XP"/>
-                                    <constraint firstItem="9RV-D4-mou" firstAttribute="top" secondItem="uCC-oT-FM1" secondAttribute="bottom" constant="20" id="hKe-Fv-8gy"/>
                                     <constraint firstAttribute="height" constant="230" id="hYf-Ub-TgW"/>
-                                    <constraint firstItem="9RV-D4-mou" firstAttribute="centerX" secondItem="POl-30-9nx" secondAttribute="centerX" id="iyc-SX-t5a"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -481,8 +481,8 @@
                                             <userDefinedRuntimeAttribute type="color" keyPath="imageTintColor">
                                                 <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="image" keyPath="customShowSecureTextImage" value="eye.slash.fill" catalog="system"/>
-                                            <userDefinedRuntimeAttribute type="image" keyPath="customHideSecureTextImage" value="eye.fill" catalog="system"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="customShowSecureTextImage" value="no_eye_640"/>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="customHideSecureTextImage" value="eye_640"/>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campo obligatorio *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Bw-da-fmi">
@@ -514,10 +514,10 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Antes debes ingresar tu correo Electrónico" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOR-lH-paK">
-                                        <rect key="frame" x="60" y="125" width="220" height="40"/>
+                                        <rect key="frame" x="60" y="103" width="220" height="74"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="QFh-Dl-GAy"/>
-                                            <constraint firstAttribute="width" constant="220" id="g6s-CQ-gQZ"/>
+                                            <constraint firstAttribute="height" constant="74" id="QKK-5k-p90"/>
+                                            <constraint firstAttribute="width" constant="220" id="fT3-dc-Wbf"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="17"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -548,11 +548,11 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="ccb-M8-63Z" firstAttribute="top" secondItem="KFP-qO-Mgc" secondAttribute="top" constant="25" id="36f-pt-tor"/>
-                                    <constraint firstItem="bOR-lH-paK" firstAttribute="top" secondItem="ccb-M8-63Z" secondAttribute="bottom" constant="30" id="JOy-aC-wGF"/>
-                                    <constraint firstItem="NOS-dM-5ca" firstAttribute="top" secondItem="bOR-lH-paK" secondAttribute="bottom" constant="20" id="MWS-RV-sWt"/>
+                                    <constraint firstItem="NOS-dM-5ca" firstAttribute="top" secondItem="bOR-lH-paK" secondAttribute="bottom" constant="8" id="9hR-rl-z3J"/>
+                                    <constraint firstItem="bOR-lH-paK" firstAttribute="top" secondItem="ccb-M8-63Z" secondAttribute="bottom" constant="8" id="Ttn-2f-w5w"/>
                                     <constraint firstItem="NOS-dM-5ca" firstAttribute="centerX" secondItem="KFP-qO-Mgc" secondAttribute="centerX" id="em7-Yj-iLa"/>
                                     <constraint firstAttribute="width" constant="340" id="foS-sP-zej"/>
-                                    <constraint firstItem="bOR-lH-paK" firstAttribute="centerX" secondItem="KFP-qO-Mgc" secondAttribute="centerX" id="hMr-Ia-FBb"/>
+                                    <constraint firstItem="bOR-lH-paK" firstAttribute="centerX" secondItem="KFP-qO-Mgc" secondAttribute="centerX" id="jb8-Yb-zaB"/>
                                     <constraint firstAttribute="height" constant="230" id="ld4-RY-XVc"/>
                                     <constraint firstItem="ccb-M8-63Z" firstAttribute="centerX" secondItem="KFP-qO-Mgc" secondAttribute="centerX" id="r0Z-Ms-Spq"/>
                                 </constraints>
@@ -605,9 +605,9 @@
     </scenes>
     <resources>
         <image name="admiracion" width="1024" height="1024"/>
-        <image name="eye.fill" catalog="system" width="64" height="38"/>
-        <image name="eye.slash.fill" catalog="system" width="64" height="40"/>
+        <image name="eye_640" width="640" height="512"/>
         <image name="ic_logo_con_nombre_rosa_gris" width="1312" height="1178"/>
+        <image name="no_eye_640" width="640" height="512"/>
         <image name="tache" width="512" height="512"/>
     </resources>
 </document>

@@ -312,9 +312,12 @@ class LoginViewController: UIViewController {
         }else{
         
             if isValidEmail(emailStr: userEmailtxt!) {
-                
+                NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
                 viewAdvertencia.isHidden = false
-                
+                viewAdvertencia.layer.borderWidth = 0.2
+                viewAdvertencia.layer.borderColor = UIColor.lightGray.cgColor;
+                viewAdvertencia.layer.cornerRadius = 20
+                viewSombra.isHidden = false
             }
             
         }
