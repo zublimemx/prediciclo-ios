@@ -21,7 +21,6 @@
 		C612E0C023E1FD9200A3919F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C612E0BD23E1FD9200A3919F /* Utils.swift */; };
 		C612E0C123E1FD9200A3919F /* Alerts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C612E0BE23E1FD9200A3919F /* Alerts.storyboard */; };
 		C612E0C323E1FE2700A3919F /* CustomAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C612E0C223E1FE2700A3919F /* CustomAlertController.swift */; };
-		C6387C0A23D104620090E291 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6387C0923D104620090E291 /* Assets.xcassets */; };
 		C658B6F923D57BB00009D1C5 /* Registro1Periodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B6F823D57BB00009D1C5 /* Registro1Periodo.swift */; };
 		C658B6FB23D57BCB0009D1C5 /* Registro2Periodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B6FA23D57BCB0009D1C5 /* Registro2Periodo.swift */; };
 		C658B6FD23D57BE50009D1C5 /* Registro3Menstruacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B6FC23D57BE50009D1C5 /* Registro3Menstruacion.swift */; };
@@ -40,6 +39,7 @@
 		C6993B3923D8DD5C00C29C9E /* DateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6993B3823D8DD5C00C29C9E /* DateHeader.swift */; };
 		C6993B3B23D8DD6A00C29C9E /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6993B3A23D8DD6A00C29C9E /* DateCell.swift */; };
 		C6993B3D23D8DE1300C29C9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6993B3C23D8DE1300C29C9E /* ViewController.swift */; };
+		C6A2F35923E9D11800B2D283 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6A2F35823E9D11800B2D283 /* Assets.xcassets */; };
 		C6BDD9C523D2F955000BA7F2 /* Registro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6BDD9C423D2F955000BA7F2 /* Registro.storyboard */; };
 		C6BDD9C723D2FF51000BA7F2 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6BDD9C623D2FF51000BA7F2 /* Home.storyboard */; };
 		C6BDD9C923D30611000BA7F2 /* Tienda.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6BDD9C823D30611000BA7F2 /* Tienda.storyboard */; };
@@ -79,7 +79,6 @@
 		C612E0BD23E1FD9200A3919F /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = ../../../../../Utils.swift; sourceTree = "<group>"; };
 		C612E0BE23E1FD9200A3919F /* Alerts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Alerts.storyboard; path = ../../../../../Alerts.storyboard; sourceTree = "<group>"; };
 		C612E0C223E1FE2700A3919F /* CustomAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomAlertController.swift; path = ../../../../../CustomAlertController.swift; sourceTree = "<group>"; };
-		C6387C0923D104620090E291 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../Downloads/Assets.xcassets; sourceTree = "<group>"; };
 		C658B6F823D57BB00009D1C5 /* Registro1Periodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registro1Periodo.swift; sourceTree = "<group>"; };
 		C658B6FA23D57BCB0009D1C5 /* Registro2Periodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registro2Periodo.swift; sourceTree = "<group>"; };
 		C658B6FC23D57BE50009D1C5 /* Registro3Menstruacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registro3Menstruacion.swift; sourceTree = "<group>"; };
@@ -98,6 +97,7 @@
 		C6993B3823D8DD5C00C29C9E /* DateHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateHeader.swift; path = "../../../../../../events 2/test/DateHeader.swift"; sourceTree = "<group>"; };
 		C6993B3A23D8DD6A00C29C9E /* DateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateCell.swift; path = "../../../../../../events 2/test/DateCell.swift"; sourceTree = "<group>"; };
 		C6993B3C23D8DE1300C29C9E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "../../../../../../events 2/test/ViewController.swift"; sourceTree = "<group>"; };
+		C6A2F35823E9D11800B2D283 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6BDD9C423D2F955000BA7F2 /* Registro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registro.storyboard; sourceTree = "<group>"; };
 		C6BDD9C623D2FF51000BA7F2 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		C6BDD9C823D30611000BA7F2 /* Tienda.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tienda.storyboard; sourceTree = "<group>"; };
@@ -161,8 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				B22CDC9123C78A8B0011ADB0 /* AppDelegate.swift */,
+				C6A2F35823E9D11800B2D283 /* Assets.xcassets */,
 				B22CDC9323C78A8B0011ADB0 /* SceneDelegate.swift */,
-				C6387C0923D104620090E291 /* Assets.xcassets */,
 				B22CDC9C23C78A8D0011ADB0 /* LaunchScreen.storyboard */,
 				B22CDC9F23C78A8D0011ADB0 /* Info.plist */,
 				C658B71A23D667270009D1C5 /* Login */,
@@ -516,8 +516,8 @@
 				C6BDD9C523D2F955000BA7F2 /* Registro.storyboard in Resources */,
 				C658B71823D664330009D1C5 /* wave.json in Resources */,
 				C6BDD9CC23D30A45000BA7F2 /* Mas.storyboard in Resources */,
-				C6387C0A23D104620090E291 /* Assets.xcassets in Resources */,
 				B22CDC9923C78A8B0011ADB0 /* Main.storyboard in Resources */,
+				C6A2F35923E9D11800B2D283 /* Assets.xcassets in Resources */,
 				C612E0C123E1FD9200A3919F /* Alerts.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
