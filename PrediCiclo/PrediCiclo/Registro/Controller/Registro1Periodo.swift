@@ -37,6 +37,7 @@ class Registro1Periodo: UIViewController {
     }
     
     func setDates(){
+        let date = Date()
         let calendar = Calendar(identifier: .gregorian)
         let currentDate = Date()
         var components = DateComponents()

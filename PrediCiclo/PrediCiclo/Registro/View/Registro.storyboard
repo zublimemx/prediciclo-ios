@@ -22,16 +22,10 @@
                                     <constraint firstAttribute="width" constant="120" id="sma-FK-rer"/>
                                 </constraints>
                             </imageView>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJR-x9-VGj">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="CJR-x9-VGj">
                                 <rect key="frame" x="0.0" y="340" width="414" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="602461751.306615">
-                                    <!--2020-02-03 22:29:11 +0000-->
-                                </date>
                                 <date key="minimumDate" timeIntervalSinceReferenceDate="-1609419600">
                                     <!--1950-01-01 11:00:00 +0000-->
-                                </date>
-                                <date key="maximumDate" timeIntervalSinceReferenceDate="599482800">
-                                    <!--2019-12-31 11:00:00 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="es_MX"/>
                             </datePicker>
@@ -308,9 +302,6 @@
                                 <date key="minimumDate" timeIntervalSinceReferenceDate="-1609419600">
                                     <!--1950-01-01 11:00:00 +0000-->
                                 </date>
-                                <date key="maximumDate" timeIntervalSinceReferenceDate="599482800">
-                                    <!--2019-12-31 11:00:00 +0000-->
-                                </date>
                                 <locale key="locale" localeIdentifier="es_MX"/>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pm6-bX-g90">
@@ -345,7 +336,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.931047099774021" blue="0.55426965809356687" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.91432060518102443" blue="0.44000140272378918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Ysg-48-l55" firstAttribute="centerX" secondItem="Syk-iy-l2n" secondAttribute="centerX" id="1UK-nY-WMS"/>
                             <constraint firstItem="HKR-aW-bnn" firstAttribute="bottom" secondItem="RQE-WO-s4o" secondAttribute="bottom" constant="15" id="3lO-pH-oZK"/>
