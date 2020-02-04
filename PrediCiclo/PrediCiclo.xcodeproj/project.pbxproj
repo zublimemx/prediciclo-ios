@@ -30,16 +30,18 @@
 		C658B70723D599410009D1C5 /* Informacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B70623D599410009D1C5 /* Informacion.swift */; };
 		C658B70923D5A10A0009D1C5 /* DatosEnvio.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B70823D5A10A0009D1C5 /* DatosEnvio.swift */; };
 		C658B70C23D64EDD0009D1C5 /* RegistroController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B70B23D64EDD0009D1C5 /* RegistroController.swift */; };
-		C658B71323D664330009D1C5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B70D23D664330009D1C5 /* Constants.swift */; };
-		C658B71423D664330009D1C5 /* AlamofireStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B70E23D664330009D1C5 /* AlamofireStatus.swift */; };
-		C658B71523D664330009D1C5 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B70F23D664330009D1C5 /* GradientView.swift */; };
-		C658B71623D664330009D1C5 /* SharedPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B71023D664330009D1C5 /* SharedPreferences.swift */; };
-		C658B71723D664330009D1C5 /* Extensiones.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B71123D664330009D1C5 /* Extensiones.swift */; };
-		C658B71823D664330009D1C5 /* wave.json in Resources */ = {isa = PBXBuildFile; fileRef = C658B71223D664330009D1C5 /* wave.json */; };
 		C6993B3923D8DD5C00C29C9E /* DateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6993B3823D8DD5C00C29C9E /* DateHeader.swift */; };
 		C6993B3B23D8DD6A00C29C9E /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6993B3A23D8DD6A00C29C9E /* DateCell.swift */; };
 		C6993B3D23D8DE1300C29C9E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6993B3C23D8DE1300C29C9E /* ViewController.swift */; };
 		C6A2F35923E9D11800B2D283 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6A2F35823E9D11800B2D283 /* Assets.xcassets */; };
+		C6A2F36223E9D41200B2D283 /* Extensiones.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A2F35A23E9D41000B2D283 /* Extensiones.swift */; };
+		C6A2F36323E9D41200B2D283 /* CustomAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A2F35B23E9D41000B2D283 /* CustomAlertController.swift */; };
+		C6A2F36423E9D41200B2D283 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A2F35C23E9D41000B2D283 /* Utils.swift */; };
+		C6A2F36523E9D41200B2D283 /* wave.json in Resources */ = {isa = PBXBuildFile; fileRef = C6A2F35D23E9D41000B2D283 /* wave.json */; };
+		C6A2F36623E9D41200B2D283 /* AlamofireStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A2F35E23E9D41000B2D283 /* AlamofireStatus.swift */; };
+		C6A2F36723E9D41200B2D283 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A2F35F23E9D41100B2D283 /* Constants.swift */; };
+		C6A2F36823E9D41200B2D283 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A2F36023E9D41100B2D283 /* GradientView.swift */; };
+		C6A2F36923E9D41200B2D283 /* SharedPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A2F36123E9D41100B2D283 /* SharedPreferences.swift */; };
 		C6BDD9C523D2F955000BA7F2 /* Registro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6BDD9C423D2F955000BA7F2 /* Registro.storyboard */; };
 		C6BDD9C723D2FF51000BA7F2 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6BDD9C623D2FF51000BA7F2 /* Home.storyboard */; };
 		C6BDD9C923D30611000BA7F2 /* Tienda.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6BDD9C823D30611000BA7F2 /* Tienda.storyboard */; };
@@ -88,16 +90,18 @@
 		C658B70623D599410009D1C5 /* Informacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Informacion.swift; sourceTree = "<group>"; };
 		C658B70823D5A10A0009D1C5 /* DatosEnvio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatosEnvio.swift; sourceTree = "<group>"; };
 		C658B70B23D64EDD0009D1C5 /* RegistroController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroController.swift; sourceTree = "<group>"; };
-		C658B70D23D664330009D1C5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = "../../../../../prediciclo-ios-swift-master/Prediciclo/extras/Constants.swift"; sourceTree = "<group>"; };
-		C658B70E23D664330009D1C5 /* AlamofireStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlamofireStatus.swift; path = "../../../../../prediciclo-ios-swift-master/Prediciclo/extras/AlamofireStatus.swift"; sourceTree = "<group>"; };
-		C658B70F23D664330009D1C5 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientView.swift; path = "../../../../../prediciclo-ios-swift-master/Prediciclo/extras/GradientView.swift"; sourceTree = "<group>"; };
-		C658B71023D664330009D1C5 /* SharedPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SharedPreferences.swift; path = "../../../../../prediciclo-ios-swift-master/Prediciclo/extras/SharedPreferences.swift"; sourceTree = "<group>"; };
-		C658B71123D664330009D1C5 /* Extensiones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensiones.swift; path = "../../../../../prediciclo-ios-swift-master/Prediciclo/extras/Extensiones.swift"; sourceTree = "<group>"; };
-		C658B71223D664330009D1C5 /* wave.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = wave.json; path = "../../../../../prediciclo-ios-swift-master/Prediciclo/extras/wave.json"; sourceTree = "<group>"; };
 		C6993B3823D8DD5C00C29C9E /* DateHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateHeader.swift; path = "../../../../../../events 2/test/DateHeader.swift"; sourceTree = "<group>"; };
 		C6993B3A23D8DD6A00C29C9E /* DateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateCell.swift; path = "../../../../../../events 2/test/DateCell.swift"; sourceTree = "<group>"; };
 		C6993B3C23D8DE1300C29C9E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = "../../../../../../events 2/test/ViewController.swift"; sourceTree = "<group>"; };
 		C6A2F35823E9D11800B2D283 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C6A2F35A23E9D41000B2D283 /* Extensiones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensiones.swift; sourceTree = "<group>"; };
+		C6A2F35B23E9D41000B2D283 /* CustomAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAlertController.swift; sourceTree = "<group>"; };
+		C6A2F35C23E9D41000B2D283 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		C6A2F35D23E9D41000B2D283 /* wave.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = wave.json; sourceTree = "<group>"; };
+		C6A2F35E23E9D41000B2D283 /* AlamofireStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireStatus.swift; sourceTree = "<group>"; };
+		C6A2F35F23E9D41100B2D283 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C6A2F36023E9D41100B2D283 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		C6A2F36123E9D41100B2D283 /* SharedPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedPreferences.swift; sourceTree = "<group>"; };
 		C6BDD9C423D2F955000BA7F2 /* Registro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registro.storyboard; sourceTree = "<group>"; };
 		C6BDD9C623D2FF51000BA7F2 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		C6BDD9C823D30611000BA7F2 /* Tienda.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tienda.storyboard; sourceTree = "<group>"; };
@@ -404,13 +408,15 @@
 		C6BDD9BA23D25721000BA7F2 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				C658B70E23D664330009D1C5 /* AlamofireStatus.swift */,
-				C658B70D23D664330009D1C5 /* Constants.swift */,
-				C658B71123D664330009D1C5 /* Extensiones.swift */,
-				C658B70F23D664330009D1C5 /* GradientView.swift */,
-				C658B71023D664330009D1C5 /* SharedPreferences.swift */,
-				C658B71223D664330009D1C5 /* wave.json */,
 				C612E0BE23E1FD9200A3919F /* Alerts.storyboard */,
+				C6A2F35E23E9D41000B2D283 /* AlamofireStatus.swift */,
+				C6A2F35F23E9D41100B2D283 /* Constants.swift */,
+				C6A2F35B23E9D41000B2D283 /* CustomAlertController.swift */,
+				C6A2F35A23E9D41000B2D283 /* Extensiones.swift */,
+				C6A2F36023E9D41100B2D283 /* GradientView.swift */,
+				C6A2F36123E9D41100B2D283 /* SharedPreferences.swift */,
+				C6A2F35C23E9D41000B2D283 /* Utils.swift */,
+				C6A2F35D23E9D41000B2D283 /* wave.json */,
 				C612E0C223E1FE2700A3919F /* CustomAlertController.swift */,
 				C612E0BD23E1FD9200A3919F /* Utils.swift */,
 			);
@@ -512,9 +518,9 @@
 			files = (
 				B22CDC9E23C78A8D0011ADB0 /* LaunchScreen.storyboard in Resources */,
 				C6BDD9C923D30611000BA7F2 /* Tienda.storyboard in Resources */,
+				C6A2F36523E9D41200B2D283 /* wave.json in Resources */,
 				C6BDD9C723D2FF51000BA7F2 /* Home.storyboard in Resources */,
 				C6BDD9C523D2F955000BA7F2 /* Registro.storyboard in Resources */,
-				C658B71823D664330009D1C5 /* wave.json in Resources */,
 				C6BDD9CC23D30A45000BA7F2 /* Mas.storyboard in Resources */,
 				B22CDC9923C78A8B0011ADB0 /* Main.storyboard in Resources */,
 				C6A2F35923E9D11800B2D283 /* Assets.xcassets in Resources */,
@@ -602,30 +608,32 @@
 			files = (
 				C6BDD9CE23D30DC3000BA7F2 /* LoginViewController.swift in Sources */,
 				C612E0A323DE8E8600A3919F /* LoginModel.swift in Sources */,
-				C658B71423D664330009D1C5 /* AlamofireStatus.swift in Sources */,
 				C612E0C323E1FE2700A3919F /* CustomAlertController.swift in Sources */,
 				C658B70723D599410009D1C5 /* Informacion.swift in Sources */,
 				C612E0C023E1FD9200A3919F /* Utils.swift in Sources */,
+				C6A2F36323E9D41200B2D283 /* CustomAlertController.swift in Sources */,
 				C658B70523D57EF40009D1C5 /* Mas.swift in Sources */,
-				C658B71623D664330009D1C5 /* SharedPreferences.swift in Sources */,
+				C6A2F36723E9D41200B2D283 /* Constants.swift in Sources */,
+				C6A2F36823E9D41200B2D283 /* GradientView.swift in Sources */,
 				C658B6FF23D57C030009D1C5 /* Registro4Fecha.swift in Sources */,
 				C658B6FD23D57BE50009D1C5 /* Registro3Menstruacion.swift in Sources */,
 				C612E0A523DE8E9900A3919F /* LoginApi.swift in Sources */,
-				C658B71523D664330009D1C5 /* GradientView.swift in Sources */,
 				C658B70323D57EE30009D1C5 /* Tienda.swift in Sources */,
 				C6993B3923D8DD5C00C29C9E /* DateHeader.swift in Sources */,
 				C6993B3B23D8DD6A00C29C9E /* DateCell.swift in Sources */,
+				C6A2F36923E9D41200B2D283 /* SharedPreferences.swift in Sources */,
 				C658B70923D5A10A0009D1C5 /* DatosEnvio.swift in Sources */,
 				C658B6FB23D57BCB0009D1C5 /* Registro2Periodo.swift in Sources */,
 				C658B70C23D64EDD0009D1C5 /* RegistroController.swift in Sources */,
 				C658B6F923D57BB00009D1C5 /* Registro1Periodo.swift in Sources */,
-				C658B71323D664330009D1C5 /* Constants.swift in Sources */,
 				C612E0B323E00B4500A3919F /* RegistroModel.swift in Sources */,
-				C658B71723D664330009D1C5 /* Extensiones.swift in Sources */,
 				C6993B3D23D8DE1300C29C9E /* ViewController.swift in Sources */,
 				C612E0B523E00B6400A3919F /* RegistroApi.swift in Sources */,
 				B22CDC9223C78A8B0011ADB0 /* AppDelegate.swift in Sources */,
+				C6A2F36623E9D41200B2D283 /* AlamofireStatus.swift in Sources */,
 				B22CDC9423C78A8B0011ADB0 /* SceneDelegate.swift in Sources */,
+				C6A2F36223E9D41200B2D283 /* Extensiones.swift in Sources */,
+				C6A2F36423E9D41200B2D283 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
