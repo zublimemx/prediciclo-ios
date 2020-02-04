@@ -15,12 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Cuándo comenzó tu último periodo?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctl-ZG-CyS">
-                                <rect key="frame" x="1.5" y="234" width="411.5" height="24.5"/>
-                                <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="23"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar_new_basic" translatesAutoresizingMaskIntoConstraints="NO" id="0zB-7Q-AoU">
                                 <rect key="frame" x="147" y="84" width="120" height="120"/>
                                 <constraints>
@@ -28,8 +22,11 @@
                                     <constraint firstAttribute="width" constant="120" id="sma-FK-rer"/>
                                 </constraints>
                             </imageView>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="CJR-x9-VGj">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJR-x9-VGj">
                                 <rect key="frame" x="0.0" y="340" width="414" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="602461751.306615">
+                                    <!--2020-02-03 22:29:11 +0000-->
+                                </date>
                                 <date key="minimumDate" timeIntervalSinceReferenceDate="-1609419600">
                                     <!--1950-01-01 11:00:00 +0000-->
                                 </date>
@@ -71,21 +68,31 @@
                                     <segue destination="aQF-A1-meo" kind="show" id="5qQ-8X-9tN"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Cuándo comenzó tu último periodo?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctl-ZG-CyS">
+                                <rect key="frame" x="40.5" y="234" width="333" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="Cyx-lF-5qU"/>
+                                    <constraint firstAttribute="width" constant="333" id="O5L-sR-2DU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="23"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.75674592068893609" blue="0.70603986482398351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Icn-cd-LNS" firstAttribute="leading" secondItem="gaL-kv-AZc" secondAttribute="leading" constant="45" id="14B-Ib-ib8"/>
-                            <constraint firstItem="ctl-ZG-CyS" firstAttribute="top" secondItem="0zB-7Q-AoU" secondAttribute="bottom" constant="30" id="62p-Rf-1Sf"/>
                             <constraint firstItem="CJR-x9-VGj" firstAttribute="centerX" secondItem="3Kr-vO-ctD" secondAttribute="centerX" id="C6e-jf-Qat"/>
                             <constraint firstItem="gaL-kv-AZc" firstAttribute="bottom" secondItem="Icn-cd-LNS" secondAttribute="bottom" constant="15" id="K9Z-s9-7JT"/>
+                            <constraint firstItem="ctl-ZG-CyS" firstAttribute="centerX" secondItem="3Kr-vO-ctD" secondAttribute="centerX" id="KSW-Ni-VJK"/>
                             <constraint firstItem="gaL-kv-AZc" firstAttribute="trailing" secondItem="Zji-ge-9Ae" secondAttribute="trailing" constant="30" id="KaN-y7-CY2"/>
                             <constraint firstItem="0zB-7Q-AoU" firstAttribute="centerX" secondItem="3Kr-vO-ctD" secondAttribute="centerX" id="Mp1-Fb-1Ke"/>
                             <constraint firstItem="gaL-kv-AZc" firstAttribute="trailing" secondItem="CJR-x9-VGj" secondAttribute="trailing" id="VJj-nx-fF8"/>
                             <constraint firstItem="CJR-x9-VGj" firstAttribute="leading" secondItem="gaL-kv-AZc" secondAttribute="leading" id="XS7-bI-5OI"/>
                             <constraint firstItem="0zB-7Q-AoU" firstAttribute="top" secondItem="gaL-kv-AZc" secondAttribute="top" constant="40" id="esq-DE-GH5"/>
-                            <constraint firstItem="ctl-ZG-CyS" firstAttribute="centerX" secondItem="3Kr-vO-ctD" secondAttribute="centerX" id="hgK-6D-My3"/>
                             <constraint firstItem="CJR-x9-VGj" firstAttribute="centerY" secondItem="3Kr-vO-ctD" secondAttribute="centerY" id="ky8-uO-Xxd"/>
                             <constraint firstItem="gaL-kv-AZc" firstAttribute="bottom" secondItem="Zji-ge-9Ae" secondAttribute="bottom" constant="15" id="l7y-n4-Zgi"/>
+                            <constraint firstItem="ctl-ZG-CyS" firstAttribute="top" secondItem="0zB-7Q-AoU" secondAttribute="bottom" constant="30" id="ydV-yU-sR8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gaL-kv-AZc"/>
                     </view>
@@ -113,8 +120,12 @@
                                     <constraint firstAttribute="height" constant="120" id="nyU-Tg-m9B"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Cuántos dias dura tu periodo?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0C-3f-Bfj">
-                                <rect key="frame" x="34.5" y="234" width="345" height="24.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Cuántos dias dura tu periodo?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0C-3f-Bfj">
+                                <rect key="frame" x="40.5" y="234" width="333" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="333" id="8Iv-4M-9L6"/>
+                                    <constraint firstAttribute="height" constant="63" id="ygU-Yy-UYX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="23"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -189,8 +200,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Cuántos días dura tu menstruación?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9Y-1B-txS">
-                                <rect key="frame" x="1.5" y="244" width="411.5" height="24.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Cuántos días dura tu menstruación?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9Y-1B-txS">
+                                <rect key="frame" x="40.5" y="244" width="333" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="ctW-WJ-bSb"/>
+                                    <constraint firstAttribute="width" constant="333" id="y1F-HI-a0O"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="23"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -278,8 +293,12 @@
                                     <constraint firstAttribute="height" constant="130" id="Yl3-kC-sxV"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Cuál es tu fecha de nacimiento?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cxd-wc-CKK">
-                                <rect key="frame" x="25.5" y="244" width="363" height="24.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Cuál es tu fecha de nacimiento?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cxd-wc-CKK">
+                                <rect key="frame" x="40.5" y="244" width="333" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="F1d-p7-MbF"/>
+                                    <constraint firstAttribute="width" constant="333" id="ti3-PV-EgM"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="ArialHebrew-Bold" family="Arial Hebrew" pointSize="23"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>

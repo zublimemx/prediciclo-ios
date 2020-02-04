@@ -210,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1vJ-g1-VOJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-726.08695652173924" y="-1296.4285714285713"/>
+            <point key="canvasLocation" x="-1775" y="-1296"/>
         </scene>
         <!--Tienda-->
         <scene sceneID="t6a-oe-VSR">
@@ -237,7 +237,6 @@
         <!--Item-->
         <scene sceneID="CpS-lh-wZ6">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dak-8A-fMC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController hidesBottomBarWhenPushed="YES" id="aby-N5-8Gp" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="rCC-nw-LdO"/>
                     <navigationItem key="navigationItem" id="XHP-uU-0Fz"/>
@@ -249,6 +248,7 @@
                         <segue destination="52y-cB-dqx" kind="relationship" relationship="rootViewController" id="peO-ZS-oOU"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dak-8A-fMC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2696" y="-577"/>
         </scene>
@@ -369,13 +369,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prediciclo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wl-V1-qw5">
-                                        <rect key="frame" x="161" y="50" width="92" height="23"/>
+                                        <rect key="frame" x="161" y="60" width="92" height="23"/>
                                         <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="21"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jKN-b9-RL3">
-                                        <rect key="frame" x="359" y="50" width="25" height="25"/>
+                                        <rect key="frame" x="359" y="60" width="25" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="giO-wa-UdT"/>
                                             <constraint firstAttribute="width" constant="25" id="i78-el-H6B"/>
@@ -388,8 +388,8 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.93355387450000005" green="0.52086663249999998" blue="0.49038559199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="2Wl-V1-qw5" firstAttribute="top" secondItem="65F-zf-Kd7" secondAttribute="top" constant="50" id="DEm-25-3GE"/>
-                                    <constraint firstItem="jKN-b9-RL3" firstAttribute="top" secondItem="65F-zf-Kd7" secondAttribute="top" constant="50" id="HOf-pK-WHl"/>
+                                    <constraint firstItem="2Wl-V1-qw5" firstAttribute="top" secondItem="65F-zf-Kd7" secondAttribute="top" constant="60" id="DEm-25-3GE"/>
+                                    <constraint firstItem="jKN-b9-RL3" firstAttribute="top" secondItem="65F-zf-Kd7" secondAttribute="top" constant="60" id="HOf-pK-WHl"/>
                                     <constraint firstItem="2Wl-V1-qw5" firstAttribute="centerX" secondItem="65F-zf-Kd7" secondAttribute="centerX" id="KZw-xF-T38"/>
                                     <constraint firstAttribute="trailing" secondItem="jKN-b9-RL3" secondAttribute="trailing" constant="30" id="N6b-W0-tWo"/>
                                     <constraint firstAttribute="height" constant="100" id="yyF-ed-RKP"/>
@@ -415,7 +415,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DO7-bN-dVp" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1671.0144927536232" y="-1296.4285714285713"/>
+            <point key="canvasLocation" x="-2720" y="-1296"/>
         </scene>
     </scenes>
     <resources>
