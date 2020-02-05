@@ -48,21 +48,23 @@ class Registro1Periodo: UIViewController {
             
             if result.day! > 6 {
                 //self.view.makeToast("No puedes seleccionar una fecha 6 dias antes del dia de hoy.", duration: 3.0, position: .bottom)
-                self.view.makeToast("No puedes seleccionar una fecha 6 dias antes del dia de hoy.", duration: 2.0, point: CGPoint(x: 0.0, y: -110.0), title: "Toast Title", image: UIImage(named: "")) { didTap in
+                self.view.makeToast("No puedes seleccionar una fecha 6 dias antes del dia de hoy.", duration: 2.0, point: CGPoint(x: 210.0, y: 750.0), title: "", image: UIImage(named: "")) { didTap in
                     if didTap {
                         print("completion from tap")
                     } else {
                         print("completion without tap")
                     }
                 }
+            }else{
+                print("\(day) \(month) \(year)")
+                let dateS:String = "\(year)-\(month)-\(day)"
+                preferencias.setString(key:"comienzoPeriodo",value:dateS )
             }
             
             
             
             
-            print("\(day) \(month) \(year)")
-            let dateS:String = "\(year)-\(month)-\(day)"
-            preferencias.setString(key:"comienzoPeriodo",value:dateS )
+            
         }
     }
     
