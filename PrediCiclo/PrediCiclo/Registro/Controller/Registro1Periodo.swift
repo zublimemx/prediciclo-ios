@@ -47,7 +47,14 @@ class Registro1Periodo: UIViewController {
             let result = calendar.dateComponents(dias, from: sender.date as   Date,  to: currentDate as Date)
             
             if result.day! > 6 {
-                self.view.makeToast("No puedes seleccionar una fecha 6 dias antes del dia de hoy.", duration: 3.0, position: .bottom)
+                //self.view.makeToast("No puedes seleccionar una fecha 6 dias antes del dia de hoy.", duration: 3.0, position: .bottom)
+                self.view.makeToast("No puedes seleccionar una fecha 6 dias antes del dia de hoy.", duration: 2.0, point: CGPoint(x: 0.0, y: -110.0), title: "Toast Title", image: UIImage(named: "")) { didTap in
+                    if didTap {
+                        print("completion from tap")
+                    } else {
+                        print("completion without tap")
+                    }
+                }
             }
             
             
