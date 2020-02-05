@@ -18,9 +18,6 @@
 		C612E0A523DE8E9900A3919F /* LoginApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C612E0A423DE8E9900A3919F /* LoginApi.swift */; };
 		C612E0B323E00B4500A3919F /* RegistroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C612E0B223E00B4500A3919F /* RegistroModel.swift */; };
 		C612E0B523E00B6400A3919F /* RegistroApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = C612E0B423E00B6400A3919F /* RegistroApi.swift */; };
-		C612E0C023E1FD9200A3919F /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C612E0BD23E1FD9200A3919F /* Utils.swift */; };
-		C612E0C123E1FD9200A3919F /* Alerts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C612E0BE23E1FD9200A3919F /* Alerts.storyboard */; };
-		C612E0C323E1FE2700A3919F /* CustomAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C612E0C223E1FE2700A3919F /* CustomAlertController.swift */; };
 		C658B6F923D57BB00009D1C5 /* Registro1Periodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B6F823D57BB00009D1C5 /* Registro1Periodo.swift */; };
 		C658B6FB23D57BCB0009D1C5 /* Registro2Periodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B6FA23D57BCB0009D1C5 /* Registro2Periodo.swift */; };
 		C658B6FD23D57BE50009D1C5 /* Registro3Menstruacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C658B6FC23D57BE50009D1C5 /* Registro3Menstruacion.swift */; };
@@ -78,9 +75,6 @@
 		C612E0A423DE8E9900A3919F /* LoginApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginApi.swift; path = PrediCiclo/Login/Net/LoginApi.swift; sourceTree = SOURCE_ROOT; };
 		C612E0B223E00B4500A3919F /* RegistroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroModel.swift; sourceTree = "<group>"; };
 		C612E0B423E00B6400A3919F /* RegistroApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroApi.swift; sourceTree = "<group>"; };
-		C612E0BD23E1FD9200A3919F /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = ../../../../../Utils.swift; sourceTree = "<group>"; };
-		C612E0BE23E1FD9200A3919F /* Alerts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Alerts.storyboard; path = ../../../../../Alerts.storyboard; sourceTree = "<group>"; };
-		C612E0C223E1FE2700A3919F /* CustomAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomAlertController.swift; path = ../../../../../CustomAlertController.swift; sourceTree = "<group>"; };
 		C658B6F823D57BB00009D1C5 /* Registro1Periodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registro1Periodo.swift; sourceTree = "<group>"; };
 		C658B6FA23D57BCB0009D1C5 /* Registro2Periodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registro2Periodo.swift; sourceTree = "<group>"; };
 		C658B6FC23D57BE50009D1C5 /* Registro3Menstruacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registro3Menstruacion.swift; sourceTree = "<group>"; };
@@ -408,7 +402,6 @@
 		C6BDD9BA23D25721000BA7F2 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				C612E0BE23E1FD9200A3919F /* Alerts.storyboard */,
 				C6A2F35E23E9D41000B2D283 /* AlamofireStatus.swift */,
 				C6A2F35F23E9D41100B2D283 /* Constants.swift */,
 				C6A2F35B23E9D41000B2D283 /* CustomAlertController.swift */,
@@ -417,8 +410,6 @@
 				C6A2F36123E9D41100B2D283 /* SharedPreferences.swift */,
 				C6A2F35C23E9D41000B2D283 /* Utils.swift */,
 				C6A2F35D23E9D41000B2D283 /* wave.json */,
-				C612E0C223E1FE2700A3919F /* CustomAlertController.swift */,
-				C612E0BD23E1FD9200A3919F /* Utils.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -524,7 +515,6 @@
 				C6BDD9CC23D30A45000BA7F2 /* Mas.storyboard in Resources */,
 				B22CDC9923C78A8B0011ADB0 /* Main.storyboard in Resources */,
 				C6A2F35923E9D11800B2D283 /* Assets.xcassets in Resources */,
-				C612E0C123E1FD9200A3919F /* Alerts.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -608,9 +598,7 @@
 			files = (
 				C6BDD9CE23D30DC3000BA7F2 /* LoginViewController.swift in Sources */,
 				C612E0A323DE8E8600A3919F /* LoginModel.swift in Sources */,
-				C612E0C323E1FE2700A3919F /* CustomAlertController.swift in Sources */,
 				C658B70723D599410009D1C5 /* Informacion.swift in Sources */,
-				C612E0C023E1FD9200A3919F /* Utils.swift in Sources */,
 				C6A2F36323E9D41200B2D283 /* CustomAlertController.swift in Sources */,
 				C658B70523D57EF40009D1C5 /* Mas.swift in Sources */,
 				C6A2F36723E9D41200B2D283 /* Constants.swift in Sources */,

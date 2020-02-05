@@ -22,13 +22,6 @@
                                     <constraint firstAttribute="width" constant="120" id="sma-FK-rer"/>
                                 </constraints>
                             </imageView>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="CJR-x9-VGj">
-                                <rect key="frame" x="0.0" y="340" width="414" height="216"/>
-                                <date key="minimumDate" timeIntervalSinceReferenceDate="-1609419600">
-                                    <!--1950-01-01 11:00:00 +0000-->
-                                </date>
-                                <locale key="locale" localeIdentifier="es_MX"/>
-                            </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Icn-cd-LNS">
                                 <rect key="frame" x="45" y="808" width="50" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -72,20 +65,22 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="CJR-x9-VGj">
+                                <rect key="frame" x="47" y="340" width="320" height="216"/>
+                                <locale key="locale" localeIdentifier="es_MX"/>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.75674592068893609" blue="0.70603986482398351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Icn-cd-LNS" firstAttribute="leading" secondItem="gaL-kv-AZc" secondAttribute="leading" constant="45" id="14B-Ib-ib8"/>
-                            <constraint firstItem="CJR-x9-VGj" firstAttribute="centerX" secondItem="3Kr-vO-ctD" secondAttribute="centerX" id="C6e-jf-Qat"/>
                             <constraint firstItem="gaL-kv-AZc" firstAttribute="bottom" secondItem="Icn-cd-LNS" secondAttribute="bottom" constant="15" id="K9Z-s9-7JT"/>
                             <constraint firstItem="ctl-ZG-CyS" firstAttribute="centerX" secondItem="3Kr-vO-ctD" secondAttribute="centerX" id="KSW-Ni-VJK"/>
                             <constraint firstItem="gaL-kv-AZc" firstAttribute="trailing" secondItem="Zji-ge-9Ae" secondAttribute="trailing" constant="30" id="KaN-y7-CY2"/>
                             <constraint firstItem="0zB-7Q-AoU" firstAttribute="centerX" secondItem="3Kr-vO-ctD" secondAttribute="centerX" id="Mp1-Fb-1Ke"/>
-                            <constraint firstItem="gaL-kv-AZc" firstAttribute="trailing" secondItem="CJR-x9-VGj" secondAttribute="trailing" id="VJj-nx-fF8"/>
-                            <constraint firstItem="CJR-x9-VGj" firstAttribute="leading" secondItem="gaL-kv-AZc" secondAttribute="leading" id="XS7-bI-5OI"/>
+                            <constraint firstItem="CJR-x9-VGj" firstAttribute="centerX" secondItem="3Kr-vO-ctD" secondAttribute="centerX" id="bAt-Bw-t1k"/>
                             <constraint firstItem="0zB-7Q-AoU" firstAttribute="top" secondItem="gaL-kv-AZc" secondAttribute="top" constant="40" id="esq-DE-GH5"/>
-                            <constraint firstItem="CJR-x9-VGj" firstAttribute="centerY" secondItem="3Kr-vO-ctD" secondAttribute="centerY" id="ky8-uO-Xxd"/>
                             <constraint firstItem="gaL-kv-AZc" firstAttribute="bottom" secondItem="Zji-ge-9Ae" secondAttribute="bottom" constant="15" id="l7y-n4-Zgi"/>
+                            <constraint firstItem="CJR-x9-VGj" firstAttribute="centerY" secondItem="3Kr-vO-ctD" secondAttribute="centerY" id="tkC-nM-4OE"/>
                             <constraint firstItem="ctl-ZG-CyS" firstAttribute="top" secondItem="0zB-7Q-AoU" secondAttribute="bottom" constant="30" id="ydV-yU-sR8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gaL-kv-AZc"/>
@@ -297,10 +292,10 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Oof-qQ-cux">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oof-qQ-cux">
                                 <rect key="frame" x="47" y="340" width="320" height="216"/>
-                                <date key="minimumDate" timeIntervalSinceReferenceDate="-1609419600">
-                                    <!--1950-01-01 11:00:00 +0000-->
+                                <date key="date" timeIntervalSinceReferenceDate="602493948.28230095">
+                                    <!--2020-02-04 07:25:48 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="es_MX"/>
                             </datePicker>

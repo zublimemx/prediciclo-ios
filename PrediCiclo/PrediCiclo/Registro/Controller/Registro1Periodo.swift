@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 class Registro1Periodo: UIViewController {
     
@@ -23,13 +24,35 @@ class Registro1Periodo: UIViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
         self.pickerCalendario.setValue(UIColor.black, forKey: "textColor")
+        self.pickerCalendario.datePickerMode = UIDatePicker.Mode.date
         setDates()
         pickerCalendario.addTarget(self, action: #selector(dateChanged), for: .valueChanged)
+        
     }
     
     @objc func dateChanged(_ sender: UIDatePicker) {
+        /*Fecha Actual*/
+        let currentDate = Date()
+        let calendar = Calendar(identifier: .gregorian)
+        var componentsActual = DateComponents()
+        componentsActual.calendar = calendar
+        //let dayCurrent = calendar.component(.day, from: currentDate)
+        
+        
+        /*Fecha Seleccionada*/
         let components = Calendar.current.dateComponents([.year, .month, .day], from: sender.date)
         if let day = components.day, let month = components.month, let year = components.year {
+            
+            let dias = Set<Calendar.Component>([.day])
+            let result = calendar.dateComponents(dias, from: sender.date as   Date,  to: currentDate as Date)
+            
+            if result.day! > 6 {
+                self.view.makeToast("No puedes seleccionar una fecha 6 dias antes del dia de hoy.", duration: 3.0, position: .bottom)
+            }
+            
+            
+            
+            
             print("\(day) \(month) \(year)")
             let dateS:String = "\(year)-\(month)-\(day)"
             preferencias.setString(key:"comienzoPeriodo",value:dateS )
@@ -37,18 +60,25 @@ class Registro1Periodo: UIViewController {
     }
     
     func setDates(){
-        let date = Date()
-        let calendar = Calendar(identifier: .gregorian)
         let currentDate = Date()
+        let calendar = Calendar(identifier: .gregorian)
         var components = DateComponents()
         components.calendar = calendar
+        
+        components.day = 0
         let maxDate = calendar.date(byAdding: components, to: currentDate)!
         pickerCalendario.maximumDate = maxDate
-        components.day = -6
+        
+        let initialDate = calendar.date(byAdding: components, to: currentDate)!
+        pickerCalendario.setDate(initialDate, animated: true)
+        
+        components.day = -30
         let minDate = calendar.date(byAdding: components, to: currentDate)!
         pickerCalendario.minimumDate = minDate
+        
+        
+        
     }
-    
     
     // MARK: Actions
   

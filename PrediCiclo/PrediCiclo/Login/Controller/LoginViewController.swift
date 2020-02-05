@@ -259,7 +259,6 @@ class LoginViewController: UIViewController {
         }else{
             NVActivityIndicatorPresenter.sharedInstance.stopAnimating(nil)
             /*Alerta de Error*/
-            userEmailtxt = ""
             self.viewError.isHidden = false
             self.viewError.layer.borderWidth = 0.2
             self.viewError.layer.borderColor = UIColor.lightGray.cgColor;

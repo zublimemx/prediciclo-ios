@@ -38,21 +38,23 @@ class Registro4Fecha: UIViewController {
             
     func setDates(){
         
-        let calendar = Calendar(identifier: .gregorian)
         let currentDate = Date()
+        let calendar = Calendar(identifier: .gregorian)
         var components = DateComponents()
         components.calendar = calendar
-            
-        components.month = 12
+
+        components.year = -1
         let maxDate = calendar.date(byAdding: components, to: currentDate)!
-
-        components.year = -60
-        let minDate = calendar.date(byAdding: components, to: currentDate)!
-
-        cumpleView.minimumDate = minDate
         cumpleView.maximumDate = maxDate
         
-        cumpleView.setDate(currentDate, animated: true)
+        components.year = -30
+        let initialDate = calendar.date(byAdding: components, to: currentDate)!
+        cumpleView.setDate(initialDate, animated: true)
+        
+        components.year = -35
+        let minDate = calendar.date(byAdding: components, to: currentDate)!
+        cumpleView.minimumDate = minDate
+        
         
     }
     
