@@ -2274,7 +2274,6 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = 4FD564BE5130AA537705CD9911BB3A5D /* Products */;
@@ -3100,23 +3099,6 @@
 			};
 			name = Release;
 		};
-		0B7A5F84027F22E92B8B5B0AA106A43F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1773D162EC6D36F3B21EB15C35AE7CF9 /* IQKeyboardManager.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/IQKeyboardManager";
-				IBSC_MODULE = IQKeyboardManager;
-				INFOPLIST_FILE = "Target Support Files/IQKeyboardManager/ResourceBundle-IQKeyboardManager-IQKeyboardManager-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = IQKeyboardManager;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
 		124AA77418747D85F8FD22FAB4837A9B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 496DBC7D82CDD569426FDBEE38D4EE63 /* SkeletonView.xcconfig */;
@@ -3259,6 +3241,22 @@
 			};
 			name = Debug;
 		};
+		3EF0DA20DD271C43A757F859733FDEB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D397B97574682650B036C15E4E0D52A5 /* PasswordTextField.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PasswordTextField";
+				INFOPLIST_FILE = "Target Support Files/PasswordTextField/ResourceBundle-PasswordTextField-PasswordTextField-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = PasswordTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 		4A91922E714119713DE623E9F04FE5B0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8F8C0BB4FA03213A64990E4EF886AAE8 /* ViewAnimator.xcconfig */;
@@ -3292,6 +3290,38 @@
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4E7AC40DB9CF8A4E6AF3158FAAA89492 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1773D162EC6D36F3B21EB15C35AE7CF9 /* IQKeyboardManager.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/IQKeyboardManager";
+				INFOPLIST_FILE = "Target Support Files/IQKeyboardManager/ResourceBundle-IQKeyboardManager-IQKeyboardManager-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = IQKeyboardManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		519EFCE6C867C19C8E38D43516351751 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1773D162EC6D36F3B21EB15C35AE7CF9 /* IQKeyboardManager.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/IQKeyboardManager";
+				INFOPLIST_FILE = "Target Support Files/IQKeyboardManager/ResourceBundle-IQKeyboardManager-IQKeyboardManager-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = IQKeyboardManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -3365,23 +3395,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		7C8D01B0D8582CA96B8F73D596E24DC1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1773D162EC6D36F3B21EB15C35AE7CF9 /* IQKeyboardManager.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/IQKeyboardManager";
-				IBSC_MODULE = IQKeyboardManager;
-				INFOPLIST_FILE = "Target Support Files/IQKeyboardManager/ResourceBundle-IQKeyboardManager-IQKeyboardManager-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = IQKeyboardManager;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
 		};
 		846ACBB75A0DE1F29676841A8153FBB4 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -3551,23 +3564,6 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		9AF5C98CCA4A19FA2655589BE4C52C77 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D397B97574682650B036C15E4E0D52A5 /* PasswordTextField.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PasswordTextField";
-				IBSC_MODULE = PasswordTextField;
-				INFOPLIST_FILE = "Target Support Files/PasswordTextField/ResourceBundle-PasswordTextField-PasswordTextField-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = PasswordTextField;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
@@ -3970,23 +3966,6 @@
 			};
 			name = Release;
 		};
-		E77926F6FBB9B832C45D26253886F1F5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D397B97574682650B036C15E4E0D52A5 /* PasswordTextField.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PasswordTextField";
-				IBSC_MODULE = PasswordTextField;
-				INFOPLIST_FILE = "Target Support Files/PasswordTextField/ResourceBundle-PasswordTextField-PasswordTextField-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = PasswordTextField;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
 		ECB437504DF805BD96CAABF97400B526 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -4044,6 +4023,22 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		EE291E8C4981310EB61ED90AF015B8CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D397B97574682650B036C15E4E0D52A5 /* PasswordTextField.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PasswordTextField";
+				INFOPLIST_FILE = "Target Support Files/PasswordTextField/ResourceBundle-PasswordTextField-PasswordTextField-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = PasswordTextField;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Release;
 		};
@@ -4163,8 +4158,8 @@
 		03905908AD043C5ABAB9397F676D3B42 /* Build configuration list for PBXNativeTarget "IQKeyboardManager-IQKeyboardManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0B7A5F84027F22E92B8B5B0AA106A43F /* Debug */,
-				7C8D01B0D8582CA96B8F73D596E24DC1 /* Release */,
+				4E7AC40DB9CF8A4E6AF3158FAAA89492 /* Debug */,
+				519EFCE6C867C19C8E38D43516351751 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -4262,8 +4257,8 @@
 		A26F20DC86AA0C36AE39D4204B24785D /* Build configuration list for PBXNativeTarget "PasswordTextField-PasswordTextField" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9AF5C98CCA4A19FA2655589BE4C52C77 /* Debug */,
-				E77926F6FBB9B832C45D26253886F1F5 /* Release */,
+				3EF0DA20DD271C43A757F859733FDEB3 /* Debug */,
+				EE291E8C4981310EB61ED90AF015B8CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

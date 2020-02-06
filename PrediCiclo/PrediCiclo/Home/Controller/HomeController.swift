@@ -1,9 +1,10 @@
 import UIKit
 import JTAppleCalendar
 
-class ViewController: UIViewController {
-    @IBOutlet var calendarView: JTACMonthView!
+class HomeController: UIViewController {
     
+    //MARK: Variables
+    var HomeApi_ = HomeApi()
     var calendarDataSource: [String:String] = [:]
     var formatter: DateFormatter {
         let formatter = DateFormatter()
@@ -11,17 +12,28 @@ class ViewController: UIViewController {
         return formatter
     }
     
+    //MARK: Controls
+    @IBOutlet var calendarView: JTACMonthView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         calendarView.scrollDirection = .horizontal
         calendarView.scrollingMode   = .stopAtEachCalendarFrame
         calendarView.showsHorizontalScrollIndicator = false
-        
         populateDataSource()
     }
     
+    //MARK: Functions
     func populateDataSource() {
-        // update the datrasource
+        
+        HomeApi_.set_CreaCalendarioSiNoExiste(VC: self, callback: {(success, callback) in
+            if success{
+                
+            }else{
+                
+            }
+        })
         calendarDataSource = [
             "07-Jan-2018": "SomeData",
             "15-Jan-2018": "SomeMoreData",
@@ -54,9 +66,11 @@ class ViewController: UIViewController {
             cell.dotView.isHidden = false
         }
     }
+    
+    //MARK: Actions
 }
 
-extension ViewController: JTACMonthViewDataSource {
+extension HomeController: JTACMonthViewDataSource {
     func configureCalendar(_ calendar: JTACMonthView) -> ConfigurationParameters {
         let startDate = formatter.date(from: "01-jan-2018")!
         let endDate = Date()
@@ -64,7 +78,7 @@ extension ViewController: JTACMonthViewDataSource {
     }
 }
 
-extension ViewController: JTACMonthViewDelegate {
+extension HomeController: JTACMonthViewDelegate {
     func calendar(_ calendar: JTACMonthView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTACDayCell {
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "dateCell", for: indexPath) as! DateCell
         self.calendar(calendar, willDisplay: cell, forItemAt: date, cellState: cellState, indexPath: indexPath)

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+
 class Preferences {
     
     let headers = ["Authorization":"Basic Y2tfNWVjYjQ0ODI4NjczYjAyYmJmYWE4ODZhZDE1MmU0M2Y5MjNjODFmMTpjc19lM2ZiN2ZhZDRlNjMzOTc4MDA1ZDM5MDk5ZDg5YzgxMTg4MDNlMTg3","Content-Type": "application/x-www-form-urlencoded"]

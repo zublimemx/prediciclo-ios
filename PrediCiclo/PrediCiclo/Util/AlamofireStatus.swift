@@ -9,6 +9,8 @@
 import Foundation
 import Alamofire
 
+
+
 class AlamofireStatus {
 
 func Valida_Status(Status : Int, CurrentView : UIViewController,Mensaje: Error? = nil) -> Bool {

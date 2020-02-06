@@ -31,7 +31,7 @@ DEPENDENCIES:
   - ViewAnimator
 
 SPEC REPOS:
-  trunk:
+  https://github.com/cocoapods/specs.git:
     - Alamofire
     - AlamofireObjectMapper
     - IQKeyboardManager
@@ -70,4 +70,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: e54816bff7742f589d13e4f7bd181a0ea21fa747
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.7.3

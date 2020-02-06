@@ -234,11 +234,11 @@
             </objects>
             <point key="canvasLocation" x="-3860" y="-577"/>
         </scene>
-        <!--Item-->
+        <!--Tienda-->
         <scene sceneID="CpS-lh-wZ6">
             <objects>
                 <navigationController hidesBottomBarWhenPushed="YES" id="aby-N5-8Gp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="rCC-nw-LdO"/>
+                    <tabBarItem key="tabBarItem" title="Tienda" id="rCC-nw-LdO"/>
                     <navigationItem key="navigationItem" id="XHP-uU-0Fz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ng2-oU-YBl">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -252,11 +252,11 @@
             </objects>
             <point key="canvasLocation" x="-2696" y="-577"/>
         </scene>
-        <!--Item-->
+        <!--Más-->
         <scene sceneID="eYf-M7-iN3">
             <objects>
                 <navigationController id="nOg-gB-bor" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ShL-I3-QvH"/>
+                    <tabBarItem key="tabBarItem" title="Más" id="ShL-I3-QvH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ork-6a-tBl">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -272,7 +272,7 @@
         <!--Ib Calendar Data Source-->
         <scene sceneID="Yf8-4N-RGt">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="frU-V9-h8g" customClass="ViewController" customModule="PrediCiclo" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="frU-V9-h8g" customClass="HomeController" customModule="PrediCiclo" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BXD-zt-Ubo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -340,19 +340,29 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ap2-Nt-xn1">
-                                            <rect key="frame" x="36" y="25" width="46" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ei-ye-wxi">
+                                            <rect key="frame" x="359" y="24.5" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="3Jm-O4-U0h"/>
+                                                <constraint firstAttribute="width" constant="30" id="tas-kv-11m"/>
+                                            </constraints>
+                                            <state key="normal" image="right-arrow"/>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9A-FO-Zb4">
-                                            <rect key="frame" x="332" y="25" width="46" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ap2-Nt-xn1">
+                                            <rect key="frame" x="25" y="24.5" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="6tM-8x-TUv"/>
+                                                <constraint firstAttribute="width" constant="30" id="NA1-Cg-2AQ"/>
+                                            </constraints>
+                                            <state key="normal" image="right-arrow"/>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" red="0.93355387450000005" green="0.52086663249999998" blue="0.49038559199999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
+                                        <constraint firstItem="ap2-Nt-xn1" firstAttribute="leading" secondItem="uvO-AK-fQo" secondAttribute="leadingMargin" constant="17" id="GcV-HZ-c0w"/>
+                                        <constraint firstItem="7Ei-ye-wxi" firstAttribute="centerY" secondItem="uvO-AK-fQo" secondAttribute="centerY" id="M0t-Xs-A2g"/>
+                                        <constraint firstItem="ap2-Nt-xn1" firstAttribute="centerY" secondItem="uvO-AK-fQo" secondAttribute="centerY" id="Te3-rx-zsJ"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="7Ei-ye-wxi" secondAttribute="trailing" constant="17" id="elm-0A-Hxv"/>
                                         <constraint firstItem="yBV-HO-Vdf" firstAttribute="centerY" secondItem="uvO-AK-fQo" secondAttribute="centerY" id="owA-NC-cxB"/>
                                         <constraint firstItem="yBV-HO-Vdf" firstAttribute="centerX" secondItem="uvO-AK-fQo" secondAttribute="centerX" id="zs1-bl-L6e"/>
                                     </constraints>
@@ -407,10 +417,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JQI-0A-bda"/>
                     </view>
-                    <tabBarItem key="tabBarItem" id="8FE-k8-4Lg"/>
+                    <tabBarItem key="tabBarItem" title="Inicio" id="8FE-k8-4Lg"/>
                     <navigationItem key="navigationItem" title="Prediciclo" id="0PY-cd-mQh"/>
                     <connections>
-                        <outlet property="calendarView" destination="Ybb-s0-OiH" id="dLG-LV-vNJ"/>
+                        <outlet property="calendarView" destination="Ybb-s0-OiH" id="J45-sw-6iW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DO7-bN-dVp" sceneMemberID="firstResponder"/>
@@ -425,5 +435,6 @@
         <image name="pregnancy-test" width="512" height="512"/>
         <image name="question" width="512" height="512"/>
         <image name="raindrop-close-up" width="512" height="512"/>
+        <image name="right-arrow" width="512" height="512"/>
     </resources>
 </document>

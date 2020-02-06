@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3328EC5A093882B30207A00A /* Pods_PrediCicloTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F6732BC9E0F695C002792B0 /* Pods_PrediCicloTests.framework */; };
+		B20AB2BC23EBCC7B0004140C /* HomeApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20AB2BB23EBCC7B0004140C /* HomeApi.swift */; };
+		B20AB2BF23EBD2CF0004140C /* Create_if_not_exits_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20AB2BE23EBD2CF0004140C /* Create_if_not_exits_Model.swift */; };
 		B22CDC9223C78A8B0011ADB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CDC9123C78A8B0011ADB0 /* AppDelegate.swift */; };
 		B22CDC9423C78A8B0011ADB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22CDC9323C78A8B0011ADB0 /* SceneDelegate.swift */; };
 		B22CDC9923C78A8B0011ADB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B22CDC9723C78A8B0011ADB0 /* Main.storyboard */; };
@@ -38,7 +40,7 @@
 		C6A2F36923E9D41200B2D283 /* SharedPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A2F36123E9D41100B2D283 /* SharedPreferences.swift */; };
 		C6A2F36C23EA814900B2D283 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A2F36A23EA814900B2D283 /* DateCell.swift */; };
 		C6A2F36D23EA814900B2D283 /* DateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A2F36B23EA814900B2D283 /* DateHeader.swift */; };
-		C6A2F36F23EA817700B2D283 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A2F36E23EA817700B2D283 /* ViewController.swift */; };
+		C6A2F36F23EA817700B2D283 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A2F36E23EA817700B2D283 /* HomeController.swift */; };
 		C6BDD9C523D2F955000BA7F2 /* Registro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6BDD9C423D2F955000BA7F2 /* Registro.storyboard */; };
 		C6BDD9C723D2FF51000BA7F2 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6BDD9C623D2FF51000BA7F2 /* Home.storyboard */; };
 		C6BDD9C923D30611000BA7F2 /* Tienda.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6BDD9C823D30611000BA7F2 /* Tienda.storyboard */; };
@@ -62,6 +64,8 @@
 		4D1FB47C80EE96FFDA8E3BA7 /* Pods-PrediCicloTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrediCicloTests.release.xcconfig"; path = "Target Support Files/Pods-PrediCicloTests/Pods-PrediCicloTests.release.xcconfig"; sourceTree = "<group>"; };
 		4F6732BC9E0F695C002792B0 /* Pods_PrediCicloTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrediCicloTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6692FC233C5B1621EC38C4B /* Pods-PrediCiclo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrediCiclo.debug.xcconfig"; path = "Target Support Files/Pods-PrediCiclo/Pods-PrediCiclo.debug.xcconfig"; sourceTree = "<group>"; };
+		B20AB2BB23EBCC7B0004140C /* HomeApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeApi.swift; sourceTree = "<group>"; };
+		B20AB2BE23EBD2CF0004140C /* Create_if_not_exits_Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Create_if_not_exits_Model.swift; sourceTree = "<group>"; };
 		B22CDC8E23C78A8B0011ADB0 /* PrediCiclo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrediCiclo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B22CDC9123C78A8B0011ADB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B22CDC9323C78A8B0011ADB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,7 +99,7 @@
 		C6A2F36123E9D41100B2D283 /* SharedPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedPreferences.swift; sourceTree = "<group>"; };
 		C6A2F36A23EA814900B2D283 /* DateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
 		C6A2F36B23EA814900B2D283 /* DateHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHeader.swift; sourceTree = "<group>"; };
-		C6A2F36E23EA817700B2D283 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C6A2F36E23EA817700B2D283 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		C6BDD9C423D2F955000BA7F2 /* Registro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registro.storyboard; sourceTree = "<group>"; };
 		C6BDD9C623D2FF51000BA7F2 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		C6BDD9C823D30611000BA7F2 /* Tienda.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tienda.storyboard; sourceTree = "<group>"; };
@@ -133,6 +137,15 @@
 				4D1FB47C80EE96FFDA8E3BA7 /* Pods-PrediCicloTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B20AB2BD23EBD20A0004140C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C6A2F36A23EA814900B2D283 /* DateCell.swift */,
+				C6A2F36B23EA814900B2D283 /* DateHeader.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		B22CDC8523C78A8B0011ADB0 = {
@@ -218,6 +231,7 @@
 		C658B71D23D667A80009D1C5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B20AB2BD23EBD20A0004140C /* Helpers */,
 				C658B72B23D66A7E0009D1C5 /* View */,
 				C658B72A23D66A760009D1C5 /* Controller */,
 				C658B72923D66A700009D1C5 /* Model */,
@@ -308,6 +322,7 @@
 		C658B72823D66A640009D1C5 /* Net */ = {
 			isa = PBXGroup;
 			children = (
+				B20AB2BB23EBCC7B0004140C /* HomeApi.swift */,
 			);
 			path = Net;
 			sourceTree = "<group>";
@@ -315,6 +330,7 @@
 		C658B72923D66A700009D1C5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B20AB2BE23EBD2CF0004140C /* Create_if_not_exits_Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -322,9 +338,7 @@
 		C658B72A23D66A760009D1C5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C6A2F36A23EA814900B2D283 /* DateCell.swift */,
-				C6A2F36E23EA817700B2D283 /* ViewController.swift */,
-				C6A2F36B23EA814900B2D283 /* DateHeader.swift */,
+				C6A2F36E23EA817700B2D283 /* HomeController.swift */,
 				C658B70623D599410009D1C5 /* Informacion.swift */,
 			);
 			path = Controller;
@@ -604,7 +618,7 @@
 				C6A2F36723E9D41200B2D283 /* Constants.swift in Sources */,
 				C6A2F36823E9D41200B2D283 /* GradientView.swift in Sources */,
 				C658B6FF23D57C030009D1C5 /* Registro4Fecha.swift in Sources */,
-				C6A2F36F23EA817700B2D283 /* ViewController.swift in Sources */,
+				C6A2F36F23EA817700B2D283 /* HomeController.swift in Sources */,
 				C658B6FD23D57BE50009D1C5 /* Registro3Menstruacion.swift in Sources */,
 				C612E0A523DE8E9900A3919F /* LoginApi.swift in Sources */,
 				C658B70323D57EE30009D1C5 /* Tienda.swift in Sources */,
@@ -616,6 +630,8 @@
 				C658B6F923D57BB00009D1C5 /* Registro1Periodo.swift in Sources */,
 				C612E0B323E00B4500A3919F /* RegistroModel.swift in Sources */,
 				C6A2F36D23EA814900B2D283 /* DateHeader.swift in Sources */,
+				B20AB2BF23EBD2CF0004140C /* Create_if_not_exits_Model.swift in Sources */,
+				B20AB2BC23EBCC7B0004140C /* HomeApi.swift in Sources */,
 				C612E0B523E00B6400A3919F /* RegistroApi.swift in Sources */,
 				B22CDC9223C78A8B0011ADB0 /* AppDelegate.swift in Sources */,
 				C6A2F36623E9D41200B2D283 /* AlamofireStatus.swift in Sources */,
@@ -783,7 +799,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RDAL4DM88X;
+				DEVELOPMENT_TEAM = 4EJNEH5V46;
 				INFOPLIST_FILE = PrediCiclo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -803,7 +819,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = RDAL4DM88X;
+				DEVELOPMENT_TEAM = 4EJNEH5V46;
 				INFOPLIST_FILE = PrediCiclo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (

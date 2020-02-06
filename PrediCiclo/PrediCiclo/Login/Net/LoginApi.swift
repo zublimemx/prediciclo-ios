@@ -9,16 +9,6 @@
 import Foundation
 import Alamofire
 import AlamofireObjectMapper
-let Valida_Status = AlamofireStatus()
-/*let manager : SessionManager = {
-    let config = URLSessionConfiguration.default
-    config.timeoutIntervalForRequest = 45
-    config.timeoutIntervalForResource = 45
-    let mgr = Alamofire.SessionManager(configuration: config)
-      
-    return mgr
-}()*/
-let preferencias = Preferences()
 
 class LoginApi {
     
@@ -228,8 +218,6 @@ class LoginApi {
                     break
                 case false:
                     //VC.Muestra_Error_VC()
-                
-
                     break
                 }
                 
@@ -237,10 +225,6 @@ class LoginApi {
             
         }
     }
-    
-    
-    
-    
 }
 
 
