@@ -35,4 +35,36 @@ class Utils {
         let storyboard = UIStoryboard(name: storyboardName, bundle: Bundle.main);
         return storyboard.instantiateViewController(withIdentifier: viewControllerIdentifier);
     }
+    
+    static func MonthsTranslate(nombre: String) -> String
+    {
+        switch nombre {
+        case "January":
+            return "Enero"
+        case "February":
+            return "Febrero"
+        case "March":
+            return "Marzo"
+        case "April":
+            return "Abril"
+        case "May":
+            return "Mayo"
+        case "June":
+            return "Junio"
+        case "July":
+            return "Julio"
+        case "August":
+            return "Agosto"
+        case "September":
+            return "Septiembre"
+        case "October":
+            return "Octubre"
+        case "November":
+            return "Noviembre"
+        case "December":
+            return "Diciembre"
+        default:
+            return ""
+        }
+    }
 }

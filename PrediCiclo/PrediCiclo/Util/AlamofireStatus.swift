@@ -1,13 +1,15 @@
 //
 //  AlamofireStatus.swift
-//  Prediciclo
+//  PrediCiclo
 //
-//  Created by Carlos H. Torres on 06/12/19.
-//  Copyright © 2019 Carlos H. Torres. All rights reserved.
+//  Created by Jason Sa on 2/5/20.
+//  Copyright © 2020 Zublime. All rights reserved.
 //
 
 import Foundation
 import Alamofire
+
+
 
 class AlamofireStatus {
 

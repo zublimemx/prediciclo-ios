@@ -2,8 +2,8 @@
 //  GradientView.swift
 //  Prediciclo
 //
-//  Created by Carlos H. Torres on 11/24/19.
-//  Copyright © 2019 Carlos H. Torres. All rights reserved.
+//  Created by Daniel Barcenas on 1/29/20.
+//  Copyright © 2020 Zublime. All rights reserved.
 //
 
 import Foundation
@@ -32,9 +32,11 @@ class GradientView: UIView {
             gradientLayer.endPoint   = diagonalMode ? .init(x: 1, y: 1) : .init(x: 0.5, y: 1)
         }
     }
+    
     func updateLocations() {
         gradientLayer.locations = [startLocation as NSNumber, endLocation as NSNumber]
     }
+    
     func updateColors() {
         gradientLayer.colors = [startColor.cgColor, endColor.cgColor]
     }

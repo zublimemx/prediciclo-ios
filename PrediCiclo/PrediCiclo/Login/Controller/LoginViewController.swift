@@ -11,7 +11,6 @@ import PasswordTextField
 import NVActivityIndicatorView
 import Lottie
 
-
 class LoginViewController: UIViewController {
     
     // MARK: Variables

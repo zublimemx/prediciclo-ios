@@ -14,6 +14,15 @@ class Mas: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var menuTableView: UITableView!
     
+    @IBAction func editarButton(_ sender: UIButton) {
+        
+        let storyboard = UIStoryboard(name: "Editar", bundle: nil)
+                   let vc = storyboard.instantiateViewController(withIdentifier: "Editar") as! EditarViewController
+                   show(vc, sender: Any?.self)
+
+        
+    }
+    
     // MARK: Variables
     var bundle: Bundle?
     var menu = [CellModel]()
@@ -62,9 +71,56 @@ class Mas: UIViewController, UITableViewDataSource, UITableViewDelegate {
        return cell
       }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            let storyboard = UIStoryboard(name: "Mas", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "PopUp") as! PopUpCalendarViewController
+                    show(vc, sender: Any?.self)
+            break
+             
+        case 1:
+            let storyboard = UIStoryboard(name: "Tienda", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "Tienda") as! Tienda
+            show(vc, sender: Any?.self)
+
+            print("soy la celda 2 ")
+            break
+         case 2:
+            let url = "https://prediciclo.zublime.mx/terminos-y-condiciones/"
+            performSegue(withIdentifier: "webSegue", sender: nil)
+            
+            print("soy la celda 3 ")
+            break
+         case 3:
+            let url = "https://prediciclo.zublime.mx/politica-privacidad/"
+            performSegue(withIdentifier: "webSegue", sender: nil)
+            print("soy la celda 3 ")
+            break
+         case 4:
+            let url = "https://prediciclo.zublime.mx/centro-de-ayuda/"
+            performSegue(withIdentifier: "webSegue", sender: nil)
+            print("soy la celda 3 ")
+            break
+         case 5:
+            
+            print("soy la celda 3 ")
+            break
+            
+        default:
+            print("soy la celda 1 ")
+            break
+        }
+        
+        
+       // performSegue(withIdentifier: "webSegue", sender: nil)
+    }
+
+    
+    }
     
     
     
     
     
-}
+
