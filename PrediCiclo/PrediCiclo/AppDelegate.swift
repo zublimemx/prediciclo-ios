@@ -32,6 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     /*Time for launchScreen */
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         Thread.sleep(forTimeInterval: 2.0)
+        
+        
         return true
     }
 

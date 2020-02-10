@@ -1,3 +1,11 @@
+//
+//  HomeController.swift
+//  PrediCiclo
+//
+//  Created by Jason Sa on 2/5/20.
+//  Copyright © 2020 Zublime. All rights reserved.
+//
+
 import UIKit
 import JTAppleCalendar
 
@@ -5,12 +13,20 @@ class HomeController: UIViewController {
     
     //MARK: Variables
     var HomeApi_ = HomeApi()
-    var calendarDataSource: [String:String] = [:]
+    var calendarData = [Data]()
+    struct CalendarIconoFecha {
+        var caso = 0
+        var fecha = ""
+    }
+    var calendarDataSource = [CalendarIconoFecha]()
     var formatter: DateFormatter {
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd-MMM-yyyy"
+        formatter.dateFormat = "yyyy-MM-dd"
         return formatter
     }
+    var fechaDelCalendario = Date()
+    var startDate = Date()
+    var auxFechaMasMenos = 0
     
     //MARK: Controls
     @IBOutlet var calendarView: JTACMonthView!
@@ -21,60 +37,155 @@ class HomeController: UIViewController {
         calendarView.scrollDirection = .horizontal
         calendarView.scrollingMode   = .stopAtEachCalendarFrame
         calendarView.showsHorizontalScrollIndicator = false
-        populateDataSource()
+        startDate = formatter.date(from: formatter.string(from: Date()))!
+        ConsultaInfo()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.StatusBarColorChange()
     }
     
     //MARK: Functions
-    func populateDataSource() {
+    func ConsultaInfo() {
+        
+        self.LoadingStart(texto: "Consultando datos")
         
         HomeApi_.set_CreaCalendarioSiNoExiste(VC: self, callback: {(success, callback) in
             if success{
-                
+                self.HomeApi_.get_ObtenerCalendario(VC: self, callback: {(success, callback) in
+                    if success{
+                        self.OrganizaInfo(Info:callback,callback: {(success) in
+                            if success{
+                                self.calendarView.reloadData()
+                                self.calendarView.scrollToDate(self.startDate)
+                                self.LoadingStop()
+                            }else{
+                                self.LoadingStop()
+                            }
+                        })
+                    }else{
+                        self.LoadingStop()
+                    }
+                })
             }else{
-                
+                self.LoadingStop()
             }
         })
-        calendarDataSource = [
-            "07-Jan-2018": "SomeData",
-            "15-Jan-2018": "SomeMoreData",
-            "15-Feb-2018": "MoreData",
-            "21-Feb-2018": "onlyData",
-        ]
-        calendarView.reloadData()
+    }
+    
+    private func OrganizaInfo(Info:Calendar2_Model,callback: @escaping (_ success: Bool)->Void){
+        guard let fechas = Info.data else { return }
+        for items in fechas{
+            calendarData.append(items)
+            calendarDataSource.append(CalendarIconoFecha(caso: items.caso!, fecha: items.fecha!))
+        }
+        callback(true)
     }
     
     func configureCell(view: JTACDayCell?, cellState: CellState) {
         guard let cell = view as? DateCell  else { return }
-        cell.dateLabel.text = cellState.text
+        cell.lblFecha.text = cellState.text
         handleCellTextColor(cell: cell, cellState: cellState)
         handleCellEvents(cell: cell, cellState: cellState)
     }
     
     func handleCellTextColor(cell: DateCell, cellState: CellState) {
         if cellState.dateBelongsTo == .thisMonth {
-            cell.dateLabel.textColor = UIColor.black
+            cell.lblFecha.textColor = CustomColors.charcoalgrey
         } else {
-            cell.dateLabel.textColor = UIColor.gray
+            cell.lblFecha.textColor = UIColor.gray
         }
     }
     
     func handleCellEvents(cell: DateCell, cellState: CellState) {
         let dateString = formatter.string(from: cellState.date)
-        if calendarDataSource[dateString] == nil {
-            cell.dotView.isHidden = true
-        } else {
-            cell.dotView.isHidden = false
+        
+        print(calendarDataSource.count)
+        if calendarDataSource.count != 0{
+            if let itemActual = calendarDataSource.first(where: {$0.fecha == dateString})
+            {
+                print(itemActual)
+                switch itemActual.caso {
+                case 0:
+                    cell.imgStatus.image = UIImage(named: "")
+                    break
+                case 1:
+                    cell.imgStatus.image = UIImage(named: "img_raindrop-close-up")
+                    break
+                case 2:
+                    cell.imgStatus.image = UIImage(named: "img_pregnancy_test")
+                    break
+                case 3:
+                    cell.imgStatus.image = UIImage(named: "img_caret-arrow-up")
+                    break
+                case 4:
+                    cell.imgStatus.image = UIImage(named: "img_baby_boy")
+                    break
+                case 5:
+                    cell.imgStatus.image = UIImage(named: "")
+                    break
+                case 6:
+                    cell.imgStatus.image = UIImage(named: "img_baby_girl")
+                    break
+                case 7:
+                    cell.imgStatus.image = UIImage(named: "")
+                    break
+                case 8:
+                    cell.imgStatus.image = UIImage(named: "")
+                    break
+                case 9:
+                    cell.imgStatus.image = UIImage(named: "")
+                    break
+                case 10:
+                    cell.imgStatus.image = UIImage(named: "")
+                    break
+                default:
+                    cell.imgStatus.image = UIImage(named: "")
+                    break
+                }
+            }else{
+                cell.imgStatus.image = UIImage(named: "")
+            }
+        }else{
+            
         }
     }
     
     //MARK: Actions
+    @IBAction func btnPrevious_Touch(_ sender: Any) {
+        if auxFechaMasMenos == -3
+        {
+            print("Solo retrocedes tres meses a partir de la fecha actual")
+        }
+        else{
+            let now = Calendar.current.date(byAdding: .month, value: -1, to: fechaDelCalendario)
+            fechaDelCalendario = now!
+            calendarView.scrollToDate(now!)
+            auxFechaMasMenos -= 1
+        }
+    }
+    
+    @IBAction func btnNext_Touch(_ sender: Any) {
+        if auxFechaMasMenos == 2
+        {
+            print("Solo avanzas dos meses a partir de la fecha actual")
+        }
+        else{
+            let now = Calendar.current.date(byAdding: .month, value: 1, to: fechaDelCalendario)
+            fechaDelCalendario = now!
+            calendarView.scrollToDate(now!)
+            auxFechaMasMenos += 1
+        }
+    }
 }
 
 extension HomeController: JTACMonthViewDataSource {
     func configureCalendar(_ calendar: JTACMonthView) -> ConfigurationParameters {
-        let startDate = formatter.date(from: "01-jan-2018")!
-        let endDate = Date()
-        return ConfigurationParameters(startDate: startDate, endDate: endDate)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let tresMesesAntesDelActual = Calendar.current.date(byAdding: .month, value: -3, to: Date())
+        let dosMesesDespuesDelActual = Calendar.current.date(byAdding: .month, value: 2, to: Date())
+        return ConfigurationParameters(startDate: tresMesesAntesDelActual!, endDate: dosMesesDespuesDelActual!)
     }
 }
 
@@ -89,13 +200,15 @@ extension HomeController: JTACMonthViewDelegate {
         configureCell(view: cell, cellState: cellState)
     }
     
-    
     func calendar(_ calendar: JTACMonthView, headerViewForDateRange range: (start: Date, end: Date), at indexPath: IndexPath) -> JTACMonthReusableView {
-        let formatter = DateFormatter()  // Declare this outside, to avoid instancing this heavy class multiple times.
-        formatter.dateFormat = "MMM"
-        
+
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMMM"
         let header = calendar.dequeueReusableJTAppleSupplementaryView(withReuseIdentifier: "DateHeader", for: indexPath) as! DateHeader
-        header.monthTitle.text = formatter.string(from: range.start)
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.year], from: range.start)
+        header.monthTitle.text = "\(Utils.MonthsTranslate(nombre: formatter.string(from: range.start))) \(components.year!)"
+        
         return header
     }
 

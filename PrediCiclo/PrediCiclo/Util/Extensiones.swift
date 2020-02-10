@@ -1,9 +1,9 @@
 //
 //  Extensiones.swift
-//  Olinca App
+//  PrediCiclo
 //
-//  Created by Carlos H. Torres on 10/21/19.
-//  Copyright © 2019 De3mx. All rights reserved.
+//  Created by Jason Sa on 2/5/20.
+//  Copyright © 2020 Zublime. All rights reserved.
 //
 
 import Foundation
@@ -116,14 +116,15 @@ class RoundUIView: UIView {
    
 }
 
-
-
 extension UIViewController {
+    
+    
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
     }
+    
     func transparentBar(){
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -161,6 +162,48 @@ extension UIColor {
 }
 
 extension UIViewController{
+    
+    func StatusBarColorChange()
+    {
+        if #available(iOS 13.0, *) {
+            let app = UIApplication.shared
+            let statusBarHeight: CGFloat = app.statusBarFrame.size.height
+            
+            let statusbarView = UIView()
+            statusbarView.backgroundColor = CustomColors.pink
+            view.addSubview(statusbarView)
+          
+            statusbarView.translatesAutoresizingMaskIntoConstraints = false
+            statusbarView.heightAnchor
+                .constraint(equalToConstant: statusBarHeight).isActive = true
+            statusbarView.widthAnchor
+                .constraint(equalTo: view.widthAnchor, multiplier: 1.0).isActive = true
+            statusbarView.topAnchor
+                .constraint(equalTo: view.topAnchor).isActive = true
+            statusbarView.centerXAnchor
+                .constraint(equalTo: view.centerXAnchor).isActive = true
+          
+        } else {
+            let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView
+            statusBar?.backgroundColor = CustomColors.pink
+        }
+    }
+    
+    func LoadingStart(texto: String) {
+        let activity = UIAlertController(title: nil, message: texto, preferredStyle: .alert)
+        let activityIndictor: UIActivityIndicatorView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.large)
+        activityIndictor.hidesWhenStopped = true
+        activityIndictor.color = CustomColors.pink
+        activityIndictor.startAnimating()
+        activityIndictor.frame = CGRect(x: 0,y: 0 ,width: 55,height: 55)
+        activity.view.addSubview(activityIndictor)
+        present(activity, animated: true, completion: nil)
+    }
+    
+    func LoadingStop() {
+        dismiss(animated: false, completion: nil)
+    }
+    
     func setVisibility(view: UIView,constraint:NSLayoutConstraint, visibility:Visibility)  {
         if visibility == Visibility.VISIBLE {
             constraint.constant = 40
@@ -172,12 +215,14 @@ extension UIViewController{
             self.view.layoutIfNeeded()
         }
     }
-     func isValidEmail(emailStr:String) -> Bool {
+    
+    func isValidEmail(emailStr:String) -> Bool {
          let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
 
          let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
          return emailPred.evaluate(with: emailStr)
-     }
+    }
+    
     func crearAlertConfirmacion(title:String,texto:String){
         let alert = UIAlertController(title: title, message: texto, preferredStyle: .alert)
         
@@ -202,16 +247,6 @@ extension UIViewController{
            item: alert.view!, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute:
            NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 2, constant: 900)
         alert.view.addConstraint(constraintWidth)
-        
-        
-    
-        
-
-        
-        
-        
-        
-
 
         self.present(alert, animated: true)
     }
@@ -287,8 +322,11 @@ extension UIAlertController {
         self.setValue(attributeString, forKey: "attributedMessage")
     }
     
-    //Set tint color of UIAlertController
     func setTint(color: UIColor) {
         self.view.tintColor = color
     }
 }
+
+
+
+
