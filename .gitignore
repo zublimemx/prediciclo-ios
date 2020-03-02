@@ -1,0 +1,7 @@
+git_stats/*
+*.DS_Store
+*.zip
+
+.DS_Store
+PrediCiclo/.DS_Store
+PrediCiclo/PrediCiclo/Mas/.DS_Store
